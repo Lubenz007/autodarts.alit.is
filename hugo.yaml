@@ -1,6 +1,6 @@
-baseURL: https://www.alit.is/
+baseURL: https://autodarts.alit.is
 languageCode: en-us
-title: www.alit.is
+title: autodarts.alit.is
 
 module:
   imports:
