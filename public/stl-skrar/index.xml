@@ -25,109 +25,47 @@
         
         
         &lt;p&gt;Hér eru nokkrir vinsælir hlekkir þar sem hægt er að finna STL skrár fyrir þrívíddarprentun, þar á meðal fyrir Autodarts.&lt;/p&gt;
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-blue-200 hx:bg-blue-100 hx:text-blue-900 hx:dark:border-blue-200/30 hx:dark:bg-blue-900/30 hx:dark:text-blue-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;svg height=1.2em class=&#34;hx:inline-block hx:align-middle&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; fill=&#34;none&#34; viewBox=&#34;0 0 24 24&#34; stroke-width=&#34;2&#34; stroke=&#34;currentColor&#34; aria-hidden=&#34;true&#34;&gt;&lt;path stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; d=&#34;M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z&#34;/&gt;&lt;/svg&gt;&lt;/div&gt;
 
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-blue-200 hx-bg-blue-100 hx-text-blue-900 dark:hx-border-blue-200/30 dark:hx-bg-blue-900/30 dark:hx-text-blue-200&#34;&gt;
-  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
-        ℹ️
-      &lt;/div&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
-      &lt;p&gt;Þessar helstu.&lt;/p&gt;
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Þessar helstu.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://makerworld.com/en/search/models?keyword=dart&amp;#43;light&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MakerWorld&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://cults3d.com/en/search?q=dartboard&amp;#43;light&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cults3D&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.printables.com/search/models?ctx=models&amp;amp;q=Autodarts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;printables&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    &lt;/div&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://makerworld.com/en/search/models?keyword=dart&amp;#43;light&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MakerWorld&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://cults3d.com/en/search?q=dartboard&amp;#43;light&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cults3D&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.printables.com/search/models?ctx=models&amp;amp;q=Autodarts&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;printables&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;div class=&#34;hx:select-none hx:text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;🌐&lt;/div&gt;&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
-  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
-        🌐
-      &lt;/div&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
-      &lt;p&gt;Frekar flottar lausnir.&lt;/p&gt;
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Frekar flottar lausnir.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://makerworld.com/en/models/1124401-dartboard-led-light-autodarts?from=recommend#profileId-1147539&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OMMO&lt;/a&gt;&lt;/strong&gt;: Án kostnaðar.
-&lt;a href=&#34;https://makerworld.com/en/models/1124401-dartboard-led-light-autodarts?from=recommend#profileId-1147539&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://makerworld.bblmw.com/makerworld/model/US3744f3b7abc2b2/design/2025-02-18_f1e905cecaadd8.jpg&#34; alt=&#34;OMMO&#34; loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://makerworld.com/en/models/1124401-dartboard-led-light-autodarts?from=recommend#profileId-1147539&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OMMO&lt;/a&gt;&lt;/strong&gt;: Án kostnaðar.
+&lt;a href=&#34;https://makerworld.com/en/models/1124401-dartboard-led-light-autodarts?from=recommend#profileId-1147539&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://makerworld.bblmw.com/makerworld/model/US3744f3b7abc2b2/design/2025-02-18_f1e905cecaadd8.jpg&#34; alt=&#34;OMMO&#34;  loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cults3d.com/en/3d-model/gadget/steeldart-score-system-wie-autodarts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Robbel3D&lt;/a&gt;&lt;/strong&gt;: Kostar að fá skrár.
-&lt;a href=&#34;https://cults3d.com/en/3d-model/gadget/steeldart-score-system-wie-autodarts&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://fbi.cults3d.com/uploaders/17886443/illustration-file/ca67da1e-0396-48a1-afec-b0b340bbf2b1/Autodarts-3DDrucken.png&#34; alt=&#34;Robbel3D&#34; loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://cults3d.com/en/3d-model/gadget/steeldart-score-system-wie-autodarts&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Robbel3D&lt;/a&gt;&lt;/strong&gt;: Kostar að fá skrár.
+&lt;a href=&#34;https://cults3d.com/en/3d-model/gadget/steeldart-score-system-wie-autodarts&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://fbi.cults3d.com/uploaders/17886443/illustration-file/ca67da1e-0396-48a1-afec-b0b340bbf2b1/Autodarts-3DDrucken.png&#34; alt=&#34;Robbel3D&#34;  loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-
-    &lt;/div&gt;
+&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
+&lt;div class=&#34;hx:overflow-x-auto hx:mt-6 hx:flex hx:rounded-lg hx:border hx:py-2 hx:ltr:pr-4 hx:rtl:pl-4 hx:contrast-more:border-current hx:contrast-more:dark:border-current hx:border-green-200 hx:bg-green-100 hx:text-green-900 hx:dark:border-green-200/30 hx:dark:bg-green-900/30 hx:dark:text-green-200&#34;&gt;
+  &lt;div class=&#34;hx:ltr:pl-3 hx:ltr:pr-2 hx:rtl:pr-3 hx:rtl:pl-2&#34;&gt;&lt;div class=&#34;hx:select-none hx:text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;🌐&lt;/div&gt;&lt;/div&gt;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;hx-overflow-x-auto hx-mt-6 hx-flex hx-rounded-lg hx-border hx-py-2 ltr:hx-pr-4 rtl:hx-pl-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-orange-100 hx-bg-orange-50 hx-text-orange-800 dark:hx-border-orange-400/30 dark:hx-bg-orange-400/20 dark:hx-text-orange-300&#34;&gt;
-  &lt;div class=&#34;ltr:hx-pl-3 ltr:hx-pr-2 rtl:hx-pr-3 rtl:hx-pl-2&#34;&gt;&lt;div class=&#34;hx-select-none hx-text-xl&#34; style=&#34;font-family: &#39;Apple Color Emoji&#39;, &#39;Segoe UI Emoji&#39;, &#39;Segoe UI Symbol&#39;;&#34;&gt;
-        🌐
-      &lt;/div&gt;&lt;/div&gt;
-
-  &lt;div class=&#34;hx-w-full hx-min-w-0 hx-leading-7&#34;&gt;
-    &lt;div class=&#34;hx-mt-6 hx-leading-7 first:hx-mt-0&#34;&gt;
-      &lt;p&gt;Varhlutir til prentunar&lt;/p&gt;
+  &lt;div class=&#34;hx:w-full hx:min-w-0 hx:leading-7&#34;&gt;
+    &lt;div class=&#34;hx:mt-6 hx:leading-7 hx:first:mt-0&#34;&gt;&lt;p&gt;Varhlutir til prentunar&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.thingiverse.com/thing:6269569&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Winmau Rota-Lock&lt;/a&gt;&lt;/strong&gt;: Winmau Rota-Lock
-&lt;a href=&#34;https://www.thingiverse.com/thing:6269569&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://cdn.thingiverse.com/assets/a2/51/12/05/94/large_display_b356bf96-c9c5-436f-ac62-63da175c2ea7.jpg&#34; alt=&#34;Winmau Rota-Lock&#34; loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-    &lt;/div&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://www.thingiverse.com/thing:6269569&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Winmau Rota-Lock&lt;/a&gt;&lt;/strong&gt;: Winmau Rota-Lock
+&lt;a href=&#34;https://www.thingiverse.com/thing:6269569&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://cdn.thingiverse.com/assets/a2/51/12/05/94/large_display_b356bf96-c9c5-436f-ac62-63da175c2ea7.jpg&#34; alt=&#34;Winmau Rota-Lock&#34;  loading=&#34;lazy&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -144,26 +82,26 @@
       <description>
         
         
-        &lt;h2&gt;Plasma myndavélafesting fyrir Autodarts&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;plasma-myndavélafesting-fyrir-autodarts&#34;&gt;&lt;/span&gt;
+        &lt;h2&gt;Plasma myndavélafesting fyrir Autodarts&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;plasma-myndavélafesting-fyrir-autodarts&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#plasma-myndav%c3%a9lafesting-fyrir-autodarts&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Þetta er &amp;ldquo;Plasma&amp;rdquo; festingin, vinsæll valkostur sem er hannaður til að sitja beint á píluborðinu og veitir stöðugt og gott sjónarhorn fyrir myndavélarnar.&lt;/p&gt;
 &lt;p&gt;&lt;figure&gt;
-    &lt;img src=&#34;https://autodarts.diy/3d-printing/images/plasma_assembly_git.png&#34; title=&#34;Fullgerð myndavélafesting&#34; alt=&#34;Mynd af prentaðri myndavélafestingu&#34; loading=&#34;lazy&#34; /&gt;
+    &lt;img src=&#34;https://autodarts.diy/3d-printing/images/plasma_assembly_git.png&#34; title=&#34;Fullgerð myndavélafesting&#34; alt=&#34;Mynd af prentaðri myndavélafestingu&#34;  loading=&#34;lazy&#34; /&gt;
     &lt;figcaption&gt;Fullgerð myndavélafesting&lt;/figcaption&gt;
   &lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Mynd fengin frá &lt;a href=&#34;https://autodarts.diy/3d-printing/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;opinberu Autodarts DIY síðunni&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h3&gt;Prentunarráðleggingar&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;prentunarráðleggingar&#34;&gt;&lt;/span&gt;
+&lt;p&gt;&lt;em&gt;Mynd fengin frá &lt;a href=&#34;https://autodarts.diy/3d-printing/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;opinberu Autodarts DIY síðunni&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Prentunarráðleggingar&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;prentunarráðleggingar&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#prentunarr%c3%a1%c3%b0leggingar&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Efni:&lt;/strong&gt; PLA eða PETG&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Lagahæð:&lt;/strong&gt; 0.2mm&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Fylling (Infill):&lt;/strong&gt; 20%&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Stuðningur (Supports):&lt;/strong&gt; Gæti þurft stuðning fyrir myndavélarhaldarann (Cam Holder), fer eftir prentara.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Niðurhal&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;niðurhal&#34;&gt;&lt;/span&gt;
+&lt;h3&gt;Niðurhal&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;niðurhal&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#ni%c3%b0urhal&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Þú getur sótt allar STL skrár fyrir Plasma festinguna á GitHub síðu Autodarts:
-&lt;a href=&#34;https://github.com/autodarts/docs/tree/main/static/3d-printing/stl&#34; title=&#34;Smelltu til að opna GitHub möppuna&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Sækja Plasma Mount skrár á GitHub&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Frekari upplýsingar&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;frekari-upplýsingar&#34;&gt;&lt;/span&gt;
+&lt;a href=&#34;https://github.com/autodarts/docs/tree/main/static/3d-printing/stl&#34;title=&#34;Smelltu til að opna GitHub möppuna&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Sækja Plasma Mount skrár á GitHub&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Frekari upplýsingar&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;frekari-upplýsingar&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#frekari-uppl%c3%bdsingar&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Fyrir fleiri hönnunarmöguleika og upplýsingar, skoðaðu opinberu Autodarts DIY síðuna:
-&lt;a href=&#34;https://autodarts.diy/3d-printing/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;autodarts.diy/3d-printing/&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://autodarts.diy/3d-printing/&#34;target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;autodarts.diy/3d-printing/&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>

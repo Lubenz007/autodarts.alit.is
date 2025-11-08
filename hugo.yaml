@@ -34,28 +34,65 @@ menu:
         icon: github
 
 params:
+  # Modern theme configuration
   theme:
     # light | dark | system
-    default: dark
+    default: system
     displayToggle: true
+    colors:
+      primary: "#0055FF"
+    navigation:
+      style: "modern"
+    
+  # Modern page settings
   page:
     # full (100%), wide (90rem), normal (1280px)
-    width: full
+    width: wide
+    breadcrumb: true
+    
+  # Enhanced navbar
   navbar:
-      displayTitle: true
-      displayLogo: true
-      logo:
-        path: images/BensiLogo.png
-        dark: images/BensiLogo.png
-        link: /
-        width: 40
-        height: 40
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: images/BensiLogo.png
+      dark: images/BensiLogo.png
+      link: /
+      width: 40
+      height: 40
+    
+  # Footer configuration
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    
+  # Modern search configuration
+  search:
+    enable: true
+    type: "flexsearch"
+    
+  # Enable modern features
+  features:
+    scrollSpy: true
+    darkMode: true
+    backToTop: true
 
 markup:
   goldmark:
     renderer:
       unsafe: true
   highlight:
-    noclasses: false
+    noClasses: false
+    style: dracula
 
+# Modern image processing
+imaging:
+  quality: 85
+  resampleFilter: Lanczos
+  anchor: Smart
+  bgColor: '#ffffff'
+  format: 'webp'
+
+# Analytics
 googleAnalytics: G-LT0HS2CLJZ
