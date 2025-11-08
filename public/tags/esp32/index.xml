@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>www.alit.is – Esp32</title>
+    <title>autodarts.alit.is – Esp32</title>
     <link>http://localhost:1313/tags/esp32/</link>
-    <description>Recent content in Esp32 on www.alit.is</description>
+    <description>Recent content in Esp32 on autodarts.alit.is</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 23 Jun 2024 00:27:00 +0000</lastBuildDate>

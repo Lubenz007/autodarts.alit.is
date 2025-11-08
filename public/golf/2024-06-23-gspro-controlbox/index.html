@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 
-  <title>GSPRO Control box – www.alit.is</title>
+  <title>GSPRO Control box – autodarts.alit.is</title>
   <meta name="description" content="esp32 code to create GSPRO Control box // Benedikt Gabriel Egilsson - bensiegils.com // 1= 5 - Camera to ball // 2= KEY_M_CTRL - Muligan // 3= T - Scorecard display // 4= P - See the pin // 5= O - Flyover of the hole // 6= . - shadow quality // 7= B - Hide - Make objects in your line of sight invisible // 8= Z - Hide or show the 3D gras // 9= KEY_UP_ARROW // 10= KEY_DOWN_ARROW // 11= KEY_LEFT_ARROW // 12= KEY_RIGHT_ARROW #define USE_NIMBLE #include &lt;BleKeyboard.h&gt; BleKeyboard bleKeyboard(&#34;GSPRO BOX&#34;); #define NUM_KEYS 12 struct Key { int pin; uint8_t code; bool state; bool isCtrl; // New field to indicate if Ctrl needs to be held }; Key keys[NUM_KEYS] = { {16, &#39;5&#39;, false, false}, {17, &#39;m&#39;, false, true}, // &#39;m&#39; with Ctrl modifier {18, &#39;t&#39;, false, false}, {19, &#39;p&#39;, false, false}, {21, &#39;o&#39;, false, false}, {22, &#39;.&#39;, false, false}, {32, &#39;b&#39;, false, false}, {33, &#39;z&#39;, false, false}, {27, KEY_UP_ARROW, false, false}, {14, KEY_DOWN_ARROW, false, false}, {12, KEY_LEFT_ARROW, false, false}, {13, KEY_RIGHT_ARROW, false, false} }; bool connectNotificationSent = false; void setup() { Serial.begin(115200); Serial.println(&#34;Code running...&#34;); // Set pin modes for (int i = 0; i &lt; NUM_KEYS; i&#43;&#43;) { pinMode(keys[i].pin, INPUT_PULLUP); } // Initialize BLE keyboard bleKeyboard.begin(); } void loop() { if (bleKeyboard.isConnected()) { if (!connectNotificationSent) { Serial.println(&#34;BLE connected...&#34;); connectNotificationSent = true; } for (int i = 0; i &lt; NUM_KEYS; i&#43;&#43;) { handleButton(i); } } else { if (connectNotificationSent) { Serial.println(&#34;BLE disconnected...&#34;); connectNotificationSent = false; } } delay(10); // Small delay to stabilize readings } void handleButton(int keyIndex) { bool currentState = !digitalRead(keys[keyIndex].pin); // Read the button state (active low) if (currentState != keys[keyIndex].state) { keys[keyIndex].state = currentState; if (currentState) { if (keys[keyIndex].isCtrl) { // Check if Ctrl modifier is needed bleKeyboard.press(KEY_LEFT_CTRL); } bleKeyboard.press(keys[keyIndex].code); Serial.print(&#34;Key pressed: &#34;); } else { bleKeyboard.release(keys[keyIndex].code); if (keys[keyIndex].isCtrl) { // Check if Ctrl modifier is needed bleKeyboard.release(KEY_LEFT_CTRL); } Serial.print(&#34;Key released: &#34;); } Serial.println(keys[keyIndex].code); } } " />
 
   
@@ -190,9 +190,9 @@ void handleButton(int keyIndex) {
 
   <nav class="hx-mx-auto hx-flex hx-items-center hx-justify-end hx-gap-2 hx-h-16 hx-px-6 hx-max-w-[90rem]">
     <a class="hx-flex hx-items-center hover:hx-opacity-75 ltr:hx-mr-auto rtl:hx-ml-auto" href="/">
-        <img class="hx-block dark:hx-hidden" src="/images/BensiLogo.png" alt="www.alit.is" height="40" width="40" />
-        <img class="hx-hidden dark:hx-block" src="/images/BensiLogo.png" alt="www.alit.is" height="40" width="40" />
-        <span class="hx-mx-2 hx-font-extrabold hx-inline hx-select-none" title="www.alit.is">www.alit.is</span>
+        <img class="hx-block dark:hx-hidden" src="/images/BensiLogo.png" alt="autodarts.alit.is" height="40" width="40" />
+        <img class="hx-hidden dark:hx-block" src="/images/BensiLogo.png" alt="autodarts.alit.is" height="40" width="40" />
+        <span class="hx-mx-2 hx-font-extrabold hx-inline hx-select-none" title="autodarts.alit.is">autodarts.alit.is</span>
     </a><a
             title="STL Skrár"
             href="/stl-skrar"
