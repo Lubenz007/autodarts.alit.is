@@ -1,0 +1,29 @@
+{{ $dir := .Get "dir" }}
+{{ $files := readDir (print "static/" $dir) }}
+
+<div class="image-gallery">
+    {{ range $files }}
+        {{ if and (ne .Name ".DS_Store") (ne .Name "Thumbs.db") }}
+            {{ $url := (print $dir "/" .Name) }}
+            <div class="gallery-item">
+                <a href="{{ $url | relURL }}" class="glightbox" data-gallery="gallery">
+                    <img src="{{ $url | relURL }}" alt="{{ .Name }}" loading="lazy">
+                </a>
+            </div>
+        {{ end }}
+    {{ end }}
+</div>
+
+<!-- Add GLightbox CSS and JS only once per page -->
+{{ if not (.Page.Scratch.Get "glightboxLoaded") }}
+    {{ .Page.Scratch.Set "glightboxLoaded" true }}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+    </script>
+{{ end }}
