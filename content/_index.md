@@ -6,7 +6,7 @@ draft = false
 
 # Velkomin á autodarts.alit.is
 
-Þessi síða er tileinkuð þrívíddarprentun -> [autodarts.io](https://autodarts.io) og annað sem ég tek mér fyrir hendur. Hér finnur þú upplýsingar, leiðbeiningar og skrár til að prenta allt sem ég hef notað.
+Þessi síða er tileinkuð þrívíddarprentun fyrir -> [autodarts.io](https://autodarts.io). Hér finnur þú upplýsingar, leiðbeiningar og skrár til að prenta allt sem ég hef notað.
 
 ## Hvað er Autodarts?
 
