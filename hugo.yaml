@@ -1,6 +1,6 @@
-baseURL: https://autodarts.alit.is
+baseURL: https://alit.is
 languageCode: en-us
-title: autodarts.alit.is
+title: alit.is
 
 module:
   imports:
@@ -8,27 +8,24 @@ module:
 
 menu:
   main:
-    - name: STL Skrár
-      pageRef: /stl-skrar
+    - name: 3D Prentun
+      pageRef: /3d-prentun
       weight: 1
-    - name: Leiðbeiningar
-      pageRef: /leidbeiningar
-      weight: 2
     - name: Golfhermir
       pageRef: /golf
-      weight: 3
+      weight: 2
     - name: IOT
       pageRef: /iot
-      weight: 4
+      weight: 3
     - name: Um mig
       pageRef: /um
-      weight: 5
+      weight: 4
     - name: Search
-      weight: 6
+      weight: 5
       params:
         type: search
     - name: GitHub
-      weight: 7
+      weight: 6
       url: "https://github.com/Lubenz007"
       params:
         icon: github

@@ -1,5 +1,7 @@
 module github.com/lubenz007/alitis
 
-go 1.18
+go 1.21
 
-require github.com/imfing/hextra v0.11.1 // indirect
+toolchain go1.24.4
+
+require github.com/imfing/hextra v0.12.2 // indirect

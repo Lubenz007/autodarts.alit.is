@@ -1,28 +1,38 @@
-+++
-title = 'Autodards Þrívíddarprentun'
-date = 2024-08-31T22:29:39Z
-draft = false
-+++
+---
+title: "alit.is"
+description: "3D prentuð hlutir og fylgihlutir fyrir örvarspíl, golf og verkfæri"
+layout: hextra-home
+---
 
-# Velkomin á autodarts.alit.is
+{{< hextra/hero-section >}}
+{{< hextra/hero-headline >}}3D Prentuð Hlutir{{< /hextra/hero-headline >}}
+{{< hextra/hero-subtitle >}}Sérsniðnir 3D prentaðir hlutir fyrir örvarspíl, golf og verkfæri — prentaðir á Bambu Lab P1S{{< /hextra/hero-subtitle >}}
+{{< /hextra/hero-section >}}
 
-Þessi síða er tileinkuð þrívíddarprentun fyrir -> [autodarts.io](https://autodarts.io). Hér finnur þú upplýsingar, leiðbeiningar og skrár til að prenta allt sem ég hef notað.
+{{< hextra/feature-grid >}}
 
-## Hvað er Autodarts?
+  {{< hextra/feature-card
+    title="Darts"
+    subtitle="3D prentaðir hlutir og festingar fyrir Autodarts og örvarspíl"
+    link="/verslun/darts"
+    icon="star"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
+  >}}
 
-Autodarts er frábær frír hugbúnaðar sem gerir þér kleift að spila pílukast á netinu við aðra. Það notar myndavélar til að skynja sjálfkrafa hvar pílurnar þínar hafa lent.
+  {{< hextra/feature-card
+    title="Golf"
+    subtitle="3D prentaðir hlutir fyrir golfsimulator og GSPro uppsetningar"
+    link="/verslun/golf"
+    icon="academic-cap"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(74,142,53,0.15),hsla(0,0%,100%,0));"
+  >}}
 
-## Hvað er hægt að finna hér?
+  {{< hextra/feature-card
+    title="Verkfæri"
+    subtitle="3D prentaðir festihlutir og fylgihlutir fyrir verkfæri"
+    link="/verslun/milwaukee"
+    icon="cog"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(220,88,11,0.15),hsla(0,0%,100%,0));"
+  >}}
 
-*   **Leiðbeiningar:** Skref-fyrir-skref leiðbeiningar um hvaða hluti á að prenta.
-*   **STL skrár:** Skrár sem hægt er að hlaða niður fyrir þrívíddarprentarann þinn.
-*   **Ábendingar og brellur:** Bestu aðferðir við prentun á íhlutunum.
-
-## Vantar þig prentun?
-
-Ef þú átt ekki þrívíddarprentara eða vilt einfaldlega fá íhlutina tilbúna get ég prentað þá fyrir þig. Ég nota Bambu Lab P1S prentara sem tryggir mikil gæði og hraða afhendingu. Hafðu samband á [bensi@alit.is](mailto:bensi@alit.is) til að fá frekari upplýsingar.
-
-## Myndir af kláruðum verkefnum
-
-Hér er lítið sýnishorn af verkefnum sem ég hef prentað. Smelltu á myndirnar til að sjá fleiri í myndasafninu.
-{{< gallery_preview >}}
+{{< /hextra/feature-grid >}}

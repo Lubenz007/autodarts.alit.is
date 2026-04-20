@@ -1,18 +1,1 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>autodarts.alit.is – Autodards Þrívíddarprentun</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Autodards Þrívíddarprentun on autodarts.alit.is</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 31 Aug 2024 22:29:39 +0000</lastBuildDate>
-    
-	  <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-      
-      
-    
-    
-  </channel>
-</rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>alit.is – alit.is</title><link>https://alit.is/</link><description>Recent content on alit.is</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 01 Sep 2024 15:05:00 +0000</lastBuildDate><atom:link href="https://alit.is/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
