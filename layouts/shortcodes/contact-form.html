@@ -1,0 +1,92 @@
+{{/* Contact form shortcode using Formspree. Usage: {{< contact-form >}} */}}
+<form
+  action="https://formspree.io/f/xkokvjdd"
+  method="POST"
+  class="contact-form"
+>
+  <div class="form-group">
+    <label for="name">Nafn</label>
+    <input type="text" id="name" name="name" placeholder="Nafnið þitt" required>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Netfang</label>
+    <input type="email" id="email" name="email" placeholder="netfang@dæmi.is" required>
+  </div>
+
+  <div class="form-group">
+    <label for="product">Vara</label>
+    <select id="product" name="product">
+      <option value="">— Veldu vöru —</option>
+      <option value="Eingöngu myndavélar">Eingöngu myndavélar</option>
+      <option value="Myndavélafesting">Myndavélafesting</option>
+      <option value="Myndavélafesting með LED hring">Myndavélafesting með LED hring</option>
+      <option value="Myndavélafesting með LED hring og bakplötu">Myndavélafesting með LED hring og bakplötu</option>
+      <option value="Annað">Annað / ekki viss</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="color">Litur</label>
+    <input type="text" id="color" name="color" placeholder="t.d. svartur, hvítur, rauður...">
+  </div>
+
+  <div class="form-group">
+    <label for="message">Skilaboð</label>
+    <textarea id="message" name="message" rows="4" placeholder="Spurningar eða athugasemdir..."></textarea>
+  </div>
+
+  <button type="submit">Óska eftir verði</button>
+</form>
+
+<style>
+.contact-form {
+  max-width: 480px;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(128,128,128,0.3);
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #0055FF;
+  border-color: transparent;
+}
+.contact-form button[type="submit"] {
+  padding: 0.6rem 1.5rem;
+  background: #0055FF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.2s;
+}
+.contact-form button[type="submit"]:hover {
+  background: #0044cc;
+}
+</style>
