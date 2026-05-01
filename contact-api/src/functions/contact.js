@@ -2,6 +2,7 @@
 
 const { app } = require('@azure/functions');
 const { EmailClient } = require('@azure/communication-email');
+const { getTemplate } = require('../email-templates');
 
 const ALLOWED_ORIGINS = new Set(['https://alit.is', 'http://localhost:1313']);
 
@@ -107,8 +108,8 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                 'Kveðja,\nalit.is',
             ].filter(line => line !== undefined).join('\n');
 
-            // Send both emails concurrently
-            await Promise.all([
+            const sends = [
+                // 1. Notify you
                 client.beginSend({
                     senderAddress: 'DoNotReply@alit.is',
                     recipients: { to: [{ address: 'bensi@alit.is', displayName: 'Bensi' }] },
@@ -119,6 +120,7 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                         html,
                     },
                 }).then(p => p.pollUntilDone()),
+                // 2. Generic "takk" confirmation to customer
                 client.beginSend({
                     senderAddress: 'DoNotReply@alit.is',
                     recipients: { to: [{ address: email, displayName: name }] },
@@ -128,7 +130,26 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                         html: confirmHtml,
                     },
                 }).then(p => p.pollUntilDone()),
-            ]);
+            ];
+
+            // 3. Product-specific info email if a template exists for the selection
+            const tmpl = getTemplate(product);
+            if (tmpl) {
+                const t = tmpl({ name, color, message });
+                sends.push(
+                    client.beginSend({
+                        senderAddress: 'DoNotReply@alit.is',
+                        recipients: { to: [{ address: email, displayName: name }] },
+                        content: {
+                            subject: t.subject,
+                            plainText: t.plainText,
+                            html: t.html,
+                        },
+                    }).then(p => p.pollUntilDone())
+                );
+            }
+
+            await Promise.all(sends);
 
             return { status: 200, headers, body: JSON.stringify({ ok: true }) };
         } catch (err) {
