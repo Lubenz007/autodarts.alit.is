@@ -114,6 +114,7 @@ ${section('Uppsetning', steps([
 <p style="color:#555;line-height:1.6">
   Ekki hika við að hafa samband ef þú hefur frekari spurningar.
 </p>
+`;
 
         const plain = [
             `Hæ ${name}!`,
