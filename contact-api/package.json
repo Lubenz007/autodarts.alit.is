@@ -1,0 +1,16 @@
+{
+  "name": "alit-contact-api",
+  "version": "1.0.0",
+  "description": "Contact form API for alit.is using Azure Communication Services",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/communication-email": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

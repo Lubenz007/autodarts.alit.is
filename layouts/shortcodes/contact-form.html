@@ -1,9 +1,14 @@
-{{/* Contact form shortcode using Formspree. Usage: {{< contact-form >}} */}}
 <form
-  action="https://formspree.io/f/xkokvjdd"
-  method="POST"
   class="contact-form"
+  id="contactForm"
+  data-endpoint="{{ .Site.Params.contactApiUrl }}"
+  novalidate
 >
+  {{/* Honeypot — hidden from real users, bots fill it in */}}
+  <div style="display:none" aria-hidden="true">
+    <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+  </div>
+
   <div class="form-group">
     <label for="name">Nafn</label>
     <input type="text" id="name" name="name" placeholder="Nafnið þitt" required>
@@ -36,7 +41,9 @@
     <textarea id="message" name="message" rows="4" placeholder="Spurningar eða athugasemdir..."></textarea>
   </div>
 
-  <button type="submit">Óska eftir verði</button>
+  <div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
+
+  <button type="submit" id="submitBtn">Óska eftir verði</button>
 </form>
 
 <style>
@@ -86,7 +93,61 @@
   align-self: flex-start;
   transition: background 0.2s;
 }
-.contact-form button[type="submit"]:hover {
-  background: #0044cc;
+.contact-form button[type="submit"]:hover { background: #0044cc; }
+.contact-form button[type="submit"]:disabled { background: #888; cursor: not-allowed; }
+.form-status {
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: none;
 }
+.form-status.ok  { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.form-status.err { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
 </style>
+
+<script>
+(function () {
+  var form    = document.getElementById('contactForm');
+  var status  = document.getElementById('formStatus');
+  var btn     = document.getElementById('submitBtn');
+  var origTxt = btn.textContent;
+
+  function showStatus(msg, isOk) {
+    status.textContent = msg;
+    status.className   = 'form-status ' + (isOk ? 'ok' : 'err');
+    status.style.display = 'block';
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var endpoint = form.dataset.endpoint;
+    if (!endpoint) { showStatus('Uppsetningarvilla: API endpoint vantar.', false); return; }
+
+    btn.disabled    = true;
+    btn.textContent = 'Sendi...';
+    status.style.display = 'none';
+
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data.ok) {
+        showStatus('Takk! Við munum hafa samband við þig fljótlega.', true);
+        form.reset();
+      } else {
+        showStatus(data.error || 'Eitthvað fór úrskeiðis.', false);
+      }
+    })
+    .catch(function () {
+      showStatus('Nettengingarvilla. Reyndu aftur síðar.', false);
+    })
+    .finally(function () {
+      btn.disabled    = false;
+      btn.textContent = origTxt;
+    });
+  });
+})();
+</script>

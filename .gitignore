@@ -1,2 +1,4 @@
 .claude/
 _vendor/
+contact-api/local.settings.json
+contact-api/node_modules/

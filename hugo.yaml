@@ -25,6 +25,8 @@ menu:
         icon: github
 
 params:
+  contactApiUrl: "https://alit-contact-fn.azurewebsites.net/api/contact"
+
   # Modern theme configuration
   theme:
     # light | dark | system
