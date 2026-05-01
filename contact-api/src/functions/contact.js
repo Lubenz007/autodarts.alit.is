@@ -79,17 +79,56 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
 
             const client = new EmailClient(process.env.COMMUNICATION_CONNECTION_STRING);
 
-            const poller = await client.beginSend({
-                senderAddress: `DoNotReply@alit.is`,
-                recipients: { to: [{ address: 'bensi@alit.is', displayName: 'Bensi' }] },
-                replyTo: [{ address: email, displayName: name }],
-                content: {
-                    subject: `Fyrirspurn: ${name}${product ? ` — ${product}` : ''}`,
-                    plainText: plain,
-                    html,
-                },
-            });
-            await poller.pollUntilDone();
+            const confirmRows = [
+                product ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Vara</td><td>${esc(product)}</td></tr>` : '',
+                color   ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Litur</td><td>${esc(color)}</td></tr>` : '',
+                message ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Skilaboð</td><td style="white-space:pre-wrap">${esc(message)}</td></tr>` : '',
+            ].filter(Boolean).join('\n');
+
+            const confirmHtml = `
+<div style="font-family:sans-serif;max-width:520px">
+  <h2 style="color:#0055FF">Takk fyrir fyrirspurnina, ${esc(name)}!</h2>
+  <p>Við höfum móttekið fyrirspurn þína og munum hafa samband við þig eins fljótt og auðið er.</p>
+  ${confirmRows ? `<h3>Samantekt á fyrirspurn</h3><table style="border-collapse:collapse;font-size:15px">${confirmRows}</table>` : ''}
+  <p style="margin-top:24px">Kveðja,<br><strong>alit.is</strong></p>
+  <hr style="margin-top:32px">
+  <small style="color:#888">Þetta er sjálfvirk staðfesting. Vinsamlegast ekki svara þessum tölvupósti.</small>
+</div>`;
+
+            const confirmPlain = [
+                `Takk fyrir fyrirspurnina, ${name}!`,
+                '',
+                'Við höfum móttekið fyrirspurn þína og munum hafa samband við þig eins fljótt og auðið er.',
+                '',
+                product ? `Vara: ${product}` : '',
+                color   ? `Litur: ${color}`   : '',
+                message ? `Skilaboð: ${message}` : '',
+                '',
+                'Kveðja,\nalit.is',
+            ].filter(line => line !== undefined).join('\n');
+
+            // Send both emails concurrently
+            await Promise.all([
+                client.beginSend({
+                    senderAddress: 'DoNotReply@alit.is',
+                    recipients: { to: [{ address: 'bensi@alit.is', displayName: 'Bensi' }] },
+                    replyTo: [{ address: email, displayName: name }],
+                    content: {
+                        subject: `Fyrirspurn: ${name}${product ? ` — ${product}` : ''}`,
+                        plainText: plain,
+                        html,
+                    },
+                }).then(p => p.pollUntilDone()),
+                client.beginSend({
+                    senderAddress: 'DoNotReply@alit.is',
+                    recipients: { to: [{ address: email, displayName: name }] },
+                    content: {
+                        subject: 'Við höfum móttekið fyrirspurn þína — alit.is',
+                        plainText: confirmPlain,
+                        html: confirmHtml,
+                    },
+                }).then(p => p.pollUntilDone()),
+            ]);
 
             return { status: 200, headers, body: JSON.stringify({ ok: true }) };
         } catch (err) {
