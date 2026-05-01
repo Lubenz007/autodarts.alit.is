@@ -69,37 +69,78 @@ const templates = {
     'Eingöngu myndavélar': ({ name }) => {
         const body = `
 <p style="margin:0 0 16px;color:#555;line-height:1.6">
-  Takk fyrir áhugann á myndavélum! Hér eru upplýsingar um það sem við bjóðum upp á.
+  Takk fyrir áhugann á myndavélum! Hér eru allar upplýsingar um sett sem við bjóðum upp á.
 </p>
 
 ${section('Um vöruna', `
 <p style="color:#555;line-height:1.6">
-  [PLACEHOLDER — lýstu myndavélinni: gerð, gæði, hvað fylgir með o.s.frv.]
+  Við seljum <strong>GXIVISION OV9732</strong> myndavélar — 3 stk. í setti sem er tilbúið fyrir Autodarts.
+  Allar myndavélarnar eru með nýjasta Autodarts DIY Cam fastbúnaðinn (firmware) og hýsingin hefur verið fjarlægð
+  svo þær passi beint í festingarnar.
+</p>
+<p style="color:#555;line-height:1.6">
+  <strong>Eitt USB tengi — þrjár myndavélar.</strong> Hér þarf ekkert flókið uppsett,
+  allar þrjár ganga í eitt USB tengi (með deili).
 </p>`)}
 
-${section('Verð', priceTag('[PLACEHOLDER — t.d. 4.500 kr.]'))}
+${section('Verð', priceTag('[PLACEHOLDER — verð]'))}
 
 ${section('Hvað fylgir með', `
 <ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
-  <li>[PLACEHOLDER — t.d. myndavél]</li>
-  <li>[PLACEHOLDER — t.d. USB snúra]</li>
-  <li>[PLACEHOLDER — t.d. uppsetningarleiðbeiningar]</li>
+  <li>3 × GXIVISION OV9732 myndavélar (32mm × 32mm)</li>
+  <li>USB snúrur (2m og 1m fylgja með)</li>
+  <li>Autodarts DIY Cam fastbúnaður foruppsettur</li>
+  <li>Hýsing fjarlægð — tilbúið til uppsetningar</li>
 </ul>`)}
 
+${section('Tæknilegar upplýsingar', `
+<table style="border-collapse:collapse;font-size:14px;color:#555;width:100%">
+  <tr style="background:#f9f9f9"><td style="padding:6px 10px;font-weight:bold;white-space:nowrap">Skynjari</td><td style="padding:6px 10px">1MP OV9732</td></tr>
+  <tr><td style="padding:6px 10px;font-weight:bold">Upplausn</td><td style="padding:6px 10px">1280 × 720 (720p)</td></tr>
+  <tr style="background:#f9f9f9"><td style="padding:6px 10px;font-weight:bold">Rammar á sek.</td><td style="padding:6px 10px">MJPG 30fps · YUV 10fps</td></tr>
+  <tr><td style="padding:6px 10px;font-weight:bold">Sjónarhorn</td><td style="padding:6px 10px">100° án bjögunar</td></tr>
+  <tr style="background:#f9f9f9"><td style="padding:6px 10px;font-weight:bold">Tenging</td><td style="padding:6px 10px">USB · UVC · Plug &amp; Play · OTG</td></tr>
+  <tr><td style="padding:6px 10px;font-weight:bold">Stýrikerfi</td><td style="padding:6px 10px">Windows · Mac · Linux · Android · Raspberry Pi</td></tr>
+  <tr style="background:#f9f9f9"><td style="padding:6px 10px;font-weight:bold">Stærð</td><td style="padding:6px 10px">32mm × 32mm</td></tr>
+</table>`)}
+
 ${section('Uppsetning', steps([
-    '[PLACEHOLDER — skref 1]',
-    '[PLACEHOLDER — skref 2]',
-    '[PLACEHOLDER — skref 3]',
+    'Tengið USB deili (hub) við tölvuna',
+    'Tengið allar þrjár myndavélarnar við deilinn',
+    'Opnið Autodarts — myndavélarnar greinast sjálfkrafa (enginn rekill nauðsynlegur)',
+    '[PLACEHOLDER — fleiri skref ef við á, t.d. stillingar í Autodarts]',
 ]))}
 
 <p style="color:#555;line-height:1.6">
-  Ef þú hefur fleiri spurningar skaltu ekki hika við að hafa samband.
-</p>`;
+  Ekki hika við að hafa samband ef þú hefur frekari spurningar.
+</p>
+
+        const plain = [
+            `Hæ ${name}!`,
+            '',
+            'Takk fyrir áhugann á myndavélum! Hér eru upplýsingar um GXIVISION OV9732 sett.',
+            '',
+            'HVAÐ FYLGIR MEÐ',
+            '• 3 × GXIVISION OV9732 myndavél (32mm × 32mm)',
+            '• USB snúrur (2m og 1m)',
+            '• Autodarts DIY Cam firmware forbrunnið',
+            '• Rammi fjarlægður',
+            '',
+            'TÆKNILEGAR UPPLÝSINGAR',
+            '• Skynjari: 1MP OV9732',
+            '• Upplausn: 1280×720 (720p) — 30fps MJPG',
+            '• Sjónarhorn: 100° án skekju',
+            '• Plug & Play, engin driver',
+            '• Styður Windows, Mac, Linux, Android, Raspberry Pi',
+            '',
+            'Kveðja,',
+            'Bensi @ alit.is',
+        ].join('\n');
 
         return {
             subject: 'Upplýsingar um myndavélar — alit.is',
             html: layout(name, `${BASE_URL}/images/hero-board.jpg`, body),
-            plainText: `Hæ ${name}!\n\nTakk fyrir áhugann á myndavélum.\n\n[PLACEHOLDER — fylla inn efni]\n\nKveðja,\nBensi @ alit.is`,
+            plainText: plain,
         };
     },
 
