@@ -7,8 +7,9 @@
     "start": "func start"
   },
   "dependencies": {
+    "@azure/communication-email": "^1.0.0",
     "@azure/functions": "^4.0.0",
-    "@azure/communication-email": "^1.0.0"
+    "@azure/storage-queue": "^12.29.0"
   },
   "engines": {
     "node": ">=18"

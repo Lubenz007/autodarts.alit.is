@@ -2,7 +2,11 @@
 
 const { app } = require('@azure/functions');
 const { EmailClient } = require('@azure/communication-email');
+const { QueueServiceClient } = require('@azure/storage-queue');
 const { getTemplate } = require('../email-templates');
+
+const QUEUE_NAME  = 'product-emails';
+const DELAY_SECS  = parseInt(process.env.PRODUCT_EMAIL_DELAY_MINUTES ?? '10') * 60;
 
 const ALLOWED_ORIGINS = new Set(['https://alit.is', 'http://localhost:1313']);
 
@@ -132,24 +136,19 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                 }).then(p => p.pollUntilDone()),
             ];
 
-            // 3. Product-specific info email if a template exists for the selection
-            const tmpl = getTemplate(product);
-            if (tmpl) {
-                const t = tmpl({ name, color, message });
-                sends.push(
-                    client.beginSend({
-                        senderAddress: 'DoNotReply@alit.is',
-                        recipients: { to: [{ address: email, displayName: name }] },
-                        content: {
-                            subject: t.subject,
-                            plainText: t.plainText,
-                            html: t.html,
-                        },
-                    }).then(p => p.pollUntilDone())
+            await Promise.all(sends);
+
+            // 3. Queue a delayed product-info email if a template exists
+            if (getTemplate(product)) {
+                const queueClient = QueueServiceClient
+                    .fromConnectionString(process.env.AzureWebJobsStorage)
+                    .getQueueClient(QUEUE_NAME);
+                await queueClient.createIfNotExists();
+                await queueClient.sendMessage(
+                    Buffer.from(JSON.stringify({ name, email, product, color, message })).toString('base64'),
+                    { visibilityTimeout: DELAY_SECS }
                 );
             }
-
-            await Promise.all(sends);
 
             return { status: 200, headers, body: JSON.stringify({ ok: true }) };
         } catch (err) {
