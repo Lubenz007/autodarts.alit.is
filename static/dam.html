@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amsterdam 1.–4. október 2026</title>
+<meta name="description" content="Ferðaáætlun fyrir Amsterdam 1.–4. október 2026 með leiðsögn og bókunum.">
+<meta name="theme-color" content="#10233F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Karla:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10233F;
+    --blue:#2C5F9E;
+    --blue-soft:#E4EDF6;
+    --tile:#F3F6F9;
+    --paper:#FFFFFF;
+    --ochre:#B8842A;
+    --moss:#3F6B57;
+    --line:#D3DEE8;
+    --muted:#5A6B80;
+    --display:"Bricolage Grotesque","Trebuchet MS",sans-serif;
+    --body:"Karla","Segoe UI",system-ui,sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+
+  html{-webkit-text-size-adjust:100%;}
+
+  body{
+    margin:0;
+    background:var(--tile);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .wrap{max-width:640px;margin:0 auto;background:var(--paper);min-height:100vh;}
+
+  a{color:var(--blue);}
+  a:focus-visible,button:focus-visible{
+    outline:3px solid var(--ochre);
+    outline-offset:2px;
+    border-radius:2px;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--ink);
+    color:#fff;
+    padding:34px 22px 26px;
+  }
+  .hero .tiles{display:flex;gap:5px;margin-bottom:20px;}
+  .hero .tiles span{width:11px;height:11px;background:var(--blue);transform:rotate(45deg);}
+  .hero .tiles span:nth-child(4),.hero .tiles span:nth-child(5){background:var(--ochre);}
+  .hero h1{
+    font-family:var(--display);
+    font-weight:800;
+    font-size:clamp(2.3rem,10vw,3.1rem);
+    line-height:.95;
+    letter-spacing:-.02em;
+    margin:0 0 10px;
+  }
+  .hero .dates{
+    font-size:1.05rem;
+    color:#B9CDE4;
+    margin:0 0 22px;
+  }
+  .hotel{
+    border-top:1px solid rgba(255,255,255,.18);
+    padding-top:16px;
+    font-size:.95rem;
+  }
+  .hotel strong{display:block;font-size:1.05rem;font-weight:700;}
+  .hotel span{color:#B9CDE4;}
+  .hotel a{
+    color:#fff;
+    display:inline-block;
+    margin-top:9px;
+    border:1px solid rgba(255,255,255,.4);
+    padding:7px 14px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:.9rem;
+  }
+  .hotel a:hover{background:rgba(255,255,255,.1);}
+
+  /* ---------- Checklist ---------- */
+  .checklist{
+    background:#FBF6EA;
+    border-bottom:1px solid var(--line);
+    padding:22px;
+  }
+  .checklist h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.15rem;
+    margin:0 0 4px;
+  }
+  .checklist p.lead{margin:0 0 16px;color:var(--muted);font-size:.92rem;}
+  .checklist ul{list-style:none;margin:0;padding:0;}
+  .checklist li{
+    display:flex;
+    gap:12px;
+    padding:11px 0;
+    border-top:1px solid #EADFC6;
+    font-size:.95rem;
+  }
+  .checklist li:first-child{border-top:none;}
+  .checklist input[type=checkbox]{
+    margin-top:5px;
+    width:19px;height:19px;
+    accent-color:var(--ochre);
+    flex:0 0 auto;
+  }
+  .checklist label{cursor:pointer;}
+  .checklist .why{display:block;color:var(--muted);font-size:.86rem;margin-top:2px;}
+
+  /* ---------- Day nav ---------- */
+  .daynav{
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    display:flex;
+    overflow-x:auto;
+    scrollbar-width:none;
+  }
+  .daynav::-webkit-scrollbar{display:none;}
+  .daynav button{
+    flex:1 0 auto;
+    background:none;
+    border:none;
+    border-bottom:3px solid transparent;
+    font-family:var(--body);
+    font-size:.93rem;
+    font-weight:600;
+    color:var(--muted);
+    padding:14px 16px;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .daynav button[aria-selected="true"]{
+    color:var(--ink);
+    border-bottom-color:var(--blue);
+  }
+
+  /* ---------- Day panels ---------- */
+  .day{padding:24px 22px 34px;}
+  .day[hidden]{display:none;}
+  .day > h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.5rem;
+    margin:0 0 3px;
+  }
+  .day > p.sub{margin:0 0 26px;color:var(--muted);font-size:.93rem;}
+
+  /* ---------- Timeline ---------- */
+  ol.stops{list-style:none;margin:0;padding:0;}
+  ol.stops > li{
+    position:relative;
+    padding:0 0 26px 74px;
+  }
+  ol.stops > li::before{ /* the rail */
+    content:"";
+    position:absolute;
+    left:59px;top:9px;bottom:-4px;
+    width:1px;
+    background:var(--line);
+  }
+  ol.stops > li:last-child::before{display:none;}
+  ol.stops > li::after{ /* the tile marker */
+    content:"";
+    position:absolute;
+    left:55px;top:6px;
+    width:9px;height:9px;
+    background:var(--blue);
+    transform:rotate(45deg);
+  }
+  li.meal::after{background:var(--ochre);}
+  .time{
+    position:absolute;
+    left:0;top:1px;
+    width:46px;
+    text-align:right;
+    font-size:.85rem;
+    font-weight:700;
+    color:var(--muted);
+    font-variant-numeric:tabular-nums;
+  }
+  .stop-name{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.16rem;
+    line-height:1.25;
+    margin:0 0 3px;
+  }
+  .stop-note{margin:0;font-size:.93rem;color:var(--muted);}
+  .stop-note em{color:var(--ink);font-style:normal;font-weight:600;}
+
+  .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:11px;}
+  .actions a{
+    display:inline-block;
+    font-size:.84rem;
+    font-weight:600;
+    text-decoration:none;
+    padding:7px 12px;
+    border:1px solid var(--line);
+    background:var(--tile);
+    color:var(--blue);
+  }
+  .actions a.route{
+    background:var(--blue-soft);
+    border-color:#BBD3EA;
+  }
+  .actions a:hover{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+  .booked{
+    display:inline-block;
+    margin-top:9px;
+    font-size:.8rem;
+    font-weight:700;
+    color:var(--moss);
+    border:1px solid #C2D8CD;
+    background:#EDF4F0;
+    padding:3px 9px;
+  }
+
+  /* ---------- Sections ---------- */
+  .section{padding:28px 22px;border-top:8px solid var(--tile);}
+  .section h2{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.35rem;
+    margin:0 0 16px;
+  }
+  .card{
+    border:1px solid var(--line);
+    padding:16px;
+    margin-bottom:14px;
+  }
+  .card h3{
+    font-family:var(--display);
+    font-weight:600;
+    font-size:1.1rem;
+    margin:0 0 2px;
+  }
+  .card .when{font-size:.85rem;font-weight:700;color:var(--ochre);margin:0 0 8px;}
+  .card p{margin:0 0 10px;font-size:.93rem;color:var(--muted);}
+  .card p:last-of-type{margin-bottom:0;}
+  .card .tel{
+    font-weight:700;
+    color:var(--ink);
+    text-decoration:none;
+    border-bottom:2px solid var(--blue-soft);
+  }
+
+  dl.facts{margin:0;}
+  dl.facts div{
+    display:grid;
+    grid-template-columns:112px 1fr;
+    gap:14px;
+    padding:12px 0;
+    border-top:1px solid var(--line);
+    font-size:.93rem;
+  }
+  dl.facts div:first-child{border-top:none;}
+  dl.facts dt{font-weight:700;}
+  dl.facts dd{margin:0;color:var(--muted);}
+
+  footer{
+    padding:26px 22px 40px;
+    background:var(--ink);
+    color:#8FA9C6;
+    font-size:.85rem;
+  }
+  footer p{margin:0 0 6px;}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important;}
+  }
+  @media print{
+    .daynav{display:none;}
+    .day[hidden]{display:block!important;}
+    .actions{display:none;}
+    body{background:#fff;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="tiles" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+    <h1>Amsterdam</h1>
+    <p class="dates">Fimmtudagur 1. — sunnudagur 4. október 2026</p>
+    <div class="hotel">
+      <strong>Motel One Amsterdam-Waterlooplein</strong>
+      <span>Valkenburgerstraat 90 · metró Waterlooplein við dyrnar</span><br>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3698313%2C4.9070138&amp;query_place_id=ChIJfa9QxrwJxkcRwjIVJ1omN4c">Opna hótelið í Maps</a>
+    </div>
+  </header>
+
+  <section class="checklist">
+    <h2>Áður en þið farið</h2>
+    <p class="lead">Þrennt sem þarf að klára núna, ekki í flugvélinni.</p>
+    <ul>
+      <li>
+        <input type="checkbox" id="c1">
+        <label for="c1">Anne Frank-húsið — athuga miða á <a href="https://www.annefrank.org/en/museum/tickets/">annefrank.org</a>
+        <span class="why">Miðar fara í sölu sex vikum fram í tímann. Glugginn fyrir 2. okt er liðinn, svo leitið að afbókunum — þær koma inn daglega.</span></label>
+      </li>
+      <li>
+        <input type="checkbox" id="c2">
+        <label for="c2">Bóka tímaglugga í <a href="https://www.rijksmuseum.nl/en/tickets">Rijksmuseum</a> og <a href="https://www.vangoghmuseum.nl/en/visit/tickets">Van Gogh</a>
+        <span class="why">Van Gogh selst reglulega upp á laugardögum.</span></label>
+      </li>
+      <li>
+        <input type="checkbox" id="c3">
+        <label for="c3">Bóka borð á De Belhamel og Villa Maria
+        <span class="why">Föstudags- og laugardagskvöld í október fyllast.</span></label>
+      </li>
+      <li>
+        <input type="checkbox" id="c4">
+        <label for="c4">Greiðslukort með snertilausri greiðslu í sporvagna og metró
+        <span class="why">Ekkert sérstakt ferðakort þarf. Tappa inn og út, sitt kortið hvort.</span></label>
+      </li>
+    </ul>
+  </section>
+
+  <nav class="daynav" role="tablist" aria-label="Dagar">
+    <button role="tab" id="tab-1" aria-controls="day-1" aria-selected="true">Fim 1. okt</button>
+    <button role="tab" id="tab-2" aria-controls="day-2" aria-selected="false">Fös 2. okt</button>
+    <button role="tab" id="tab-3" aria-controls="day-3" aria-selected="false">Lau 3. okt</button>
+    <button role="tab" id="tab-4" aria-controls="day-4" aria-selected="false">Sun 4. okt</button>
+  </nav>
+
+  <!-- ============ DAY 1 ============ -->
+  <section class="day" id="day-1" role="tabpanel" aria-labelledby="tab-1">
+    <h2>Koma og fyrsta kvöldið</h2>
+    <p class="sub">Rólegur gönguhringur um gamla bæinn, svo matarhöllin.</p>
+    <ol class="stops">
+
+      <li>
+        <span class="time">13:00</span>
+        <p class="stop-name">Lending á Schiphol</p>
+        <p class="stop-note">Engin vegabréfaskoðun frá Íslandi. Lestarstöðin er beint undir komusalnum — fylgið skiltum með lestartákni.</p>
+      </li>
+
+      <li>
+        <span class="time">13:45</span>
+        <p class="stop-name">Lest á Amsterdam Centraal</p>
+        <p class="stop-note">15 mínútur, ferð á 10 mínútna fresti, um <em>6 evrur</em> á mann. Kaupið í sjálfsala eða tappið kortinu á hliðið.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=Schiphol+Airport&amp;destination=Amsterdam+Centraal&amp;travelmode=transit">Leiðsögn</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">14:30</span>
+        <p class="stop-name">Innritun á Motel One</p>
+        <p class="stop-note">Metró 51, 53 eða 54 eina stöð frá Centraal á Waterlooplein. Annars 20 mínútna ganga meðfram síkjunum.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=Amsterdam+Centraal&amp;destination=52.3698313%2C4.9070138&amp;travelmode=transit">Leiðsögn</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">15:15</span>
+        <p class="stop-name">Waterlooplein-markaðurinn</p>
+        <p class="stop-note">Flóamarkaður í næstu götu við hótelið. Lokar um 17:30 og er lokaður á sunnudögum.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3698313%2C4.9070138&amp;destination=52.3690%2C4.9028&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Waterlooplein+Market+Amsterdam">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">16:00</span>
+        <p class="stop-name">Nieuwmarkt og De Waag</p>
+        <p class="stop-note">De Waag er elsta veraldlega byggingin í Amsterdam, frá 1488. Torgið er umkringt kaffihúsum — gott stopp fyrir fyrsta bjórinn.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3690%2C4.9028&amp;destination=52.3727115%2C4.9004026&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3727115%2C4.9004026&amp;query_place_id=ChIJVR5Sl74JxkcRPvBLwwIgPmA">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">17:00</span>
+        <p class="stop-name">Dam-torg og Konungshöllin</p>
+        <p class="stop-note">15 mínútna ganga vestur eftir Zeedijk og Warmoesstraat. Hjarta borgarinnar, Nieuwe Kerk við hliðina.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3727115%2C4.9004026&amp;destination=52.3730%2C4.8926&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Dam+Square+Amsterdam">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li class="meal">
+        <span class="time">19:00</span>
+        <p class="stop-name">Kvöldverður: Foodhallen</p>
+        <p class="stop-note">Um 20 matarbásar í gömlu sporvagnaskýli í Oud-West. <em>Engar borðapantanir</em> — finnið borð fyrst, pantið svo. Opið til 23:00. Sporvagn 17 frá Dam, um 20 mínútur.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3730%2C4.8926&amp;destination=52.3667899%2C4.8679146&amp;travelmode=transit">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3667899%2C4.8679146&amp;query_place_id=ChIJtWMWEeAJxkcR7PV7zX9aRh0">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">22:00</span>
+        <p class="stop-name">Heim á hótel</p>
+        <p class="stop-note">Sporvagn 17 á Centraal, svo metró á Waterlooplein. Um 30 mínútur.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3667899%2C4.8679146&amp;destination=52.3698313%2C4.9070138&amp;travelmode=transit">Leiðsögn</a>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ DAY 2 ============ -->
+  <section class="day" id="day-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+    <h2>Söfn og rómantískt kvöld</h2>
+    <p class="sub">Snemma af stað. Bæði söfnin krefjast bókaðs tímaglugga.</p>
+    <ol class="stops">
+
+      <li>
+        <span class="time">09:00</span>
+        <p class="stop-name">Anne Frank-húsið</p>
+        <p class="stop-note">Aðeins með bókaðan tíma — engir miðar seldir á staðnum. Reiknið með 90 mínútum. Sporvagn 14 frá Mr. Visserplein á Westermarkt.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3698313%2C4.9070138&amp;destination=52.3752182%2C4.8839765&amp;travelmode=transit">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3752182%2C4.8839765&amp;query_place_id=ChIJSRE-IcUJxkcRCltjPmVdmtQ">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">10:45</span>
+        <p class="stop-name">Jordaan og Níu strætin</p>
+        <p class="stop-note">Beint suður frá Anne Frank-húsinu. Þröngar götur, litlar búðir og fallegustu síkin í borginni. Þetta er hverfið sem fólk man eftir.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3752182%2C4.8839765&amp;destination=52.3690%2C4.8843&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=De+Negen+Straatjes+Amsterdam">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li class="meal">
+        <span class="time">12:30</span>
+        <p class="stop-name">Hádegismatur í Níu strætum</p>
+        <p class="stop-note">Fullt af litlum stöðum. Pancakes Amsterdam á Berenstraat fyrir hollenskar pönnukökur, eða bara samloka og kaffi á næsta horni.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=lunch+De+Negen+Straatjes+Amsterdam">Finna stað</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">14:00</span>
+        <p class="stop-name">Rijksmuseum</p>
+        <p class="stop-note">Reiknið með <em>2,5–3 klukkustundum</em>. Ókeypis fatageymsla og skápar. Byrjið á Heiðursgalleríinu á 2. hæð — Rembrandt og Vermeer eru þar.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3690%2C4.8843&amp;destination=52.3599976%2C4.8852188&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3599976%2C4.8852188&amp;query_place_id=ChIJ5Ra7we4JxkcRhYVAaq5zQ9U">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">17:00</span>
+        <p class="stop-name">Hvíld á hótelinu</p>
+        <p class="stop-note">Sporvagn 14 frá Rijksmuseum aftur á Mr. Visserplein, stutt ganga heim.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3599976%2C4.8852188&amp;destination=52.3698313%2C4.9070138&amp;travelmode=transit">Leiðsögn</a>
+        </div>
+      </li>
+
+      <li class="meal">
+        <span class="time">19:30</span>
+        <p class="stop-name">Kvöldverður: De Belhamel</p>
+        <p class="stop-note">Franskur matseðill í art nouveau-húsi þar sem Brouwersgracht og Herengracht mætast. <em>Biðjið um borð við gluggann niðri</em> — efri hæðin hefur ekki útsýnið.</p>
+        <span class="booked">Bóka fyrirfram · +31 20 622 1095</span>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3698313%2C4.9070138&amp;destination=52.3794184%2C4.8920453&amp;travelmode=transit">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3794184%2C4.8920453&amp;query_place_id=ChIJkXOJ6MgJxkcRIwjfUYItF44">Opna í Maps</a>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ DAY 3 ============ -->
+  <section class="day" id="day-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+    <h2>Van Gogh, síkin og kjötkvöldið</h2>
+    <p class="sub">Laugardagur — söfnin fyllast eftir hádegi, svo byrjið snemma.</p>
+    <ol class="stops">
+
+      <li>
+        <span class="time">09:00</span>
+        <p class="stop-name">Van Gogh-safnið</p>
+        <p class="stop-note">Fyrsti tími dagsins. Reiknið með 90 mínútum til 2 tímum. Hljóðleiðsögnin kostar lítið og er þess virði.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3698313%2C4.9070138&amp;destination=52.3580757%2C4.8812053&amp;travelmode=transit">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3580757%2C4.8812053&amp;query_place_id=ChIJX1rTlu8JxkcRGsV8-a4oKMI">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">11:30</span>
+        <p class="stop-name">Vondelpark</p>
+        <p class="stop-note">Beint vestur frá Museumplein. Stærsti garður borgarinnar og góður staður til að hvíla fæturna eftir safnið.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3580757%2C4.8812053&amp;destination=52.3579%2C4.8686&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Vondelpark+Amsterdam">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li class="meal">
+        <span class="time">13:00</span>
+        <p class="stop-name">Hádegismatur við Museumplein</p>
+        <p class="stop-note">Café Loetje á Johannes Vermeerstraat er hér rétt hjá og gerir góðan hádegismat — ef ykkur líst vel á hann getið þið sleppt Villa Maria um kvöldið og komið hingað í staðinn.</p>
+        <div class="actions">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.354382%2C4.884167&amp;query_place_id=ChIJ4cQymvEJxkcR7DCtnd76R0Q">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">14:30</span>
+        <p class="stop-name">Síkjasigling</p>
+        <p class="stop-note">Bátalægi við Stadhouderskade, göngufæri frá Museumplein. Klukkustundarferð og besta leiðin til að sjá borgina frá réttu sjónarhorni.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3579%2C4.8686&amp;destination=52.3628%2C4.8823&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=canal+cruise+Stadhouderskade+Amsterdam">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li>
+        <span class="time">16:00</span>
+        <p class="stop-name">Begijnhof og blómamarkaðurinn</p>
+        <p class="stop-note">Begijnhof er falinn garður frá 14. öld inni í miðbænum — gengið er inn um lítið hlið við Spui. Bloemenmarkt er fimm mínútum sunnar.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3628%2C4.8823&amp;destination=52.3690%2C4.8899&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Begijnhof+Amsterdam">Opna í Maps</a>
+        </div>
+      </li>
+
+      <li class="meal">
+        <span class="time">19:30</span>
+        <p class="stop-name">Kvöldverður: Villa Maria Steakhouse</p>
+        <p class="stop-note">Argentínskt grill við Leidseplein, 4,5 af 3.208 umsögnum. Blandaður kjötdiskur fyrir tvo er það sem fólk kemur fyrir.</p>
+        <span class="booked">Bóka fyrirfram · +31 20 622 3759</span>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3690%2C4.8899&amp;destination=52.3640146%2C4.8846737&amp;travelmode=walking">Leiðsögn</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=52.3640146%2C4.8846737&amp;query_place_id=ChIJG-cUBOkJxkcRQafXHl2Blws">Opna í Maps</a>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ DAY 4 ============ -->
+  <section class="day" id="day-4" role="tabpanel" aria-labelledby="tab-4" hidden>
+    <h2>Heimferð</h2>
+    <p class="sub">Reiknið með 45 mínútum frá hótelinu að flugstöðinni.</p>
+    <ol class="stops">
+
+      <li>
+        <span class="time">11:00</span>
+        <p class="stop-name">Útritun</p>
+        <p class="stop-note">Motel One geymir farangur ef flugið er seinna um daginn. Nýtið morguninn í síðasta göngutúr um gamla bæinn.</p>
+      </li>
+
+      <li>
+        <span class="time">—</span>
+        <p class="stop-name">Metró og lest á Schiphol</p>
+        <p class="stop-note">Metró frá Waterlooplein á Centraal, svo lest á flugvöllinn. Um 35 mínútur samtals. Verið á flugvellinum tveimur tímum fyrir brottför.</p>
+        <div class="actions">
+          <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;origin=52.3698313%2C4.9070138&amp;destination=Schiphol+Airport&amp;travelmode=transit">Leiðsögn</a>
+        </div>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- ============ RESTAURANTS ============ -->
+  <section class="section">
+    <h2>Matur</h2>
+
+    <div class="card">
+      <h3>Foodhallen</h3>
+      <p class="when">Fimmtudagskvöld</p>
+      <p>Hannie Dankbaarpassage 16, Oud-West. Opið alla daga 12:00–23:00. Engar borðapantanir og engin símanúmer sem þarf að hringja í — bara mæta.</p>
+      <p><a class="tel" href="tel:+31202181776">+31 20 218 1776</a></p>
+    </div>
+
+    <div class="card">
+      <h3>De Belhamel</h3>
+      <p class="when">Föstudagskvöld · rómantíkin</p>
+      <p>Brouwersgracht 60. Franskur matseðill, opið til 22:00. Biðjið sérstaklega um borð við gluggann á jarðhæð þegar þið bókið.</p>
+      <p><a class="tel" href="tel:+31206221095">+31 20 622 1095</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Villa Maria Steakhouse</h3>
+      <p class="when">Laugardagskvöld · kjötið</p>
+      <p>Lange Leidsedwarsstraat 45, við Leidseplein. Argentínskt grill, opið til 23:00.</p>
+      <p><a class="tel" href="tel:+31206223759">+31 20 622 3759</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Varaplan</h3>
+      <p><strong>Cannibale Royale</strong>, Handboogstraat 17a — rifjasteik og ribeye, hávaðasamt og afslappað, opið til 01:00. <a class="tel" href="tel:+31202337160">+31 20 233 7160</a></p>
+      <p><strong>Café Loetje</strong>, Johannes Vermeerstraat 52 — hollenski klassíkerinn, biefstuk í smjörsósu. <a class="tel" href="tel:+31206628173">+31 20 662 8173</a></p>
+      <p><strong>Blauw aan de Wal</strong>, Oudezijds Achterburgwal 99 — falinn garður, smakkmatseðill, rólegt. <a class="tel" href="tel:+31203302257">+31 20 330 2257</a></p>
+    </div>
+  </section>
+
+  <!-- ============ PRACTICAL ============ -->
+  <section class="section">
+    <h2>Gott að vita</h2>
+    <dl class="facts">
+      <div>
+        <dt>Samgöngur</dt>
+        <dd>Tappið snertilausu greiðslukorti á lesarann þegar þið farið inn og út úr sporvagni eða metró. Sitt kortið hvort — ekki hægt að borga fyrir tvo með sama korti.</dd>
+      </div>
+      <div>
+        <dt>Veður</dt>
+        <dd>10–15 stig í október og rigning líkleg. Takið regnjakka frekar en regnhlíf, það er vindasamt.</dd>
+      </div>
+      <div>
+        <dt>Hjólin</dt>
+        <dd>Hjólastígarnir eru rauðir og hjólin víkja ekki. Lítið alltaf til beggja hliða áður en þið stígið út á götu.</dd>
+      </div>
+      <div>
+        <dt>Þjórfé</dt>
+        <dd>Ekki skylda. 5–10% á veitingastöðum ef þjónustan var góð.</dd>
+      </div>
+      <div>
+        <dt>Neyðarnúmer</dt>
+        <dd>112</dd>
+      </div>
+      <div>
+        <dt>Hótel</dt>
+        <dd>Motel One Amsterdam-Waterlooplein, Valkenburgerstraat 90 · <a class="tel" href="tel:+31208207300">+31 20 820 7300</a></dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <p>Ferðaáætlun · Amsterdam 1.–4. október 2026</p>
+    <p>Opnunartímar og verð geta breyst — staðfestið hjá staðnum áður en þið leggið af stað.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+
+  function show(tab) {
+    tabs.forEach(function (t) {
+      var panel = document.getElementById(t.getAttribute('aria-controls'));
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      panel.hidden = !on;
+    });
+    tab.scrollIntoView({ block: 'nearest', inline: 'center' });
+  }
+
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { show(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var next = null;
+      if (e.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
+      if (e.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (next) { e.preventDefault(); next.focus(); show(next); }
+    });
+  });
+
+  // Opna réttan dag sjálfkrafa meðan á ferðinni stendur
+  var today = new Date();
+  if (today.getFullYear() === 2026 && today.getMonth() === 9) {
+    var d = today.getDate();
+    if (d >= 1 && d <= 4) show(tabs[d - 1]);
+  }
+
+  // Muna hakað í gátlistann
+  document.querySelectorAll('.checklist input[type=checkbox]').forEach(function (box) {
+    try {
+      if (localStorage.getItem('ams-' + box.id) === '1') box.checked = true;
+      box.addEventListener('change', function () {
+        localStorage.setItem('ams-' + box.id, box.checked ? '1' : '0');
+      });
+    } catch (err) { /* localStorage ekki í boði */ }
+  });
+})();
+</script>
+</body>
+</html>
