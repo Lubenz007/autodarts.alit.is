@@ -1,6 +1,6 @@
 ---
 title: "Bjórkassi"
-description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur og sérsniðinn texti og merki"
+description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur fylgir, sérsniðinn texti og merki"
 ---
 
 3D prentaður **bjórkassi með kælingu**. Kælikubbur situr í miðjum kassanum, á milli dósaraðanna, og heldur öllum sex dósunum köldum — á pallinum, í útilegunni eða á vellinum. Tekur **6 dósir (330 ml)** og er með handfangi sem auðvelt er að bera. Prentaður úr **PETG** — sem þolir sól, raka og högg betur en PLA — á **Bambu Lab P1S** og **H2S**.
@@ -8,12 +8,12 @@ description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur o
 <img src="/images/bjorkassi-hero.webp" alt="Bjórkassi með kælingu — dósir og kælikubbur í kassanum" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 1.5rem 0;">
 
 {{< callout type="info" >}}
-**Svartur er til á lager.** Aðrir litir eru fáanlegir eftir pöntun — og kassinn kemur með **þínum texta** á handfanginu og **þínu merki** framan á. Hafðu samband til að velja lit, texta og merki.
+**Kælikubbur fylgir með.** Svartur er til á lager, aðrir litir eftir pöntun — og kassinn kemur með **þínum texta** á handfanginu og **þínu merki** framan á. Hafðu samband til að velja lit, texta og merki.
 {{< /callout >}}
 
 ## Eiginleikar
 
-- **Kæling:** kælikubbur (3 dósa) smellpassar í miðjuna, á milli dósaraðanna, svo **báðar raðir haldast kaldar**
+- **Kæling:** kælikubbur (3 dósa) **fylgir með** og smellpassar í miðjuna, á milli dósaraðanna, svo **báðar raðir haldast kaldar**
 - Pláss fyrir **6 dósir** (3 + 3) með kælikubbinn í miðjunni
 - **Sérsniðinn texti** á handfangi — t.d. nafn, gælunafn, liðsheiti eða slagorð
 - **Sérsniðið merki** framan á kassanum
