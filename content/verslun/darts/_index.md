@@ -19,6 +19,15 @@ Fáanlegt í **öllum litum**. Hafðu samband til að velja lit.
 - Myndavélafesting með LED hring
 - Myndavélafesting með LED hring og bakplötu
 
+## Verð
+
+| Vara | Verð |
+|---|---|
+| Eingöngu myndavélar (3 stk. sett) | **8.000 kr.** |
+| Myndavélafesting — með eða án LED hrings og bakplötu | **20.000–49.000 kr.** eftir útfærslu |
+
+Sendingarkostnaður (Pósturinn eða Dropp) bætist við. Þú færð nákvæmt verð í svari við fyrirspurninni.
+
 ## Panta
 
 {{< order-info >}}

@@ -6,7 +6,7 @@
 // Each export is a function that receives { name, color, message }
 // and returns { subject, html, plainText }.
 //
-// Edit the text between the [PLACEHOLDER] markers to add your real content.
+// A template that still contains [PLACEHOLDER] text is disabled automatically (see getTemplate).
 // Image URLs point to static/images/ on alit.is — swap in better photos
 // by adding them to static/images/ and updating the src= below.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -83,7 +83,9 @@ ${section('Um vöruna', `
   allar þrjár ganga í eitt USB tengi (með deili).
 </p>`)}
 
-${section('Verð', priceTag('[PLACEHOLDER — verð]'))}
+${section('Verð', `
+${priceTag('8.000 kr.')}
+<p style="color:#555;line-height:1.6;margin-top:-8px">Fyrir settið (3 myndavélar). Sendingarkostnaður (Pósturinn eða Dropp) bætist við.</p>`)}
 
 ${section('Hvað fylgir með', `
 <ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
@@ -108,7 +110,6 @@ ${section('Uppsetning', steps([
     'Tengið USB deili (hub) við tölvuna',
     'Tengið allar þrjár myndavélarnar við deilinn',
     'Opnið Autodarts — myndavélarnar greinast sjálfkrafa (enginn rekill nauðsynlegur)',
-    '[PLACEHOLDER — fleiri skref ef við á, t.d. stillingar í Autodarts]',
 ]))}
 
 <p style="color:#555;line-height:1.6">
@@ -120,6 +121,8 @@ ${section('Uppsetning', steps([
             `Hæ ${name}!`,
             '',
             'Takk fyrir áhugann á myndavélum! Hér eru upplýsingar um GXIVISION OV9732 sett.',
+            '',
+            'VERÐ: 8.000 kr. fyrir settið (3 myndavélar). Sendingarkostnaður bætist við.',
             '',
             'HVAÐ FYLGIR MEÐ',
             '• 3 × GXIVISION OV9732 myndavél (32mm × 32mm)',
@@ -145,142 +148,97 @@ ${section('Uppsetning', steps([
         };
     },
 
-    'Myndavélafesting': ({ name, color }) => {
-        const colorNote = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong>. Við getum prentað í þeim lit.</p>` : '';
-        const body = `
-<p style="margin:0 0 16px;color:#555;line-height:1.6">
-  Takk fyrir áhugann á myndavélafestingu! Hér eru allar upplýsingar.
-</p>
-
-${colorNote}
-
-${section('Um vöruna', `
-<p style="color:#555;line-height:1.6">
-  [PLACEHOLDER — lýstu festingunni: efni, styrkur, hvernig hún passar o.s.frv.]
-</p>`)}
-
-${section('Verð', priceTag('[PLACEHOLDER — t.d. 5.500 kr.]'))}
-
-${section('Uppsetning', steps([
-    '[PLACEHOLDER — skref 1, t.d. festið festinguna á dartborðið]',
-    '[PLACEHOLDER — skref 2, t.d. setjið myndavélina í festinguna]',
-    '[PLACEHOLDER — skref 3, t.d. tengið USB snúru]',
-]))}
-
-${section('Samhæft við', `
-<ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
-  <li>[PLACEHOLDER — t.d. Autodarts]</li>
-  <li>[PLACEHOLDER — t.d. Darts for Windows]</li>
-</ul>`)}
-
-<p style="color:#555;line-height:1.6">
-  Ef þú hefur fleiri spurningar skaltu ekki hika við að hafa samband.
-</p>`;
-
-        return {
-            subject: 'Upplýsingar um myndavélafestingu — alit.is',
-            html: layout(name, `${BASE_URL}/images/hero-board.jpg`, body),
-            plainText: `Hæ ${name}!\n\nTakk fyrir áhugann á myndavélafestingu.\n\n[PLACEHOLDER — fylla inn efni]\n\nKveðja,\nBensi @ alit.is`,
-        };
-    },
-
-    'Myndavélafesting með LED hring': ({ name, color }) => {
-        const colorNote = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong>. Við getum prentað í þeim lit.</p>` : '';
-        const body = `
-<p style="margin:0 0 16px;color:#555;line-height:1.6">
-  Takk fyrir áhugann á myndavélafestingu með LED hring! Hér eru allar upplýsingar.
-</p>
-
-${colorNote}
-
-${section('Um vöruna', `
-<p style="color:#555;line-height:1.6">
-  [PLACEHOLDER — lýstu festingunni og LED hringnum: birta, litir, hvernig hann eykur nákvæmni kerfisins o.s.frv.]
-</p>`)}
-
-${section('Verð', priceTag('[PLACEHOLDER — t.d. 7.500 kr.]'))}
-
-${section('Hvað fylgir með', `
-<ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
-  <li>[PLACEHOLDER — t.d. 3D prentuð festing]</li>
-  <li>[PLACEHOLDER — t.d. LED hringur]</li>
-  <li>[PLACEHOLDER — t.d. USB snúra fyrir LED]</li>
-  <li>[PLACEHOLDER — t.d. uppsetningarleiðbeiningar]</li>
-</ul>`)}
-
-${section('Uppsetning', steps([
-    '[PLACEHOLDER — skref 1]',
-    '[PLACEHOLDER — skref 2]',
-    '[PLACEHOLDER — skref 3]',
-    '[PLACEHOLDER — skref 4, t.d. kveikið á LED hringnum]',
-]))}
-
-<p style="color:#555;line-height:1.6">
-  Ef þú hefur fleiri spurningar skaltu ekki hika við að hafa samband.
-</p>`;
-
-        return {
-            subject: 'Upplýsingar um myndavélafestingu með LED hring — alit.is',
-            html: layout(name, `${BASE_URL}/images/hero-ring.jpg`, body),
-            plainText: `Hæ ${name}!\n\nTakk fyrir áhugann á myndavélafestingu með LED hring.\n\n[PLACEHOLDER — fylla inn efni]\n\nKveðja,\nBensi @ alit.is`,
-        };
-    },
-
-    'Myndavélafesting með LED hring og bakplötu': ({ name, color }) => {
-        const colorNote = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong>. Við getum prentað í þeim lit.</p>` : '';
-        const body = `
-<p style="margin:0 0 16px;color:#555;line-height:1.6">
-  Takk fyrir áhugann á fullkominni myndavélafestingu með LED hring og bakplötu! Þetta er flottasta útgáfan okkar.
-</p>
-
-${colorNote}
-
-${section('Um vöruna', `
-<p style="color:#555;line-height:1.6">
-  [PLACEHOLDER — lýstu fullkomna settinu: bakplatan, LED hringurinn, festingin og hvernig þau vinna saman]
-</p>`)}
-
-${section('Verð', priceTag('[PLACEHOLDER — t.d. 9.500 kr.]'))}
-
-${section('Hvað fylgir með', `
-<ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
-  <li>[PLACEHOLDER — t.d. 3D prentuð festing]</li>
-  <li>[PLACEHOLDER — t.d. LED hringur]</li>
-  <li>[PLACEHOLDER — t.d. bakplata]</li>
-  <li>[PLACEHOLDER — t.d. allar skrúfur og festingar]</li>
-  <li>[PLACEHOLDER — t.d. USB snúra]</li>
-  <li>[PLACEHOLDER — t.d. uppsetningarleiðbeiningar]</li>
-</ul>`)}
-
-${section('Uppsetning', steps([
-    '[PLACEHOLDER — skref 1, t.d. festið bakplötuna á dartborðið]',
-    '[PLACEHOLDER — skref 2]',
-    '[PLACEHOLDER — skref 3]',
-    '[PLACEHOLDER — skref 4]',
-    '[PLACEHOLDER — skref 5, t.d. prófið í Autodarts]',
-]))}
-
-${section('Af hverju bakplata?', `
-<p style="color:#555;line-height:1.6">
-  [PLACEHOLDER — útskýrðu kosti bakplötunnar: stöðugleiki, útlit, auðveld uppsetning o.s.frv.]
-</p>`)}
-
-<p style="color:#555;line-height:1.6">
-  Ef þú hefur fleiri spurningar skaltu ekki hika við að hafa samband.
-</p>`;
-
-        return {
-            subject: 'Upplýsingar um myndavélafestingu með LED hring og bakplötu — alit.is',
-            html: layout(name, `${BASE_URL}/images/hero-led.jpg`, body),
-            plainText: `Hæ ${name}!\n\nTakk fyrir áhugann á myndavélafestingu með LED hring og bakplötu.\n\n[PLACEHOLDER — fylla inn efni]\n\nKveðja,\nBensi @ alit.is`,
-        };
-    },
+    'Myndavélafesting':                             (args) => festingTemplate('Myndavélafesting', args),
+    'Myndavélafesting með LED hring':               (args) => festingTemplate('Myndavélafesting með LED hring', args),
+    'Myndavélafesting með LED hring og bakplötu':   (args) => festingTemplate('Myndavélafesting með LED hring og bakplötu', args),
 
     // ── Bjórkassi ────────────────────────────────────────────────────────────
     'Bjórkassi með kælingu': (args) => bjorkassiTemplate(args),
     'Bjórkassi með kælingu, sérsniðnum texta og merki': (args) => bjorkassiTemplate(args),
 
 };
+
+// Shared template for the three camera-mount variants
+const FESTING_VARIANTS = {
+    'Myndavélafesting': {
+        heading: 'myndavélafestingu',
+        includes: ['3D prentuð festing fyrir þrjár Autodarts myndavélar'],
+    },
+    'Myndavélafesting með LED hring': {
+        heading: 'myndavélafestingu með LED hring',
+        includes: ['3D prentuð festing fyrir þrjár Autodarts myndavélar', 'LED hringur sem lýsir jafnt á borðið'],
+    },
+    'Myndavélafesting með LED hring og bakplötu': {
+        heading: 'myndavélafestingu með LED hring og bakplötu',
+        includes: ['3D prentuð festing fyrir þrjár Autodarts myndavélar', 'LED hringur sem lýsir jafnt á borðið', 'Bakplata á bak við borðið'],
+    },
+};
+
+function festingTemplate(product, { name, color }) {
+    const v = FESTING_VARIANTS[product];
+    const colorNote = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong> — festingin er prentuð í þeim lit sem þú velur.</p>` : '';
+    const body = `
+<p style="margin:0 0 16px;color:#555;line-height:1.6">
+  Takk fyrir áhugann á ${v.heading}! Hér eru helstu upplýsingar á meðan ég tek saman nákvæmt verð og afhendingartíma fyrir þig.
+</p>
+
+${colorNote}
+
+${section('Um vöruna', `
+<p style="color:#555;line-height:1.6">
+  Sérsniðin lausn fyrir Autodarts uppsetningu, hönnuð og prentuð af mér á Bambu Lab P1S og H2S — fáanleg í öllum litum.
+</p>
+<ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
+  ${v.includes.map(i => `<li>${i}</li>`).join('\n  ')}
+</ul>
+<p style="color:#555;line-height:1.6">
+  Vantar þig myndavélar líka? Ég sel <strong>GXIVISION OV9732</strong> sett (3 stk., tilbúið fyrir Autodarts) á 8.000 kr. — nefndu það í svari.
+</p>`)}
+
+${section('Verð', `
+${priceTag('20.000–49.000 kr.')}
+<p style="color:#555;line-height:1.6;margin-top:-8px">
+  Endanlegt verð fer eftir útfærslu — festing, LED hringur og bakplata. Sendingarkostnaður (Pósturinn eða Dropp) bætist við. Nákvæmt verð kemur í svari frá mér.
+</p>`)}
+
+${section('Næstu skref', steps([
+    'Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
+    'Þú staðfestir útfærslu og lit.',
+    'Prentað sérstaklega fyrir þig og sent með Póstinum eða Dropp — eða sótt eftir samkomulagi.',
+]))}
+
+<p style="color:#555;line-height:1.6">
+  Myndir af uppsetningum: <a href="${BASE_URL}/verslun/darts/myndir/" style="color:${BRAND_COLOR}">alit.is/verslun/darts/myndir</a>
+</p>`;
+
+    return {
+        subject: `Upplýsingar um ${v.heading} — alit.is`,
+        html: layout(name, `${BASE_URL}/images/hero-ring.jpg`, body),
+        plainText: [
+            `Hæ ${name}!`,
+            '',
+            `Takk fyrir áhugann á ${v.heading}! Hér eru helstu upplýsingar á meðan ég tek saman nákvæmt verð og afhendingartíma.`,
+            '',
+            color ? `Litur: ${color}` : null,
+            'Verð: 20.000–49.000 kr. eftir útfærslu (festing, LED hringur, bakplata). Sendingarkostnaður bætist við.',
+            '',
+            'Innifalið:',
+            ...v.includes.map(i => `- ${i}`),
+            '',
+            'Vantar þig myndavélar líka? GXIVISION OV9732 sett (3 stk., tilbúið fyrir Autodarts) á 8.000 kr.',
+            '',
+            'Næstu skref:',
+            '1. Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
+            '2. Þú staðfestir útfærslu og lit.',
+            '3. Prentað fyrir þig og sent með Póstinum eða Dropp, eða sótt eftir samkomulagi.',
+            '',
+            `Myndir: ${BASE_URL}/verslun/darts/myndir/`,
+            '',
+            'Kveðja,',
+            'Bensi @ alit.is',
+        ].filter(l => l !== null).join('\n'),
+    };
+}
 
 // Shared template for both Bjórkassi variants
 function bjorkassiTemplate({ name, color, handleText }) {

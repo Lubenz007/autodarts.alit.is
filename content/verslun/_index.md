@@ -28,7 +28,7 @@ images:
 
   {{< hextra/feature-card
     title="Darts"
-    subtitle="Myndavélafestingar og LED hringir fyrir Autodarts — í öllum litum"
+    subtitle="Myndavélafestingar og LED hringir fyrir Autodarts — myndavélar 8.000 kr., festingar frá 20.000 kr."
     link="/verslun/darts"
     icon="star"
     class="card-photo"
