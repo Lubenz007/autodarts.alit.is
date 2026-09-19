@@ -77,6 +77,15 @@
   width: 100%;
   box-sizing: border-box;
 }
+/* Native <select> popup follows the site theme (Hextra toggles .dark on <html>) */
+.contact-form input,
+.contact-form select,
+.contact-form textarea { color-scheme: light; }
+html.dark .contact-form input,
+html.dark .contact-form select,
+html.dark .contact-form textarea { color-scheme: dark; }
+.contact-form select option { background: #fff; color: #111; }
+html.dark .contact-form select option { background: #171717; color: #e5e5e5; }
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
