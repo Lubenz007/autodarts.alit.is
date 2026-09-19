@@ -24,6 +24,10 @@ images:
 - Svartur á lager — fjöldi annarra lita eftir pöntun, t.d. í litum félagsins þíns
 - Prentaður úr sterku PETG sem hentar úti á palli
 
+## Verð
+
+**7.900–9.800 kr.** eftir útfærslu — litur, texti og merki ráða endanlegu verði. Sendingarkostnaður (Pósturinn eða Dropp) bætist við. Þú færð nákvæmt verð í svari við fyrirspurninni.
+
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin: 2rem 0;">
   <img src="/images/bjorkassi-bord.webp" alt="Bjórkassi á borði með dósum og flöskum" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
   <img src="/images/bjorkassi-kaelikubbur.webp" alt="Bjórkassi með kælikubbi í miðjunni" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
@@ -33,7 +37,7 @@ images:
 
 {{< order-info >}}
 
-Segðu mér hvaða lit og texta þú vilt — merkið sendir þú svo í tölvupósti — og ég kem aftur með verð og afhendingartíma.
+Segðu mér hvaða lit og texta þú vilt — merkið sendir þú svo í tölvupósti — og ég kem aftur með nákvæmt verð og afhendingartíma.
 
 {{< contact-form products="Bjórkassi með kælingu|Bjórkassi með kælingu, sérsniðnum texta og merki" handle="true" >}}
 

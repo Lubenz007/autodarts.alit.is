@@ -1,6 +1,6 @@
 ---
 title: "Verslun"
-description: "3D prentaðir hlutir — bjórkassi með kælingu, Autodarts festingar og sérverkefni"
+description: "3D prentaðir hlutir — bjórkassi með kælingu og Autodarts festingar"
 layout: hextra-home
 images:
   - /images/bjorkassi-hero.webp
@@ -18,7 +18,7 @@ images:
 
   {{< hextra/feature-card
     title="Bjórkassi með kælingu"
-    subtitle="6 dósir, kælikubbur fylgir — með þínum texta á handfanginu og þínu merki framan á"
+    subtitle="6 dósir, kælikubbur fylgir, þinn texti og merki — frá 7.900 kr."
     link="/verslun/bjorkassi"
     icon="gift"
     class="card-photo"
@@ -36,13 +36,5 @@ images:
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
   >}}
 
-  {{< hextra/feature-card
-    title="Sérverkefni"
-    subtitle="Áttu hugmynd, brotinn hlut eða STL skrá? Ég hanna og prenta eftir pöntun — hafðu samband"
-    link="/3d-prentun"
-    icon="sparkles"
-    class="card-tall"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(74,142,53,0.15),hsla(0,0%,100%,0));"
-  >}}
 
 {{< /hextra/feature-grid >}}

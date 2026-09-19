@@ -305,6 +305,12 @@ ${section('Um vöruna', `
   <li>Opið mynstur á hliðum: léttur, og dósirnar sjást.</li>
 </ul>`)}
 
+${section('Verð', `
+${priceTag('7.900–9.800 kr.')}
+<p style="color:#555;line-height:1.6;margin-top:-8px">
+  Endanlegt verð fer eftir útfærslu — lit, texta og merki. Sendingarkostnaður (Pósturinn eða Dropp) bætist við. Nákvæmt verð kemur í svari frá mér.
+</p>`)}
+
 ${section('Merkið þitt', `
 <p style="color:#555;line-height:1.6">
   Sendu mér merkið sem þú vilt hafa framan á kassanum með því að <strong>svara þessum pósti</strong> — helst sem PNG eða SVG með gegnsæjum bakgrunni.
@@ -331,6 +337,8 @@ ${section('Næstu skref', steps([
             '',
             color ? `Litur: ${color} (svartur er til á lager, aðra liti panta ég inn)` : null,
             handleText ? `Texti á handfang: ${handleText}` : 'Sérsniðinn texti á handfang: allt að 14 stafir — sendu mér hann í svari.',
+            '',
+            'Verð: 7.900–9.800 kr. eftir útfærslu (litur, texti, merki). Sendingarkostnaður bætist við.',
             '',
             'Um vöruna:',
             '- Kæling: 3 dósa kælikubbur fylgir með og situr í miðjunni svo báðar raðir haldast kaldar',

@@ -1,6 +1,6 @@
 ---
 title: "alit.is"
-description: "Sérsmíðaðir 3D prentaðir hlutir, hannaðir og prentaðir á Íslandi — bjórkassi með kælingu, Autodarts festingar og fleira"
+description: "3D prentaðir hlutir, hannaðir og prentaðir á Íslandi — bjórkassi með kælingu og Autodarts festingar"
 layout: hextra-home
 images:
   - /images/bjorkassi-hero.webp
@@ -11,7 +11,7 @@ images:
 </div>
 
 <div class="hx:mb-8">
-{{< hextra/hero-subtitle >}}Bjórkassi með kælingu og þínu merki, festingar fyrir Autodarts — og sérverkefni eftir pöntun. Prentað á Bambu Lab P1S og H2S.{{< /hextra/hero-subtitle >}}
+{{< hextra/hero-subtitle >}}Bjórkassi með kælingu og þínu merki, og festingar fyrir Autodarts. Hannað af mér og prentað eftir pöntun á Bambu Lab P1S og H2S.{{< /hextra/hero-subtitle >}}
 </div>
 
 <div class="hx:mb-6 hx:flex hx:flex-wrap hx:gap-3">
@@ -29,7 +29,7 @@ images:
 
   {{< hextra/feature-card
     title="Bjórkassi með kælingu"
-    subtitle="6 dósir, kælikubbur fylgir — með þínum texta á handfanginu og þínu merki framan á"
+    subtitle="6 dósir, kælikubbur fylgir, þinn texti og merki — frá 7.900 kr."
     link="/verslun/bjorkassi"
     icon="gift"
     class="card-photo"
@@ -47,13 +47,5 @@ images:
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
   >}}
 
-  {{< hextra/feature-card
-    title="Sérverkefni"
-    subtitle="Áttu hugmynd, brotinn hlut eða STL skrá? Ég hanna og prenta eftir pöntun — hafðu samband"
-    link="/3d-prentun"
-    icon="sparkles"
-    class="card-tall"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(74,142,53,0.15),hsla(0,0%,100%,0));"
-  >}}
 
 {{< /hextra/feature-grid >}}
