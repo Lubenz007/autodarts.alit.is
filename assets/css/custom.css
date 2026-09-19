@@ -110,3 +110,27 @@ body {
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
 }
 }
+/* ── Home / shop feature cards with a photo ─────────────────────────────
+   Hextra's precompiled Tailwind doesn't include arbitrary-value classes,
+   so card height and image placement are done here instead. */
+.hextra-feature-card.card-photo {
+  min-height: 340px;
+}
+@media (min-width: 768px) {
+  .hextra-feature-card.card-photo { aspect-ratio: 1.1 / 1; min-height: 0; }
+}
+.hextra-feature-card.card-photo img {
+  top: 38%;
+  left: 24px;
+  width: 110%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.hextra-feature-card.card-photo:hover img { transform: translateY(-4px); }
+html.dark .hextra-feature-card.card-photo img { opacity: 0.85; }
+/* Text-only card should match the photo cards' height on desktop */
+.hextra-feature-card.card-tall { min-height: 200px; }
+@media (min-width: 768px) {
+  .hextra-feature-card.card-tall { aspect-ratio: 1.1 / 1; }
+}

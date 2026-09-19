@@ -32,9 +32,8 @@ images:
     subtitle="6 dósir, kælikubbur fylgir — með þínum texta á handfanginu og þínu merki framan á"
     link="/verslun/bjorkassi"
     icon="gift"
-    class="hx:aspect-auto md:hx:aspect-[1.1/1] max-md:hx:min-h-[340px]"
+    class="card-photo"
     image="/images/bjorkassi-hero-800.webp"
-    imageClass="hx:top-[40%] hx:left-[24px] hx:w-[180%] sm:hx:w-[110%] dark:hx:opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(0,85,255,0.15),hsla(0,0%,100%,0));"
   >}}
 
@@ -43,9 +42,8 @@ images:
     subtitle="Myndavélafestingar og LED hringir fyrir Autodarts — í öllum litum"
     link="/verslun/darts"
     icon="star"
-    class="hx:aspect-auto md:hx:aspect-[1.1/1] max-md:hx:min-h-[340px]"
+    class="card-photo"
     image="/images/hero-ring.jpg"
-    imageClass="hx:top-[40%] hx:left-[24px] hx:w-[180%] sm:hx:w-[110%] dark:hx:opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
   >}}
 
@@ -54,7 +52,7 @@ images:
     subtitle="Áttu hugmynd, brotinn hlut eða STL skrá? Ég hanna og prenta eftir pöntun — hafðu samband"
     link="/3d-prentun"
     icon="sparkles"
-    class="hx:aspect-auto md:hx:aspect-[1.1/1] max-md:hx:min-h-[340px]"
+    class="card-tall"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(74,142,53,0.15),hsla(0,0%,100%,0));"
   >}}
 
