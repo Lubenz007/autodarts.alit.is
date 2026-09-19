@@ -362,9 +362,15 @@ ${section('Næstu skref', steps([
 }
 
 // Returns the template for the selected product, or null if no template exists
-// (null = only the generic "takk" confirmation is sent)
+// (null = only the generic "takk" confirmation is sent).
+// Templates that still contain [PLACEHOLDER] text are treated as unfinished and
+// disabled automatically — finish the text and they switch on by themselves.
 function getTemplate(product) {
-    return templates[product] ?? null;
+    const tmpl = templates[product];
+    if (!tmpl) return null;
+    const probe = tmpl({ name: 'x', color: '', handleText: '', message: '' });
+    if (/\[PLACEHOLDER/.test(probe.html + probe.plainText)) return null;
+    return tmpl;
 }
 
 module.exports = { getTemplate };
