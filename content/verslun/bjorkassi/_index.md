@@ -3,7 +3,7 @@ title: "Bjórkassi"
 description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur og sérsniðinn texti og merki"
 ---
 
-3D prentaður **bjórkassi með kælingu**. Kælikubbur passar beint í kassann og heldur bjórnum köldum — á pallinum, í útilegunni eða á vellinum. Tekur **6 dósir (330 ml)** og er með handfangi sem auðvelt er að bera. Prentaður úr **PETG** — sem þolir sól, raka og högg betur en PLA — á **Bambu Lab P1S** og **H2S**.
+3D prentaður **bjórkassi með kælingu**. Kælikubbur situr í miðjum kassanum, á milli dósaraðanna, og heldur öllum sex dósunum köldum — á pallinum, í útilegunni eða á vellinum. Tekur **6 dósir (330 ml)** og er með handfangi sem auðvelt er að bera. Prentaður úr **PETG** — sem þolir sól, raka og högg betur en PLA — á **Bambu Lab P1S** og **H2S**.
 
 <img src="/images/bjorkassi-hero.webp" alt="Bjórkassi með kælingu — dósir og kælikubbur í kassanum" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 1.5rem 0;">
 
@@ -13,8 +13,8 @@ description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur o
 
 ## Eiginleikar
 
-- **Kæling:** kælikubbur (3 dósa) smellpassar í aðra röðina og heldur bjórnum köldum
-- Pláss fyrir **6 dósir** (3 + 3) — eða 3 dósir + kælikubbur
+- **Kæling:** kælikubbur (3 dósa) smellpassar í miðjuna, á milli dósaraðanna, svo **báðar raðir haldast kaldar**
+- Pláss fyrir **6 dósir** (3 + 3) með kælikubbinn í miðjunni
 - **Sérsniðinn texti** á handfangi — t.d. nafn, gælunafn, liðsheiti eða slagorð
 - **Sérsniðið merki** framan á kassanum
 - Opið mynstur á hliðum svo dósirnar sjást og kassinn er léttur
@@ -23,7 +23,7 @@ description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur o
 
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin: 2rem 0;">
   <img src="/images/bjorkassi-bord.webp" alt="Bjórkassi á borði með dósum og flöskum" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
-  <img src="/images/bjorkassi-kaelikubbur.webp" alt="Bjórkassi með kælikubbi í annarri röðinni" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+  <img src="/images/bjorkassi-kaelikubbur.webp" alt="Bjórkassi með kælikubbi í miðjunni" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
 </div>
 
 ## Panta
