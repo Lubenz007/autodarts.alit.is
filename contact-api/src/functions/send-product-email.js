@@ -21,11 +21,11 @@ app.storageQueue('sendProductEmail', {
             return;
         }
 
-        const { name, email, product, color, message } = data;
+        const { name, email, product, color, handleText, message } = data;
         const tmpl = getTemplate(product);
         if (!tmpl) return;
 
-        const t = tmpl({ name, color, message });
+        const t = tmpl({ name, color, handleText, message });
         const client = new EmailClient(process.env.COMMUNICATION_CONNECTION_STRING);
         const poller = await client.beginSend({
             senderAddress: 'DoNotReply@alit.is',

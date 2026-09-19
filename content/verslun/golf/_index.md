@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Golf"
 description: "3D prentaðir hlutir fyrir golfsimulator og GSPro uppsetningar"
 ---

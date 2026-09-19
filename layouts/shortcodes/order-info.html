@@ -1,0 +1,30 @@
+{{/*
+  "Hvernig virkar pöntun" box — shared by all product pages.
+  Usage: {{< order-info >}}
+*/}}
+<div class="order-info">
+  <h3>Hvernig virkar pöntun?</h3>
+  <ol>
+    <li><strong>Sendu fyrirspurn</strong> með forminu hér að neðan — veldu vöru, lit og annað sem skiptir máli.</li>
+    <li><strong>Ég svara í tölvupósti</strong>, yfirleitt innan 1–2 daga, með verði og áætluðum afhendingartíma.</li>
+    <li><strong>Prentað eftir pöntun</strong> — hver hlutur er prentaður sérstaklega fyrir þig.</li>
+    <li><strong>Sent með Póstinum eða Dropp</strong> hvert á land sem er, eða sótt eftir samkomulagi.</li>
+  </ol>
+</div>
+
+{{- if not (.Page.Scratch.Get "order-info-style") }}
+{{- .Page.Scratch.Set "order-info-style" true }}
+<style>
+.order-info {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(128,128,128,0.25);
+  border-left: 4px solid #0055FF;
+  border-radius: 8px;
+  background: rgba(0,85,255,0.04);
+}
+.order-info h3 { margin: 0 0 .5rem; font-size: 1.05rem; }
+.order-info ol { margin: 0; padding-left: 1.25rem; }
+.order-info li { margin: .3rem 0; }
+</style>
+{{- end }}

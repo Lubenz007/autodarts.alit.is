@@ -33,6 +33,14 @@
     </select>
   </div>
 
+  {{ if .Get "handle" }}
+  <div class="form-group">
+    <label for="handleText">Texti á handfang <span style="font-weight:400;opacity:.7">(allt að 14 stafir)</span></label>
+    <input type="text" id="handleText" name="handleText" maxlength="18" placeholder="t.d. DUGLEGUR, ÁFRAM VALUR, GUÐMUNDUR" style="text-transform:uppercase">
+    <small style="opacity:.7">Hástafir lesast best. Merkið (logo) sendir þú á <a href="mailto:bensi@alit.is">bensi@alit.is</a> eftir að þú hefur sent fyrirspurnina.</small>
+  </div>
+  {{ end }}
+
   <div class="form-group">
     <label for="color">Litur</label>
     <input type="text" id="color" name="color" placeholder="t.d. svartur, hvítur, rauður...">

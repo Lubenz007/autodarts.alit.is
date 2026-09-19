@@ -1,6 +1,9 @@
 ---
 title: "Bjórkassi"
 description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur fylgir, sérsniðinn texti og merki"
+weight: 1
+images:
+  - /images/bjorkassi-hero.webp
 ---
 
 3D prentaður **bjórkassi með kælingu**. Kælikubbur situr í miðjum kassanum, á milli dósaraðanna, og heldur öllum sex dósunum köldum — á pallinum, í útilegunni eða á vellinum. Tekur **6 dósir (330 ml)** og er með handfangi sem auðvelt er að bera. Prentaður úr **PETG** — sem þolir sól, raka og högg betur en PLA — á **Bambu Lab P1S** og **H2S**.
@@ -15,7 +18,7 @@ description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur f
 
 - **Kæling:** kælikubbur (3 dósa) **fylgir með** og smellpassar í miðjuna, á milli dósaraðanna, svo **báðar raðir haldast kaldar**
 - Pláss fyrir **6 dósir** (3 + 3) með kælikubbinn í miðjunni
-- **Sérsniðinn texti** á handfangi — t.d. nafn, gælunafn, liðsheiti eða slagorð
+- **Sérsniðinn texti** á handfangi (allt að 14 stafir) — t.d. nafn, gælunafn, liðsheiti eða slagorð
 - **Sérsniðið merki** framan á kassanum
 - Opið mynstur á hliðum svo dósirnar sjást og kassinn er léttur
 - Svartur á lager — fjöldi annarra lita eftir pöntun, t.d. í litum félagsins þíns
@@ -28,6 +31,12 @@ description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur f
 
 ## Panta
 
-Segðu mér hvaða lit, texta og merki þú vilt og ég kem aftur með verð og afhendingartíma.
+{{< order-info >}}
 
-{{< contact-form products="Bjórkassi með kælingu|Bjórkassi með kælingu, sérsniðnum texta og merki" >}}
+Segðu mér hvaða lit og texta þú vilt — merkið sendir þú svo í tölvupósti — og ég kem aftur með verð og afhendingartíma.
+
+{{< contact-form products="Bjórkassi með kælingu|Bjórkassi með kælingu, sérsniðnum texta og merki" handle="true" >}}
+
+## Fleiri myndir
+
+{{< gallery_preview path="/verslun/bjorkassi/myndir" >}}

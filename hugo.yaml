@@ -1,5 +1,7 @@
 baseURL: https://alit.is
-languageCode: en-us
+languageCode: is
+defaultContentLanguage: is
+enableRobotsTXT: true
 title: alit.is
 
 module:
@@ -8,23 +10,28 @@ module:
 
 menu:
   main:
+    - name: Verslun
+      pageRef: /verslun
+      weight: 1
     - name: 3D Prentun
       pageRef: /3d-prentun
-      weight: 1
+      weight: 2
     - name: Um mig
       pageRef: /um
-      weight: 2
-    - name: Search
       weight: 3
+    - name: Leita
+      weight: 4
       params:
         type: search
     - name: GitHub
-      weight: 4
+      weight: 5
       url: "https://github.com/Lubenz007"
       params:
         icon: github
 
 params:
+  images:
+    - /images/bjorkassi-hero.webp
   contactApiUrl: "https://alit-contact-fn.azurewebsites.net/api/contact"
 
   # Modern theme configuration

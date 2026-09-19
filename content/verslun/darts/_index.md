@@ -1,6 +1,9 @@
 ---
 title: "Darts"
 description: "3D prentaðir hlutir og festingar fyrir Autodarts og örvarspíl"
+weight: 2
+images:
+  - /images/hero-ring.jpg
 ---
 
 Sérsniðnir 3D prentaðir hlutir fyrir Autodarts uppsetningar og örvarspíl, prentaðir á **Bambu Lab P1S** og **H2S**.
@@ -17,6 +20,8 @@ Fáanlegt í **öllum litum**. Hafðu samband til að velja lit.
 - Myndavélafesting með LED hring og bakplötu
 
 ## Panta
+
+{{< order-info >}}
 
 Veldu vöruna sem þig vantar og ég kem aftur með verð og framboð.
 

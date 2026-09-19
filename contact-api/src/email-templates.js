@@ -276,7 +276,82 @@ ${section('Af hverju bakplata?', `
         };
     },
 
+    // ── Bjórkassi ────────────────────────────────────────────────────────────
+    'Bjórkassi með kælingu': (args) => bjorkassiTemplate(args),
+    'Bjórkassi með kælingu, sérsniðnum texta og merki': (args) => bjorkassiTemplate(args),
+
 };
+
+// Shared template for both Bjórkassi variants
+function bjorkassiTemplate({ name, color, handleText }) {
+    const colorNote  = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong>. Svartur er til á lager — aðra liti panta ég inn og læt þig vita um afhendingartíma.</p>` : '';
+    const handleNote = handleText
+        ? `<p style="color:#555">Texti á handfang: <strong>${handleText}</strong> — ég staðfesti í svarinu að hann passi (allt að 14 stafir fer alltaf).</p>`
+        : `<p style="color:#555">Ef þú vilt sérsniðinn texta á handfangið (allt að 14 stafir) skaltu senda mér hann í svari við þessum pósti.</p>`;
+    const body = `
+<p style="margin:0 0 16px;color:#555;line-height:1.6">
+  Takk fyrir áhugann á bjórkassanum með kælingu! Hér eru helstu upplýsingar á meðan ég tek saman verð og afhendingartíma fyrir þig.
+</p>
+
+${colorNote}
+${handleNote}
+
+${section('Um vöruna', `
+<ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
+  <li><strong>Kæling:</strong> 3 dósa kælikubbur <strong>fylgir með</strong> og situr í miðjunni, á milli dósaraðanna, svo báðar raðir haldast kaldar.</li>
+  <li>Pláss fyrir <strong>6 dósir</strong> (330 ml), 3 + 3, með kælikubbinn í miðjunni.</li>
+  <li><strong>Sérsniðinn texti</strong> á handfangi og <strong>þitt merki</strong> framan á kassanum.</li>
+  <li>Prentaður úr sterku <strong>PETG</strong> sem þolir sól, raka og högg — hentar úti á palli, í útilegu og á vellinum.</li>
+  <li>Opið mynstur á hliðum: léttur, og dósirnar sjást.</li>
+</ul>`)}
+
+${section('Merkið þitt', `
+<p style="color:#555;line-height:1.6">
+  Sendu mér merkið sem þú vilt hafa framan á kassanum með því að <strong>svara þessum pósti</strong> — helst sem PNG eða SVG með gegnsæjum bakgrunni.
+  Einfalt merki með fáum litum kemur best út í prentun.
+</p>`)}
+
+${section('Næstu skref', steps([
+    'Ég sendi þér verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
+    'Þú staðfestir lit, texta og merki.',
+    'Kassinn er prentaður sérstaklega fyrir þig og sendur með Póstinum eða Dropp — eða sóttur eftir samkomulagi.',
+]))}
+
+<p style="color:#555;line-height:1.6">
+  Fleiri myndir: <a href="${BASE_URL}/verslun/bjorkassi/myndir/" style="color:${BRAND_COLOR}">alit.is/verslun/bjorkassi/myndir</a>
+</p>`;
+
+    return {
+        subject: 'Upplýsingar um bjórkassann með kælingu — alit.is',
+        html: layout(name, `${BASE_URL}/images/bjorkassi-hero.webp`, body),
+        plainText: [
+            `Hæ ${name}!`,
+            '',
+            'Takk fyrir áhugann á bjórkassanum með kælingu! Hér eru helstu upplýsingar á meðan ég tek saman verð og afhendingartíma.',
+            '',
+            color ? `Litur: ${color} (svartur er til á lager, aðra liti panta ég inn)` : null,
+            handleText ? `Texti á handfang: ${handleText}` : 'Sérsniðinn texti á handfang: allt að 14 stafir — sendu mér hann í svari.',
+            '',
+            'Um vöruna:',
+            '- Kæling: 3 dósa kælikubbur fylgir með og situr í miðjunni svo báðar raðir haldast kaldar',
+            '- Pláss fyrir 6 dósir (330 ml), 3 + 3',
+            '- Sérsniðinn texti á handfangi og þitt merki framan á',
+            '- Sterkt PETG sem þolir sól, raka og högg',
+            '',
+            'Merkið þitt: svaraðu þessum pósti með merkinu (PNG eða SVG með gegnsæjum bakgrunni).',
+            '',
+            'Næstu skref:',
+            '1. Ég sendi þér verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
+            '2. Þú staðfestir lit, texta og merki.',
+            '3. Kassinn er prentaður fyrir þig og sendur með Póstinum eða Dropp, eða sóttur eftir samkomulagi.',
+            '',
+            `Fleiri myndir: ${BASE_URL}/verslun/bjorkassi/myndir/`,
+            '',
+            'Kveðja,',
+            'Bensi @ alit.is',
+        ].filter(l => l !== null).join('\n'),
+    };
+}
 
 // Returns the template for the selected product, or null if no template exists
 // (null = only the generic "takk" confirmation is sent)

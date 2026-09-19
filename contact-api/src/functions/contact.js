@@ -51,6 +51,7 @@ app.http('contact', {
             const email   = p.get('email')?.trim()   ?? '';
             const product = p.get('product')          ?? '';
             const color   = p.get('color')?.trim()   ?? '';
+            const handleText = p.get('handleText')?.trim().slice(0, 40) ?? '';
             const message = p.get('message')?.trim() ?? '';
 
             if (!name || !email) {
@@ -65,6 +66,7 @@ app.http('contact', {
                 `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Netfang</td><td><a href="mailto:${esc(email)}">${esc(email)}</a></td></tr>`,
                 product ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Vara</td><td>${esc(product)}</td></tr>` : '',
                 color   ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Litur</td><td>${esc(color)}</td></tr>` : '',
+                handleText ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Texti á handfang</td><td>${esc(handleText)}</td></tr>` : '',
             ].filter(Boolean).join('\n');
 
             const html = `
@@ -79,6 +81,7 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                 `Netfang: ${email}`,
                 product ? `Vara: ${product}` : '',
                 color   ? `Litur: ${color}`   : '',
+                handleText ? `Texti á handfang: ${handleText}` : '',
                 message ? `\nSkilaboð:\n${message}` : '',
             ].filter(Boolean).join('\n');
 
@@ -87,6 +90,7 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
             const confirmRows = [
                 product ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Vara</td><td>${esc(product)}</td></tr>` : '',
                 color   ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Litur</td><td>${esc(color)}</td></tr>` : '',
+                handleText ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Texti á handfang</td><td>${esc(handleText)}</td></tr>` : '',
                 message ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Skilaboð</td><td style="white-space:pre-wrap">${esc(message)}</td></tr>` : '',
             ].filter(Boolean).join('\n');
 
@@ -107,6 +111,7 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                 '',
                 product ? `Vara: ${product}` : '',
                 color   ? `Litur: ${color}`   : '',
+                handleText ? `Texti á handfang: ${handleText}` : '',
                 message ? `Skilaboð: ${message}` : '',
                 '',
                 'Kveðja,\nalit.is',
@@ -145,7 +150,7 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                     .getQueueClient(QUEUE_NAME);
                 await queueClient.createIfNotExists();
                 await queueClient.sendMessage(
-                    Buffer.from(JSON.stringify({ name, email, product, color, message })).toString('base64'),
+                    Buffer.from(JSON.stringify({ name, email, product, color, handleText, message })).toString('base64'),
                     { visibilityTimeout: DELAY_SECS }
                 );
             }

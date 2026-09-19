@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Verkfæri"
 description: "3D prentaðir festihlutir og fylgihlutir fyrir verkfæri"
 ---

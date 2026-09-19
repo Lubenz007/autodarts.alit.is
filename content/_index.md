@@ -1,54 +1,61 @@
 ---
 title: "alit.is"
-description: "3D prentuð hlutir og fylgihlutir fyrir örvarspíl, golf, verkfæri og fleira"
+description: "Sérsmíðaðir 3D prentaðir hlutir, hannaðir og prentaðir á Íslandi — bjórkassi með kælingu, Autodarts festingar og fleira"
 layout: hextra-home
+images:
+  - /images/bjorkassi-hero.webp
 ---
 
-{{< hextra/hero-section >}}
-{{< hextra/hero-headline >}}3D Prentuð Hlutir{{< /hextra/hero-headline >}}
-{{< hextra/hero-subtitle >}}Sérsniðnir 3D prentaðir hlutir fyrir örvarspíl, golf og verkfæri — og bjórkassi með kælingu. Prentað á Bambu Lab P1S og H2S{{< /hextra/hero-subtitle >}}
-{{< /hextra/hero-section >}}
+<div class="hx:mt-6 hx:mb-6">
+{{< hextra/hero-headline >}}Sérsmíðað og 3D prentað á Íslandi{{< /hextra/hero-headline >}}
+</div>
+
+<div class="hx:mb-8">
+{{< hextra/hero-subtitle >}}Bjórkassi með kælingu og þínu merki, festingar fyrir Autodarts — og sérverkefni eftir pöntun. Prentað á Bambu Lab P1S og H2S.{{< /hextra/hero-subtitle >}}
+</div>
+
+<div class="hx:mb-6 hx:flex hx:flex-wrap hx:gap-3">
+{{< hextra/hero-button text="Skoða bjórkassann →" link="/verslun/bjorkassi/" >}}
+{{< hextra/hero-button text="Allar vörur" link="/verslun/" style="background: transparent; color: #0055FF; border: 1px solid #0055FF;" >}}
+</div>
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin: 2rem auto; max-width: 1000px;">
+  <a href="/verslun/bjorkassi/" style="display:block;"><img src="/images/bjorkassi-hero-sq.webp" alt="Bjórkassi með kælingu" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); object-fit:cover; aspect-ratio:1/1;"></a>
   <a href="/verslun/darts/" style="display:block;"><img src="/images/hero-ring.jpg" alt="Myndavélafesting" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); object-fit:cover; aspect-ratio:1/1;"></a>
   <a href="/verslun/darts/" style="display:block;"><img src="/images/hero-led.jpg" alt="Myndavélafesting með LED hring" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); object-fit:cover; aspect-ratio:1/1;"></a>
-  <a href="/verslun/bjorkassi/" style="display:block;"><img src="/images/bjorkassi-hero-sq.webp" alt="Bjórkassi með kælingu" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); object-fit:cover; aspect-ratio:1/1;"></a>
 </div>
 
 {{< hextra/feature-grid >}}
 
   {{< hextra/feature-card
+    title="Bjórkassi með kælingu"
+    subtitle="6 dósir, kælikubbur fylgir — með þínum texta á handfanginu og þínu merki framan á"
+    link="/verslun/bjorkassi"
+    icon="gift"
+    class="hx:aspect-auto md:hx:aspect-[1.1/1] max-md:hx:min-h-[340px]"
+    image="/images/bjorkassi-hero-800.webp"
+    imageClass="hx:top-[40%] hx:left-[24px] hx:w-[180%] sm:hx:w-[110%] dark:hx:opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(0,85,255,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
     title="Darts"
-    subtitle="3D prentaðir hlutir og festingar fyrir Autodarts og örvarspíl"
+    subtitle="Myndavélafestingar og LED hringir fyrir Autodarts — í öllum litum"
     link="/verslun/darts"
     icon="star"
+    class="hx:aspect-auto md:hx:aspect-[1.1/1] max-md:hx:min-h-[340px]"
+    image="/images/hero-ring.jpg"
+    imageClass="hx:top-[40%] hx:left-[24px] hx:w-[180%] sm:hx:w-[110%] dark:hx:opacity-80"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
   >}}
 
   {{< hextra/feature-card
-    title="Golf"
-    subtitle="3D prentaðir hlutir fyrir golfsimulator og GSPro uppsetningar"
-    link="/verslun/golf"
-    icon="academic-cap"
+    title="Sérverkefni"
+    subtitle="Áttu hugmynd, brotinn hlut eða STL skrá? Ég hanna og prenta eftir pöntun — hafðu samband"
+    link="/3d-prentun"
+    icon="sparkles"
+    class="hx:aspect-auto md:hx:aspect-[1.1/1] max-md:hx:min-h-[340px]"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(74,142,53,0.15),hsla(0,0%,100%,0));"
-  >}}
-
-  {{< hextra/feature-card
-    title="Verkfæri"
-    subtitle="3D prentaðir festihlutir og fylgihlutir fyrir verkfæri"
-    link="/verslun/milwaukee"
-    icon="cog"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(220,88,11,0.15),hsla(0,0%,100%,0));"
-  >}}
-
-  {{< hextra/feature-card
-    title="Bjórkassi"
-    subtitle="3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur fylgir, þinn texti og merki"
-    link="/verslun/bjorkassi"
-    icon="gift"
-    image="/images/bjorkassi-hero-800.webp"
-    imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
-    style="background: radial-gradient(ellipse at 50% 80%,rgba(0,85,255,0.15),hsla(0,0%,100%,0));"
   >}}
 
 {{< /hextra/feature-grid >}}
