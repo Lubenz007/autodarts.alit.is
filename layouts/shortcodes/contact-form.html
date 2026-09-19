@@ -19,14 +19,16 @@
     <input type="email" id="email" name="email" placeholder="netfang@dæmi.is" required>
   </div>
 
+  {{/* Product list can be overridden per page: {{< contact-form products="Vara A|Vara B" >}} */}}
+  {{ $defaultProducts := "Eingöngu myndavélar|Myndavélafesting|Myndavélafesting með LED hring|Myndavélafesting með LED hring og bakplötu" }}
+  {{ $products := split (.Get "products" | default $defaultProducts) "|" }}
   <div class="form-group">
     <label for="product">Vara</label>
     <select id="product" name="product">
       <option value="">— Veldu vöru —</option>
-      <option value="Eingöngu myndavélar">Eingöngu myndavélar</option>
-      <option value="Myndavélafesting">Myndavélafesting</option>
-      <option value="Myndavélafesting með LED hring">Myndavélafesting með LED hring</option>
-      <option value="Myndavélafesting með LED hring og bakplötu">Myndavélafesting með LED hring og bakplötu</option>
+      {{ range $products }}
+      <option value="{{ . }}">{{ . }}</option>
+      {{ end }}
       <option value="Annað">Annað / ekki viss</option>
     </select>
   </div>

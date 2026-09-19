@@ -6,7 +6,7 @@ layout: hextra-home
 
 {{< hextra/hero-section >}}
 {{< hextra/hero-headline >}}3D Prentuð Hlutir{{< /hextra/hero-headline >}}
-{{< hextra/hero-subtitle >}}Sérsniðnir 3D prentaðir hlutir fyrir örvarspíl, golf og Milwaukee verkfæri{{< /hextra/hero-subtitle >}}
+{{< hextra/hero-subtitle >}}Sérsniðnir 3D prentaðir hlutir fyrir örvarspíl, golf, verkfæri og fleira{{< /hextra/hero-subtitle >}}
 {{< /hextra/hero-section >}}
 
 {{< hextra/feature-grid >}}
@@ -33,6 +33,16 @@ layout: hextra-home
     link="/verslun/milwaukee"
     icon="cog"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(220,88,11,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
+    title="Bjórkassi"
+    subtitle="3D prentaður bjórkassi fyrir 6 dósir með sérsniðnu nafni og merki"
+    link="/verslun/bjorkassi"
+    icon="gift"
+    image="/images/bjorkassi-hero-800.webp"
+    imageClass="hx-top-[40%] hx-left-[24px] hx-w-[180%] sm:hx-w-[110%] dark:hx-opacity-80"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(0,85,255,0.15),hsla(0,0%,100%,0));"
   >}}
 
 {{< /hextra/feature-grid >}}
