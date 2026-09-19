@@ -42,7 +42,7 @@ layout: hextra-home
 
   {{< hextra/feature-card
     title="Bjórkassi"
-    subtitle="3D prentaður bjórkassi fyrir 6 dósir með sérsniðnu nafni og merki"
+    subtitle="3D prentaður bjórkassi fyrir 6 dósir með sérsniðnum texta og merki"
     link="/verslun/bjorkassi"
     icon="gift"
     image="/images/bjorkassi-hero-800.webp"
