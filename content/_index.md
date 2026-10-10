@@ -66,7 +66,7 @@ images:
     link="/verslun/darts"
     icon="puzzle"
     class="card-photo"
-    image="/images/darts-sett/08-standur-a-vegg-800.webp"
+    image="/images/darts-sett/09-standur-an-spjalds-800.webp"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,100%,0));"
   >}}
 
