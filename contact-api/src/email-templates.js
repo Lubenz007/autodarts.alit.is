@@ -152,6 +152,10 @@ ${section('Uppsetning', steps([
     'Myndavélafesting með LED hring':               (args) => festingTemplate('Myndavélafesting með LED hring', args),
     'Myndavélafesting með LED hring og bakplötu':   (args) => festingTemplate('Myndavélafesting með LED hring og bakplötu', args),
 
+    // ── Fullbúið Autodarts sett ──────────────────────────────────────────────
+    'Fullbúið sett án myndavéla':      (args) => settTemplate(false, args),
+    'Fullbúið sett með 3 myndavélum':  (args) => settTemplate(true, args),
+
     // ── Bjórkassi ────────────────────────────────────────────────────────────
     'Bjórkassi með kælingu': (args) => bjorkassiTemplate(args),
     'Bjórkassi með kælingu, sérsniðnum texta og merki': (args) => bjorkassiTemplate(args),
@@ -233,6 +237,78 @@ ${section('Næstu skref', steps([
             '3. Prentað fyrir þig og sent með Póstinum eða Dropp, eða sótt eftir samkomulagi.',
             '',
             `Myndir: ${BASE_URL}/verslun/darts/myndir/`,
+            '',
+            'Kveðja,',
+            'Bensi @ alit.is',
+        ].filter(l => l !== null).join('\n'),
+    };
+}
+
+// Shared template for the complete, assembled Autodarts set (with or without cameras)
+function settTemplate(withCameras, { name, color }) {
+    const price = withCameras ? 'frá 52.000 kr.' : 'frá 45.000 kr.';
+    const variant = withCameras ? 'með 3 myndavélum' : 'án myndavéla';
+    const includes = [
+        'Fullsamsettur standur með 3 myndavélafestingum fyrir Autodarts',
+        'Hvítur ljósahringur (6000K) sem lýsir spjaldið jafnt upp',
+        'WLED RGB veggljós (WS2815, 12V) á bakvið — stýrt úr WLED appinu',
+        '12V aflgjafi, WLED stýring og allar skrúfur',
+        ...(withCameras ? ['3 × GXIVISION OV9732 myndavélar, tilbúnar fyrir Autodarts'] : []),
+    ];
+    const colorNote = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong> — settið er prentað í þeim lit sem þú velur.</p>` : '';
+    const body = `
+<p style="margin:0 0 16px;color:#555;line-height:1.6">
+  Takk fyrir áhugann á fullbúna Autodarts settinu (${variant})! Hér eru helstu upplýsingar á meðan ég tek saman nákvæmt verð og afhendingartíma fyrir þig.
+</p>
+
+${colorNote}
+
+${section('Hvað fylgir með', `
+<ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
+  ${includes.map(i => `<li>${i}</li>`).join('\n  ')}
+</ul>
+<p style="color:#555;line-height:1.6">
+  Settið kemur <strong>samsett, vírað og prófað</strong> — þú skrúfar það á vegginn með 4 skrúfum og tengir í innstungu.
+</p>`)}
+
+${section('Verð', `
+${priceTag(price)}
+<p style="color:#555;line-height:1.6;margin-top:-8px">
+  Sendingarkostnaður (Pósturinn eða Dropp) bætist við, eða sótt eftir samkomulagi. Nákvæmt verð kemur í svari frá mér.
+</p>`)}
+
+${section('Næstu skref', steps([
+    'Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
+    'Þú staðfestir útfærslu og lit.',
+    'Settið er prentað, sett saman og prófað — og afhent með Póstinum eða Dropp, eða sótt eftir samkomulagi.',
+]))}
+
+<p style="color:#555;line-height:1.6">
+  Myndir og myndband: <a href="${BASE_URL}/verslun/darts/fullbuid-sett/" style="color:${BRAND_COLOR}">alit.is/verslun/darts/fullbuid-sett</a>
+</p>`;
+
+    return {
+        subject: `Upplýsingar um fullbúið Autodarts sett — alit.is`,
+        html: layout(name, `${BASE_URL}/images/darts-sett/01-upplyst-spjald-800.webp`, body),
+        plainText: [
+            `Hæ ${name}!`,
+            '',
+            `Takk fyrir áhugann á fullbúna Autodarts settinu (${variant})! Hér eru helstu upplýsingar á meðan ég tek saman nákvæmt verð og afhendingartíma.`,
+            '',
+            color ? `Litur: ${color}` : null,
+            `Verð: ${price} Sendingarkostnaður bætist við.`,
+            '',
+            'Hvað fylgir með:',
+            ...includes.map(i => `- ${i}`),
+            '',
+            'Settið kemur samsett, vírað og prófað — skrúfað á vegginn með 4 skrúfum og tengt í innstungu.',
+            '',
+            'Næstu skref:',
+            '1. Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
+            '2. Þú staðfestir útfærslu og lit.',
+            '3. Settið er prentað, sett saman og prófað og afhent með Póstinum eða Dropp, eða sótt eftir samkomulagi.',
+            '',
+            `Myndir og myndband: ${BASE_URL}/verslun/darts/fullbuid-sett/`,
             '',
             'Kveðja,',
             'Bensi @ alit.is',

@@ -17,6 +17,16 @@ images:
 {{< hextra/feature-grid >}}
 
   {{< hextra/feature-card
+    title="Fullbúið Autodarts sett"
+    subtitle="Samsett og prófað, með hvítum ljósahring og WLED RGB veggljósi — frá 45.000 kr."
+    link="/verslun/darts/fullbuid-sett"
+    icon="star"
+    class="card-photo"
+    image="/images/darts-sett/01-upplyst-spjald-800.webp"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(0,85,255,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
     title="Bjórkassi með kælingu"
     subtitle="6 dósir, kælikubbur fylgir, þinn texti og merki — frá 7.900 kr."
     link="/verslun/bjorkassi"
