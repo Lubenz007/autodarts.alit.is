@@ -11,7 +11,7 @@ images:
 <img src="/images/darts-sett/01-upplyst-spjald.webp" alt="Upplýst dartspjald í fullbúnu Autodarts setti" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 1.5rem 0;">
 
 {{< callout type="info" >}}
-**Selt eingöngu fullbúið.** Allt er sett saman, vírað og prófað áður en settið fer frá mér — þú þarft bara að skrúfa það á vegginn og tengja við rafmagn.
+**Kemur fullbúið.** Allt er sett saman, vírað og prófað áður en settið fer frá mér — þú þarft bara að skrúfa það á vegginn og tengja við rafmagn. Áttu nú þegar hluta af uppsetningunni, t.d. LED hring eða myndavélar? Sjáðu [stakir hlutar](/verslun/darts/#stakir-hlutar).
 {{< /callout >}}
 
 ## Eiginleikar

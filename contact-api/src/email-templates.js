@@ -148,9 +148,9 @@ ${section('Uppsetning', steps([
         };
     },
 
-    'Myndavélafesting':                             (args) => festingTemplate('Myndavélafesting', args),
-    'Myndavélafesting með LED hring':               (args) => festingTemplate('Myndavélafesting með LED hring', args),
-    'Myndavélafesting með LED hring og bakplötu':   (args) => festingTemplate('Myndavélafesting með LED hring og bakplötu', args),
+    'Standur með myndavélafestingum':   (args) => festingTemplate('Standur með myndavélafestingum', args),
+    'Hvítur ljósahringur':              (args) => festingTemplate('Hvítur ljósahringur', args),
+    'WLED veggljós':                    (args) => festingTemplate('WLED veggljós', args),
 
     // ── Fullbúið Autodarts sett ──────────────────────────────────────────────
     'Fullbúið sett án myndavéla':      (args) => settTemplate(false, args),
@@ -162,19 +162,25 @@ ${section('Uppsetning', steps([
 
 };
 
-// Shared template for the three camera-mount variants
+// Shared template for the single parts of the Autodarts set
 const FESTING_VARIANTS = {
-    'Myndavélafesting': {
-        heading: 'myndavélafestingu',
-        includes: ['3D prentuð festing fyrir þrjár Autodarts myndavélar'],
+    'Standur með myndavélafestingum': {
+        heading: 'standinum með myndavélafestingum',
+        subj: 'standinn með myndavélafestingum',
+        price: '25.000 kr.',
+        includes: ['Miðja, 3 armar og fætur með 3 myndavélafestingum fyrir Autodarts', 'Kapalrennur fyrir myndavélasnúrur', 'Allar skrúfur — kemur samsett'],
     },
-    'Myndavélafesting með LED hring': {
-        heading: 'myndavélafestingu með LED hring',
-        includes: ['3D prentuð festing fyrir þrjár Autodarts myndavélar', 'LED hringur sem lýsir jafnt á borðið'],
+    'Hvítur ljósahringur': {
+        heading: 'hvíta ljósahringnum',
+        subj: 'hvíta ljósahringinn',
+        price: '15.000 kr.',
+        includes: ['Ljósahringur (6000K) sem lýsir spjaldið jafnt upp', 'Festist á myndavélafestingarnar', '12V aflgjafi fylgir'],
     },
-    'Myndavélafesting með LED hring og bakplötu': {
-        heading: 'myndavélafestingu með LED hring og bakplötu',
-        includes: ['3D prentuð festing fyrir þrjár Autodarts myndavélar', 'LED hringur sem lýsir jafnt á borðið', 'Bakplata á bak við borðið'],
+    'WLED veggljós': {
+        heading: 'WLED veggljósinu',
+        subj: 'WLED veggljósið',
+        price: '18.000 kr.',
+        includes: ['RGB ljósahringur (WS2815) á bakvið standinn', 'WLED stýring — stýrt úr símanum', '12V aflgjafi fylgir'],
     },
 };
 
@@ -190,7 +196,7 @@ ${colorNote}
 
 ${section('Um vöruna', `
 <p style="color:#555;line-height:1.6">
-  Sérsniðin lausn fyrir Autodarts uppsetningu, hönnuð og prentuð af mér á Bambu Lab P1S og H2S — fáanleg í öllum litum.
+  Hluti af Autodarts settinu mínu, hannaður og prentaður af mér á Bambu Lab P1S og H2S — fáanlegur í öllum litum og kemur samsettur og prófaður. Passar við aðra hluta settsins svo þú getur bætt við seinna.
 </p>
 <ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
   ${v.includes.map(i => `<li>${i}</li>`).join('\n  ')}
@@ -200,15 +206,15 @@ ${section('Um vöruna', `
 </p>`)}
 
 ${section('Verð', `
-${priceTag('20.000–49.000 kr.')}
+${priceTag(v.price)}
 <p style="color:#555;line-height:1.6;margin-top:-8px">
-  Endanlegt verð fer eftir útfærslu — festing, LED hringur og bakplata. Sendingarkostnaður (Pósturinn eða Dropp) bætist við. Nákvæmt verð kemur í svari frá mér.
+  Ef þú tekur fleiri en einn hlut saman deila þeir einum aflgjafa og verðið lækkar. Sendingarkostnaður (Pósturinn eða Dropp) bætist við. Nákvæmt verð kemur í svari frá mér.
 </p>`)}
 
 ${section('Næstu skref', steps([
     'Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
     'Þú staðfestir útfærslu og lit.',
-    'Prentað sérstaklega fyrir þig og sent með Póstinum eða Dropp — eða sótt eftir samkomulagi.',
+    'Prentað, sett saman og prófað fyrir þig og sent með Póstinum eða Dropp — eða sótt eftir samkomulagi.',
 ]))}
 
 <p style="color:#555;line-height:1.6">
@@ -216,15 +222,15 @@ ${section('Næstu skref', steps([
 </p>`;
 
     return {
-        subject: `Upplýsingar um ${v.heading} — alit.is`,
-        html: layout(name, `${BASE_URL}/images/hero-ring.jpg`, body),
+        subject: `Upplýsingar um ${v.subj} — alit.is`,
+        html: layout(name, `${BASE_URL}/images/darts-sett/01-upplyst-spjald-800.webp`, body),
         plainText: [
             `Hæ ${name}!`,
             '',
             `Takk fyrir áhugann á ${v.heading}! Hér eru helstu upplýsingar á meðan ég tek saman nákvæmt verð og afhendingartíma.`,
             '',
             color ? `Litur: ${color}` : null,
-            'Verð: 20.000–49.000 kr. eftir útfærslu (festing, LED hringur, bakplata). Sendingarkostnaður bætist við.',
+            `Verð: ${v.price} Fleiri hlutar saman deila einum aflgjafa og verðið lækkar. Sendingarkostnaður bætist við.`,
             '',
             'Innifalið:',
             ...v.includes.map(i => `- ${i}`),

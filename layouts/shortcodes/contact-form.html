@@ -20,7 +20,7 @@
   </div>
 
   {{/* Product list can be overridden per page: {{< contact-form products="Vara A|Vara B" >}} */}}
-  {{ $defaultProducts := "Fullbúið sett án myndavéla|Fullbúið sett með 3 myndavélum|Eingöngu myndavélar|Myndavélafesting|Myndavélafesting með LED hring|Myndavélafesting með LED hring og bakplötu" }}
+  {{ $defaultProducts := "Fullbúið sett án myndavéla|Fullbúið sett með 3 myndavélum|Standur með myndavélafestingum|Hvítur ljósahringur|WLED veggljós|Eingöngu myndavélar" }}
   {{ $products := split (.Get "products" | default $defaultProducts) "|" }}
   <div class="form-group">
     <label for="product">Vara</label>
