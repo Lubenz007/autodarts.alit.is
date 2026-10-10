@@ -109,7 +109,6 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.2);
 }
-}
 /* ── Home / shop feature cards with a photo ─────────────────────────────
    Hextra's precompiled Tailwind doesn't include arbitrary-value classes,
    so card height and image placement are done here instead. */
@@ -134,3 +133,112 @@ html.dark .hextra-feature-card.card-photo img { opacity: 0.85; }
 @media (min-width: 768px) {
   .hextra-feature-card.card-tall { aspect-ratio: 1.1 / 1; }
 }
+
+/* ── Home page: featured product, photo mosaic, how-it-works steps ───── */
+.home-showcase {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(128,128,128,0.2);
+  background: radial-gradient(ellipse at 20% 0%, rgba(0,85,255,0.10), transparent 60%);
+}
+@media (min-width: 768px) {
+  .home-showcase { grid-template-columns: 1.3fr 1fr; padding: 2rem; }
+}
+.home-showcase-media video {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  background: #000;
+}
+.home-showcase-text h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0.5rem 0 0.75rem;
+}
+.home-showcase-text p { margin: 0 0 0.75rem; opacity: 0.9; }
+.home-showcase-text ul { margin: 0 0 1rem; padding-left: 1.2rem; list-style: disc; }
+.home-showcase-text li { margin: 0.2rem 0; opacity: 0.9; }
+.home-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: #0055FF;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.home-price { font-size: 1.35rem; font-weight: 700; color: #0055FF; }
+html.dark .home-price { color: #5b8cff; }
+.home-link {
+  display: inline-block;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  background: #0055FF;
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.home-link:hover { background: #0044cc; transform: translateY(-1px); }
+
+.home-mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+}
+@media (min-width: 768px) {
+  .home-mosaic { grid-template-columns: repeat(4, 1fr); }
+}
+.home-mosaic img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease;
+}
+.home-mosaic a:hover img { transform: scale(1.03); }
+
+.home-section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 3rem 0 1.25rem;
+}
+
+.home-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+.home-step {
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(128,128,128,0.2);
+  background: rgba(0,85,255,0.03);
+}
+.home-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: #0055FF;
+  color: #fff;
+  font-weight: 700;
+}
+.home-step h3 { margin: 0.75rem 0 0.35rem; font-size: 1.05rem; font-weight: 600; }
+.home-step p { margin: 0; font-size: 0.92rem; opacity: 0.8; }
