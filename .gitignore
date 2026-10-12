@@ -2,3 +2,7 @@
 _vendor/
 contact-api/local.settings.json
 contact-api/node_modules/
+
+# Amsterdam originals (web copies live in static/images/dam/web)
+static/images/dam/*.jpg
+static/images/dam/*.mp4
