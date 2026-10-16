@@ -1,12 +1,12 @@
 ---
 title: "Pílukarusell"
-description: "Snúningsstandur fyrir 24 pílur (8 sett) — V-laga hólkar sem halda öllum pílustærðum föstum, á kúlulegu, með botni eins og pílukastspjald"
+description: "Snúningsstandur fyrir 24 pílur (8 sett) — V-laga hólkar sem halda öllum pílustærðum föstum, á legu, með botni eins og pílukastspjald"
 weight: 2
 images:
   - /images/pilukarusell/01-karusell-a-pallinum.webp
 ---
 
-**Pílukarusell** sem heldur **24 pílum — 8 settum af 3** — og snýst á kúlulegu svo þú nærð í rétta settið með einu handtaki. Hannað frá grunni hjá mér til að laga það sem fer í taugarnar á mér við aðra pílustanda: **pílurnar sitja fastar og vagga ekki**, sama hvort þær eru grannar eða þykkar. Prentað á **Bambu Lab H2S**, botninn í fjórum litum eins og alvöru spjald.
+**Pílukarusell** sem heldur **24 pílum — 8 settum af 3** — og snýst á legu svo þú nærð í rétta settið með einu handtaki. Hannað frá grunni hjá mér til að laga það sem fer í taugarnar á mér við aðra pílustanda: **pílurnar sitja fastar og vagga ekki**, sama hvort þær eru grannar eða þykkar. Prentað á **Bambu Lab H2S**, botninn í fjórum litum eins og alvöru spjald.
 
 <img src="/images/pilukarusell/01-karusell-a-pallinum.webp" alt="Pílukarusell með rauðum hólkum á botni eins og pílukastspjald, á pallinum" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 1.5rem 0;">
 
@@ -19,7 +19,7 @@ images:
 - **24 pílur** — 8 armar með 3 hólkum, eitt sett á hvern arm
 - **V-laga hólkar** sem halda bæði grönnum og þykkum pílum án þess að vagga
 - **Stútur fyrir oddinn** — styður oddinn alla leið niður, pílurnar velta ekki
-- **Snýst á kúlulegu (608)** — mjúkt og hljóðlaust, stál­lega fylgir
+- **Snýst á legu** — mjúkt og hljóðlaust
 - **Hólkarnir hallast út** (0° / 8° / 16°) svo fjaðrirnar á sama arminum **rekast ekki saman**
 - **Gluggar í hólkunum** sem snúast í spíral — þú sérð píluna og hólkurinn heldur styrk sínum
 - **Botn eins og pílukastspjald** — svartur, hvítur, rauður og grænn
@@ -42,7 +42,7 @@ images:
 | Með **veggfestingu** (hengt á vegg með tveimur skrúfum) | **9.400 kr.** |
 | Í **þínum litum** eða með **nafni** á botninum | **frá 9.900 kr.** |
 
-Kúlulega og allar skrúfur fylgja. Pílurnar á myndunum fylgja ekki. Sendingarkostnaður (Pósturinn eða Dropp) bætist við, eða sótt eftir samkomulagi.
+Lega og allar skrúfur fylgja. Pílurnar á myndunum fylgja ekki. Sendingarkostnaður (Pósturinn eða Dropp) bætist við, eða sótt eftir samkomulagi.
 
 Kaupirðu [fullbúið Autodarts sett](/verslun/darts/fullbuid-sett)? Þá færðu karusellið með fyrir **6.900 kr.**
 
