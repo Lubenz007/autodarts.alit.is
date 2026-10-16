@@ -71,6 +71,16 @@ images:
   >}}
 
   {{< hextra/feature-card
+    title="Pílukarusell"
+    subtitle="Snúningsstandur fyrir 24 pílur á kúlulegu, með botni eins og pílukastspjald — 7.900 kr."
+    link="/verslun/darts/pilukarusell"
+    icon="star"
+    class="card-photo"
+    image="/images/pilukarusell/01-karusell-a-pallinum-sq.webp"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(220,38,38,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
     title="Bjórkassi með kælingu"
     subtitle="6 dósir, kælikubbur fylgir, þinn texti og merki — frá 7.900 kr."
     link="/verslun/bjorkassi"

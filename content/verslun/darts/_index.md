@@ -20,6 +20,12 @@ Fáanlegt í **öllum litum**. Allt kemur **samsett og prófað** — hafðu sam
 
 Hagkvæmast ef þig vantar allt — settið er ódýrara en stöku hlutarnir saman.
 
+## Pílukarusell
+
+<a href="/verslun/darts/pilukarusell"><img src="/images/pilukarusell/01-karusell-a-pallinum-800.webp" alt="Pílukarusell með 24 pílum á botni eins og pílukastspjald" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 0.5rem 0 1rem;"></a>
+
+**[Pílukarusell fyrir 24 pílur →](/verslun/darts/pilukarusell)** — snúningsstandur fyrir 8 sett, á kúlulegu, með V-laga hólkum sem halda öllum pílustærðum föstum og botni eins og pílukastspjald. **7.900 kr.** — eða **6.900 kr.** með fullbúnu setti.
+
 ## Stakir hlutar
 
 Áttu nú þegar hluta af uppsetningunni? Veldu bara það sem vantar. Allir hlutar passa saman og við fullbúna settið, svo þú getur líka bætt við seinna.

@@ -37,6 +37,16 @@ images:
   >}}
 
   {{< hextra/feature-card
+    title="Pílukarusell"
+    subtitle="Snýst á kúlulegu, heldur 24 pílum (8 settum) föstum — 7.900 kr."
+    link="/verslun/darts/pilukarusell"
+    icon="star"
+    class="card-photo"
+    image="/images/pilukarusell/01-karusell-a-pallinum-sq.webp"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(220,38,38,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
     title="Darts"
     subtitle="Stakir hlutar fyrir Autodarts — standur, LED hringir og myndavélar, frá 8.000 kr."
     link="/verslun/darts"
