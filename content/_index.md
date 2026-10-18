@@ -72,7 +72,7 @@ images:
 
   {{< hextra/feature-card
     title="Pílukarusell"
-    subtitle="Snúningsstandur fyrir 24 pílur á legu, með botni eins og pílukastspjald — 7.900 kr."
+    subtitle="Snúningsstandur fyrir 24 pílur á legu, með botni eins og pílukastspjald — 5.900 kr."
     link="/verslun/darts/pilukarusell"
     icon="star"
     class="card-photo"

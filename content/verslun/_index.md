@@ -38,7 +38,7 @@ images:
 
   {{< hextra/feature-card
     title="Pílukarusell"
-    subtitle="Snýst á legu, heldur 24 pílum (8 settum) föstum — 7.900 kr."
+    subtitle="Snýst á legu, heldur 24 pílum (8 settum) föstum — 5.900 kr."
     link="/verslun/darts/pilukarusell"
     icon="star"
     class="card-photo"

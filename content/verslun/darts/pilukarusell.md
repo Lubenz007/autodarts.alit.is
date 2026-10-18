@@ -38,13 +38,13 @@ images:
 
 | Útfærsla | Verð |
 |---|---|
-| Pílukarusell með spjaldbotni | **7.900 kr.** |
-| Með **veggfestingu** (hengt á vegg með tveimur skrúfum) | **9.400 kr.** |
-| Í **þínum litum** eða með **nafni** á botninum | **frá 9.900 kr.** |
+| Pílukarusell með spjaldbotni | **5.900 kr.** |
+| Með **veggfestingu** (hengt á vegg með tveimur skrúfum) | **7.400 kr.** |
+| Í **þínum litum** eða með **nafni** á botninum | **frá 7.900 kr.** |
 
 Lega og allar skrúfur fylgja. Pílurnar á myndunum fylgja ekki. Sendingarkostnaður (Pósturinn eða Dropp) bætist við, eða sótt eftir samkomulagi.
 
-Kaupirðu [fullbúið Autodarts sett](/verslun/darts/fullbuid-sett)? Þá færðu karusellið með fyrir **6.900 kr.**
+Kaupirðu [fullbúið Autodarts sett](/verslun/darts/fullbuid-sett)? Þá færðu karusellið með fyrir **4.900 kr.**
 
 ## Myndir
 
