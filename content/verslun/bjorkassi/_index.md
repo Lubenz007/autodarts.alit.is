@@ -1,45 +1,25 @@
 ---
 title: "Bjórkassi"
-description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur fylgir, sérsniðinn texti og merki"
+description: "3D prentaður bjórkassi með kælingu — 6 dósir, kælikubbur fylgir, þinn texti og merki. Frá 7.900 kr."
+toc: false
+layout: wide
 weight: 1
 images:
   - /images/bjorkassi-hero.webp
 ---
 
-3D prentaður **bjórkassi með kælingu**. Kælikubbur situr í miðjum kassanum, á milli dósaraðanna, og heldur öllum sex dósunum köldum — á pallinum, í útilegunni eða á vellinum. Tekur **6 dósir (330 ml)** og er með handfangi sem auðvelt er að bera. Prentaður úr **PETG** — sem þolir sól, raka og högg betur en PLA — á **Bambu Lab P1S** og **H2S**.
+**6 dósir, kælikubbur í miðjunni.** Sterkt PETG sem þolir sól og raka.
 
-<img src="/images/bjorkassi-hero.webp" alt="Bjórkassi með kælingu — dósir og kælikubbur í kassanum" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); margin: 1.5rem 0;">
+{{< buy group="bjorkassi" >}}
 
-{{< callout type="info" >}}
-**Kælikubbur fylgir með.** Svartur er til á lager, aðrir litir eftir pöntun — og kassinn kemur með **þínum texta** á handfanginu og **þínu merki** framan á. Hafðu samband til að velja lit, texta og merki.
-{{< /callout >}}
-
-## Eiginleikar
-
-- **Kæling:** kælikubbur (3 dósa) **fylgir með** og smellpassar í miðjuna, á milli dósaraðanna, svo **báðar raðir haldast kaldar**
-- Pláss fyrir **6 dósir** (3 + 3) með kælikubbinn í miðjunni
-- **Sérsniðinn texti** á handfangi (allt að 14 stafir) — t.d. nafn, gælunafn, liðsheiti eða slagorð
-- **Sérsniðið merki** framan á kassanum
-- Opið mynstur á hliðum svo dósirnar sjást og kassinn er léttur
-- Svartur á lager — fjöldi annarra lita eftir pöntun, t.d. í litum félagsins þíns
-- Prentaður úr sterku PETG sem hentar úti á palli
-
-## Verð
-
-**7.900–9.800 kr.** eftir útfærslu — litur, texti og merki ráða endanlegu verði. Sendingarkostnaður (Pósturinn eða Dropp) bætist við. Þú færð nákvæmt verð í svari við fyrirspurninni.
-
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin: 2rem 0;">
-  <img src="/images/bjorkassi-bord.webp" alt="Bjórkassi á borði með dósum og flöskum" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
-  <img src="/images/bjorkassi-kaelikubbur.webp" alt="Bjórkassi með kælikubbi í miðjunni" style="width:100%; border-radius:12px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:.75rem; margin: 1rem 0 2rem;">
+  <img src="/images/bjorkassi-bord.webp" alt="Bjórkassi á borði með dósum og flöskum" style="width:100%; border-radius:12px;">
+  <img src="/images/bjorkassi-kaelikubbur.webp" alt="Bjórkassi með kælikubbi í miðjunni" style="width:100%; border-radius:12px;">
 </div>
 
-## Panta
+## Bættu við
 
-{{< order-info >}}
-
-Segðu mér hvaða lit og texta þú vilt — merkið sendir þú svo í tölvupósti — og ég kem aftur með nákvæmt verð og afhendingartíma.
-
-{{< contact-form products="Bjórkassi með kælingu|Bjórkassi með kælingu, sérsniðnum texta og merki" handle="true" >}}
+{{< products ids="pilukarusell,sett" >}}
 
 ## Fleiri myndir
 

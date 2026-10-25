@@ -1,0 +1,7 @@
+{{- /* Verslun: karfa, vörulisti og stílar á öllum síðum */ -}}
+{{- $shop := hugo.Data.shop -}}
+{{- $css := resources.Get "css/shop.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+<script>window.SHOP = {{ $shop }}; window.SHOP.endpoint = {{ site.Params.contactApiUrl }};</script>
+{{- $js := resources.Get "js/shop.js" | js.Build (dict "minify" hugo.IsProduction "target" "es2018") | fingerprint -}}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>

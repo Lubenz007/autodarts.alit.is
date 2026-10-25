@@ -1,0 +1,140 @@
+# Vörulisti verslunarinnar — öll verð, myndir og valkostir á einum stað.
+# Breyttu verði eða mynd hér og það uppfærist á öllum síðum, í körfunni og á kassanum.
+#
+# products: hver vara sem hægt er að setja í körfu
+#   legacy   = nafnið sem tölvupóstsniðmátin í contact-api þekkja (valfrjálst)
+#   text     = reitur fyrir texta (t.d. nafn eða texti á handfang)
+#   bundle_price / bundle_with = lægra verð ef ein af þessum vörum er líka í körfunni
+# groups: valið á vörusíðu — valkostir raðaðir frá ódýrasta til dýrasta
+#   parts = myndahnappar undir valinu sem útskýra hvern hlut (video: má bæta við seinna)
+
+checkout_url: /verslun/karfa/
+
+colors: [Svartur, Hvítur, Rauður, Blár, Grænn]
+
+# Stungið upp á í körfunni, ef varan er ekki þegar í körfu
+upsell: [pilukarusell, bjorkassi, sett]
+
+products:
+  standur:
+    name: Standur
+    price: 25000
+    short: 3 myndavélafestingar, án ljósa
+    image: /images/darts-sett/08-standur-a-vegg-800.webp
+    url: /verslun/darts/fullbuid-sett/
+    legacy: Standur með myndavélafestingum
+  standur-ljos:
+    name: Standur + ljósahringur
+    price: 40000
+    short: Hvítt ljós á spjaldið
+    image: /images/darts-sett/02-hvitur-ljosahringur-800.webp
+    url: /verslun/darts/fullbuid-sett/
+    legacy: Standur með myndavélafestingum
+  sett:
+    name: Fullbúið sett
+    price: 45000
+    short: Standur, ljósahringur og WLED veggljós
+    image: /images/darts-sett/01-upplyst-spjald-800.webp
+    url: /verslun/darts/fullbuid-sett/
+    legacy: Fullbúið sett án myndavéla
+    badge: Vinsælast
+  sett-myndavelar:
+    name: Fullbúið sett + myndavélar
+    price: 52000
+    short: Allt tilbúið, bara tengja
+    image: /images/darts-sett/06-upplyst-spjald-og-skjar-800.webp
+    url: /verslun/darts/fullbuid-sett/
+    legacy: Fullbúið sett með 3 myndavélum
+    badge: Allt innifalið
+
+  hvitur:
+    name: Hvítur ljósahringur
+    price: 15000
+    short: 6000K, með aflgjafa
+    image: /images/darts-sett/02-hvitur-ljosahringur-800.webp
+    url: /verslun/darts/#stakir-hlutar
+    legacy: Hvítur ljósahringur
+  wled:
+    name: WLED veggljós
+    price: 18000
+    short: RGB, stýrt úr símanum
+    image: /images/darts-sett/04-wled-graent-800.webp
+    url: /verslun/darts/#stakir-hlutar
+    legacy: WLED veggljós
+  myndavelar:
+    name: 3 myndavélar
+    price: 8000
+    short: OV9732 með USB snúrum
+    image: /images/darts-sett/06-upplyst-spjald-og-skjar-800.webp
+    url: /verslun/darts/#stakir-hlutar
+    legacy: Eingöngu myndavélar
+    no_color: true
+
+  pilukarusell:
+    name: Pílukarusell
+    price: 5900
+    bundle_price: 4900
+    bundle_with: [sett, sett-myndavelar]
+    short: 24 pílur, snýst á legu
+    image: /images/pilukarusell/01-karusell-a-pallinum-sq.webp
+    url: /verslun/darts/pilukarusell/
+  pilukarusell-vegg:
+    name: Pílukarusell + veggfesting
+    price: 7400
+    short: Hengt á vegg við spjaldið
+    image: /images/pilukarusell/02-karusell-og-lyng-sq.webp
+    url: /verslun/darts/pilukarusell/
+
+  bjorkassi:
+    name: Bjórkassi með kælingu
+    price: 7900
+    short: 6 dósir, kælikubbur fylgir
+    image: /images/bjorkassi-hero-sq.webp
+    url: /verslun/bjorkassi/
+    legacy: Bjórkassi með kælingu
+  bjorkassi-texti:
+    name: Bjórkassi með texta og merki
+    price: 9800
+    short: Þinn texti á handfangið, þitt merki framan á
+    image: /images/bjorkassi-kaelikubbur.webp
+    url: /verslun/bjorkassi/
+    legacy: Bjórkassi með kælingu, sérsniðnum texta og merki
+    text: { label: Texti á handfang, max: 14, upper: true, hint: Merkið sendir þú á bensi@alit.is eftir pöntun. }
+
+groups:
+  sett:
+    options: [standur, standur-ljos, sett, sett-myndavelar]
+    default: sett
+    includes:
+      standur: [standur]
+      standur-ljos: [standur, hvitur]
+      sett: [standur, hvitur, wled]
+      sett-myndavelar: [standur, hvitur, wled, myndavelar]
+    parts:
+      - id: standur
+        name: Standur
+        image: /images/darts-sett/08-standur-a-vegg-800.webp
+        full: /images/darts-sett/08-standur-a-vegg.webp
+        text: 3 myndavélafestingar og kapalrennur. Um 83 cm. Fest með 4 skrúfum.
+      - id: hvitur
+        name: Hvítur ljósahringur
+        image: /images/darts-sett/02-hvitur-ljosahringur-800.webp
+        full: /images/darts-sett/02-hvitur-ljosahringur.webp
+        text: Lýsir spjaldið jafnt. Engir skuggar fyrir myndavélarnar.
+      - id: wled
+        name: WLED veggljós
+        image: /images/darts-sett/04-wled-graent-800.webp
+        full: /images/darts-sett/04-wled-graent.webp
+        video: /videos/wled-veggljos.mp4
+        text: Litir og áhrif á bakvið spjaldið. Stýrt úr símanum.
+      - id: myndavelar
+        name: 3 myndavélar
+        image: /images/darts-sett/06-upplyst-spjald-og-skjar-800.webp
+        full: /images/darts-sett/06-upplyst-spjald-og-skjar.webp
+        text: Tilbúnar fyrir Autodarts. Sjá hvert kast og telja stigin.
+  karusell:
+    options: [pilukarusell, pilukarusell-vegg]
+    default: pilukarusell
+  bjorkassi:
+    options: [bjorkassi, bjorkassi-texti]
+    default: bjorkassi

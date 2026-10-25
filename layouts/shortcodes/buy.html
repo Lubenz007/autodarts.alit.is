@@ -1,0 +1,60 @@
+{{/*
+  Val frá ódýrasta til dýrasta + einn hnappur "Setja í körfu".
+  Usage: {{< buy group="sett" >}}
+  Allt kemur úr data/shop.yaml (groups.<group>).
+*/}}
+{{- $shop := hugo.Data.shop -}}
+{{- $gid := .Get "group" -}}
+{{- $g := index $shop.groups $gid -}}
+{{- $def := index $shop.products $g.default -}}
+<div class="shop-buy" data-group="{{ $gid }}">
+  <div class="shop-buy-media">
+    <img class="shop-buy-hero" src="{{ $def.image }}" alt="{{ $def.name }}">
+  </div>
+
+  <div class="shop-buy-panel">
+    <div class="shop-opts" role="radiogroup" aria-label="Veldu útfærslu">
+      {{- range $g.options }}
+      {{- $p := index $shop.products . }}
+      <label class="shop-opt">
+        <input type="radio" name="opt-{{ $gid }}" value="{{ . }}"{{ if eq . $g.default }} checked{{ end }}>
+        <img src="{{ $p.image }}" alt="" loading="lazy">
+        <span class="shop-opt-body">
+          <span class="shop-opt-name">{{ $p.name }}{{ with $p.badge }} <em class="shop-badge">{{ . }}</em>{{ end }}</span>
+          <span class="shop-opt-short">{{ $p.short }}</span>
+        </span>
+        <span class="shop-opt-price">{{ partial "shop/price.html" $p.price }}</span>
+      </label>
+      {{- end }}
+    </div>
+
+    <div class="shop-colors" {{ if $def.no_color }}hidden{{ end }}>
+      <span class="shop-label">Litur</span>
+      {{- range $i, $c := $shop.colors }}
+      <label class="shop-chip"><input type="radio" name="color-{{ $gid }}" value="{{ $c }}"{{ if eq $i 0 }} checked{{ end }}><span>{{ $c }}</span></label>
+      {{- end }}
+    </div>
+
+    <div class="shop-text" hidden>
+      <label><span class="shop-label"></span>
+        <input type="text" autocomplete="off">
+      </label>
+      <small></small>
+    </div>
+
+    <button type="button" class="shop-add">Setja í körfu · <span class="shop-add-price">{{ partial "shop/price.html" $def.price }}</span></button>
+    <p class="shop-trust">Prentað eftir pöntun · Sent um allt land með Póstinum eða Dropp</p>
+  </div>
+</div>
+
+{{- with $g.parts }}
+<div class="shop-parts" data-group="{{ $gid }}">
+  {{- range . }}
+  <button type="button" class="shop-part" data-part="{{ .id }}" data-full="{{ .full | default .image }}" data-text="{{ .text }}"{{ with .video }} data-video="{{ . }}"{{ end }}>
+    <img src="{{ .image }}" alt="{{ .name }}" loading="lazy">
+    <span class="shop-part-name">{{ .name }}</span>
+    <span class="shop-part-tag"></span>
+  </button>
+  {{- end }}
+</div>
+{{- end }}

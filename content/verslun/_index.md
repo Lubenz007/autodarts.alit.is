@@ -17,8 +17,8 @@ images:
 {{< hextra/feature-grid >}}
 
   {{< hextra/feature-card
-    title="Fullbúið Autodarts sett"
-    subtitle="Samsett og prófað, með hvítum ljósahring og WLED RGB veggljósi — frá 45.000 kr."
+    title="Autodarts sett"
+    subtitle="Samsett og prófað — veldu útfærslu, frá 25.000 kr."
     link="/verslun/darts/fullbuid-sett"
     icon="star"
     class="card-photo"

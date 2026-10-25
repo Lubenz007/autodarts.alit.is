@@ -1,0 +1,25 @@
+{{/*
+  Vörukort með verði og einum hnappi í körfu.
+  Usage: {{< products ids="hvitur,wled,myndavelar" >}}
+  Vörur með textareit (t.d. nafn) opna vörusíðuna í stað þess að fara beint í körfu.
+*/}}
+{{- $shop := hugo.Data.shop -}}
+<div class="shop-cards">
+  {{- range split (.Get "ids") "," }}
+  {{- $id := trim . " " }}
+  {{- $p := index $shop.products $id }}
+  <div class="shop-card">
+    <a href="{{ $p.url }}" class="shop-card-img"><img src="{{ $p.image }}" alt="{{ $p.name }}" loading="lazy">{{ with $p.badge }}<em class="shop-badge">{{ . }}</em>{{ end }}</a>
+    <div class="shop-card-body">
+      <a href="{{ $p.url }}" class="shop-card-name">{{ $p.name }}</a>
+      <span class="shop-card-short">{{ $p.short }}</span>
+      <span class="shop-card-price" data-price-of="{{ $id }}">{{ partial "shop/price.html" $p.price }}</span>
+      {{- if $p.text }}
+      <a href="{{ $p.url }}" class="shop-add shop-add-sm">Velja</a>
+      {{- else }}
+      <button type="button" class="shop-add shop-add-sm" data-add="{{ $id }}">Í körfu</button>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+</div>

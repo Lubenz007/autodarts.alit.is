@@ -1,0 +1,33 @@
+{{/*
+  Karfa + kassi. Pöntunin fer í tölvupósti í gegnum contact-api.
+  Usage: {{< checkout >}}
+*/}}
+<div class="shop-checkout">
+  <div class="shop-co-cart">
+    <div class="shop-co-items" aria-live="polite"></div>
+    <div class="shop-co-upsell"></div>
+  </div>
+
+  <form class="shop-co-form contact-form" novalidate>
+    <div style="display:none" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+    <div class="shop-co-total"></div>
+
+    <div class="form-group"><label for="co-name">Nafn</label><input id="co-name" name="name" autocomplete="name" required></div>
+    <div class="form-group"><label for="co-email">Netfang</label><input id="co-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="form-group"><label for="co-phone">Sími</label><input id="co-phone" name="phone" type="tel" autocomplete="tel"></div>
+
+    <fieldset class="shop-co-ship">
+      <legend class="shop-label">Afhending</legend>
+      <label class="shop-chip"><input type="radio" name="ship" value="Pósturinn" checked><span>Pósturinn</span></label>
+      <label class="shop-chip"><input type="radio" name="ship" value="Dropp"><span>Dropp</span></label>
+      <label class="shop-chip"><input type="radio" name="ship" value="Sækja"><span>Sækja</span></label>
+    </fieldset>
+    <div class="form-group shop-co-addr"><label for="co-addr">Heimilisfang</label><input id="co-addr" name="address" autocomplete="street-address" placeholder="Gata, póstnúmer, staður"></div>
+
+    <div class="form-group"><label for="co-msg">Athugasemd <span style="font-weight:400;opacity:.7">(valfrjálst)</span></label><textarea id="co-msg" name="note" rows="2" placeholder="t.d. annar litur"></textarea></div>
+
+    <div class="form-status" role="alert" aria-live="polite"></div>
+    <button type="submit" class="shop-add">Senda pöntun</button>
+    <p class="shop-trust">Þú færð staðfestingu og greiðsluupplýsingar í tölvupósti. Sendingarkostnaður bætist við.</p>
+  </form>
+</div>
