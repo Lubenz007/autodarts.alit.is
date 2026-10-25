@@ -320,7 +320,7 @@ function initCheckout(root) {
       .then((d) => {
         if (!d.ok) throw new Error(d.error);
         cart = []; save();
-        root.innerHTML = `<div class="shop-done"><b>Takk fyrir kaupin!</b><p>Kvittun með greiðsluupplýsingum er á leiðinni á ${esc(f.email.value.trim())}.</p><a class="shop-add" href="/verslun/">Aftur í verslun</a></div>`;
+        root.innerHTML = `<div class="shop-done"><b>Takk fyrir kaupin!</b><p>Varan fer nú í framleiðslu. Staðfesting er á leiðinni á ${esc(f.email.value.trim())}, og svo afhendingartími og greiðsluupplýsingar.</p><a class="shop-add" href="/verslun/">Aftur í verslun</a></div>`;
       })
       .catch((err) => show((err && err.message) || 'Nettengingarvilla. Reyndu aftur síðar.', false))
       .finally(() => { btn.disabled = false; btn.textContent = `Klára kaup · ${kr(total())}`; });

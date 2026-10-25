@@ -3,9 +3,6 @@
 const { app } = require('@azure/functions');
 const { EmailClient } = require('@azure/communication-email');
 
-// Valfrjálst: t.d. bankaupplýsingar sem fara í kvittunina til kaupanda
-const PAYMENT_INFO = process.env.PAYMENT_INFO ?? '';
-
 const ALLOWED_ORIGINS = new Set(['https://alit.is', 'http://localhost:1313']);
 
 function esc(s) {
@@ -86,16 +83,14 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
             const client = new EmailClient(process.env.COMMUNICATION_CONNECTION_STRING);
 
             // Kassinn sendir alla pöntunina (vörur, verð, afhendingu) í "message"
-            const payHtml = PAYMENT_INFO
-                ? `<h3>Greiðsla</h3><p style="white-space:pre-wrap">${esc(PAYMENT_INFO)}</p>`
-                : '<p>Greiðsluupplýsingar koma í sérstökum pósti.</p>';
+            const NEXT = 'Þú færð sendan póst fljótlega með afhendingartíma og greiðsluupplýsingum (millifærsla).';
 
             const confirmHtml = `
 <div style="font-family:sans-serif;max-width:520px">
   <h2 style="color:#0055FF">Takk fyrir kaupin, ${esc(name)}!</h2>
-  <p>Pöntunin þín er móttekin og fer í prentun.</p>
+  <p>Pöntunin þín er móttekin og <strong>varan fer nú í framleiðslu</strong>.</p>
+  <p>${NEXT}</p>
   ${message ? `<h3>Pöntunin þín</h3><p style="white-space:pre-wrap;font-size:15px">${esc(message)}</p>` : ''}
-  ${payHtml}
   <p style="margin-top:24px">Kveðja,<br><strong>alit.is</strong></p>
   <hr style="margin-top:32px">
   <small style="color:#888">Þetta er sjálfvirk kvittun. Vinsamlegast ekki svara þessum tölvupósti.</small>
@@ -104,11 +99,10 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
             const confirmPlain = [
                 `Takk fyrir kaupin, ${name}!`,
                 '',
-                'Pöntunin þín er móttekin og fer í prentun.',
+                'Pöntunin þín er móttekin og varan fer nú í framleiðslu.',
+                NEXT,
                 '',
                 message,
-                '',
-                PAYMENT_INFO ? `Greiðsla:\n${PAYMENT_INFO}` : 'Greiðsluupplýsingar koma í sérstökum pósti.',
                 '',
                 'Kveðja,\nalit.is',
             ].join('\n');
