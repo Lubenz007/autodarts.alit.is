@@ -13,21 +13,10 @@ menu:
     - name: Verslun
       pageRef: /verslun
       weight: 1
-    - name: 3D Prentun
-      pageRef: /3d-prentun
-      weight: 2
-    - name: Um mig
-      pageRef: /um
-      weight: 3
     - name: Leita
       weight: 4
       params:
         type: search
-    - name: GitHub
-      weight: 5
-      url: "https://github.com/Lubenz007"
-      params:
-        icon: github
 
 params:
   images:
@@ -65,7 +54,7 @@ params:
   footer:
     enable: true
     displayCopyright: true
-    displayPoweredBy: true
+    displayPoweredBy: false
     
   # Modern search configuration
   search:

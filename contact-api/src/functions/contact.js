@@ -2,11 +2,9 @@
 
 const { app } = require('@azure/functions');
 const { EmailClient } = require('@azure/communication-email');
-const { QueueServiceClient } = require('@azure/storage-queue');
-const { getTemplate } = require('../email-templates');
 
-const QUEUE_NAME  = 'product-emails';
-const DELAY_SECS  = parseInt(process.env.PRODUCT_EMAIL_DELAY_MINUTES ?? '10') * 60;
+// Valfrjálst: t.d. bankaupplýsingar sem fara í kvittunina til kaupanda
+const PAYMENT_INFO = process.env.PAYMENT_INFO ?? '';
 
 const ALLOWED_ORIGINS = new Set(['https://alit.is', 'http://localhost:1313']);
 
@@ -70,11 +68,11 @@ app.http('contact', {
             ].filter(Boolean).join('\n');
 
             const html = `
-<h2 style="color:#0055FF;font-family:sans-serif">Ný fyrirspurn — alit.is</h2>
+<h2 style="color:#0055FF;font-family:sans-serif">Ný pöntun — alit.is</h2>
 <table style="border-collapse:collapse;font-family:sans-serif;font-size:15px">${rows}</table>
 ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-family:sans-serif;white-space:pre-wrap">${esc(message)}</p>` : ''}
 <hr style="margin-top:24px">
-<small style="color:#888;font-family:sans-serif">Sent frá alit.is hafðu samband formi</small>`;
+<small style="color:#888;font-family:sans-serif">Sent frá kassanum á alit.is</small>`;
 
             const plain = [
                 `Nafn: ${name}`,
@@ -87,35 +85,33 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
 
             const client = new EmailClient(process.env.COMMUNICATION_CONNECTION_STRING);
 
-            const confirmRows = [
-                product ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Vara</td><td>${esc(product)}</td></tr>` : '',
-                color   ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Litur</td><td>${esc(color)}</td></tr>` : '',
-                handleText ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Texti á handfang</td><td>${esc(handleText)}</td></tr>` : '',
-                message ? `<tr><td style="padding:4px 12px 4px 0;font-weight:bold;vertical-align:top">Skilaboð</td><td style="white-space:pre-wrap">${esc(message)}</td></tr>` : '',
-            ].filter(Boolean).join('\n');
+            // Kassinn sendir alla pöntunina (vörur, verð, afhendingu) í "message"
+            const payHtml = PAYMENT_INFO
+                ? `<h3>Greiðsla</h3><p style="white-space:pre-wrap">${esc(PAYMENT_INFO)}</p>`
+                : '<p>Greiðsluupplýsingar koma í sérstökum pósti.</p>';
 
             const confirmHtml = `
 <div style="font-family:sans-serif;max-width:520px">
-  <h2 style="color:#0055FF">Takk fyrir fyrirspurnina, ${esc(name)}!</h2>
-  <p>Við höfum móttekið fyrirspurn þína og munum hafa samband við þig eins fljótt og auðið er.</p>
-  ${confirmRows ? `<h3>Samantekt á fyrirspurn</h3><table style="border-collapse:collapse;font-size:15px">${confirmRows}</table>` : ''}
+  <h2 style="color:#0055FF">Takk fyrir kaupin, ${esc(name)}!</h2>
+  <p>Pöntunin þín er móttekin og fer í prentun.</p>
+  ${message ? `<h3>Pöntunin þín</h3><p style="white-space:pre-wrap;font-size:15px">${esc(message)}</p>` : ''}
+  ${payHtml}
   <p style="margin-top:24px">Kveðja,<br><strong>alit.is</strong></p>
   <hr style="margin-top:32px">
-  <small style="color:#888">Þetta er sjálfvirk staðfesting. Vinsamlegast ekki svara þessum tölvupósti.</small>
+  <small style="color:#888">Þetta er sjálfvirk kvittun. Vinsamlegast ekki svara þessum tölvupósti.</small>
 </div>`;
 
             const confirmPlain = [
-                `Takk fyrir fyrirspurnina, ${name}!`,
+                `Takk fyrir kaupin, ${name}!`,
                 '',
-                'Við höfum móttekið fyrirspurn þína og munum hafa samband við þig eins fljótt og auðið er.',
+                'Pöntunin þín er móttekin og fer í prentun.',
                 '',
-                product ? `Vara: ${product}` : '',
-                color   ? `Litur: ${color}`   : '',
-                handleText ? `Texti á handfang: ${handleText}` : '',
-                message ? `Skilaboð: ${message}` : '',
+                message,
+                '',
+                PAYMENT_INFO ? `Greiðsla:\n${PAYMENT_INFO}` : 'Greiðsluupplýsingar koma í sérstökum pósti.',
                 '',
                 'Kveðja,\nalit.is',
-            ].filter(line => line !== undefined).join('\n');
+            ].join('\n');
 
             const sends = [
                 // 1. Notify you
@@ -124,17 +120,17 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                     recipients: { to: [{ address: 'bensi@alit.is', displayName: 'Bensi' }] },
                     replyTo: [{ address: email, displayName: name }],
                     content: {
-                        subject: `Fyrirspurn: ${name}${product ? ` — ${product}` : ''}`,
+                        subject: `Pöntun: ${name}${product ? ` — ${product}` : ''}`,
                         plainText: plain,
                         html,
                     },
                 }).then(p => p.pollUntilDone()),
-                // 2. Generic "takk" confirmation to customer
+                // 2. Kvittun til kaupanda
                 client.beginSend({
                     senderAddress: 'DoNotReply@alit.is',
                     recipients: { to: [{ address: email, displayName: name }] },
                     content: {
-                        subject: 'Við höfum móttekið fyrirspurn þína — alit.is',
+                        subject: 'Takk fyrir kaupin — alit.is',
                         plainText: confirmPlain,
                         html: confirmHtml,
                     },
@@ -142,18 +138,6 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
             ];
 
             await Promise.all(sends);
-
-            // 3. Queue a delayed product-info email if a template exists
-            if (getTemplate(product)) {
-                const queueClient = QueueServiceClient
-                    .fromConnectionString(process.env.AzureWebJobsStorage)
-                    .getQueueClient(QUEUE_NAME);
-                await queueClient.createIfNotExists();
-                await queueClient.sendMessage(
-                    Buffer.from(JSON.stringify({ name, email, product, color, handleText, message })).toString('base64'),
-                    { visibilityTimeout: DELAY_SECS }
-                );
-            }
 
             return { status: 200, headers, body: JSON.stringify({ ok: true }) };
         } catch (err) {

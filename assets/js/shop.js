@@ -264,6 +264,7 @@ function initCheckout(root) {
     $('.shop-co-items', root).innerHTML = itemsHtml();
     $('.shop-co-upsell', root).innerHTML = upsellHtml('Viltu bæta við?');
     $('.shop-co-total', root).innerHTML = `<span>Samtals</span><b>${kr(total())}</b>`;
+    btn.textContent = `Klára kaup · ${kr(total())}`;
     form.hidden = !cart.length;
   }
   onChange(render);
@@ -319,10 +320,10 @@ function initCheckout(root) {
       .then((d) => {
         if (!d.ok) throw new Error(d.error);
         cart = []; save();
-        root.innerHTML = `<div class="shop-done"><b>Takk fyrir pöntunina!</b><p>Staðfesting er á leiðinni á ${esc(f.email.value.trim())}. Ég hef samband með greiðsluupplýsingar og afhendingartíma.</p><a class="shop-add" href="/verslun/">Aftur í verslun</a></div>`;
+        root.innerHTML = `<div class="shop-done"><b>Takk fyrir kaupin!</b><p>Kvittun með greiðsluupplýsingum er á leiðinni á ${esc(f.email.value.trim())}.</p><a class="shop-add" href="/verslun/">Aftur í verslun</a></div>`;
       })
       .catch((err) => show((err && err.message) || 'Nettengingarvilla. Reyndu aftur síðar.', false))
-      .finally(() => { btn.disabled = false; btn.textContent = 'Senda pöntun'; });
+      .finally(() => { btn.disabled = false; btn.textContent = `Klára kaup · ${kr(total())}`; });
   });
 }
 

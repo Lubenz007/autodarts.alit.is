@@ -3,7 +3,7 @@
   Usage: {{< products ids="hvitur,wled,myndavelar" >}}
   Vörur með textareit (t.d. nafn) opna vörusíðuna í stað þess að fara beint í körfu.
 */}}
-{{- $shop := hugo.Data.shop -}}
+{{- $shop := site.Data.shop -}}
 <div class="shop-cards">
   {{- range split (.Get "ids") "," }}
   {{- $id := trim . " " }}

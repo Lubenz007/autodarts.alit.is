@@ -3,7 +3,7 @@
   Usage: {{< buy group="sett" >}}
   Allt kemur úr data/shop.yaml (groups.<group>).
 */}}
-{{- $shop := hugo.Data.shop -}}
+{{- $shop := site.Data.shop -}}
 {{- $gid := .Get "group" -}}
 {{- $g := index $shop.groups $gid -}}
 {{- $def := index $shop.products $g.default -}}

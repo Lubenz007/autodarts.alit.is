@@ -42,4 +42,4 @@ images:
 .sett-gallery a:hover img { transform: scale(1.04); }
 </style>
 
-<small style="opacity:.7">Aflgjafi, stýring og allar skrúfur fylgja. Fáanlegt í öllum litum — skrifaðu í athugasemd ef liturinn er ekki í listanum. Hönnun byggð á hugmyndum frá Robbel3D, notuð með leyfi.</small>
+<small style="opacity:.7">Aflgjafi, stýring og allar skrúfur fylgja. Fáanlegt í öllum litum — skrifaðu í athugasemd ef liturinn er ekki í listanum.</small>

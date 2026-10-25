@@ -34,8 +34,8 @@ images:
       <li>Kapalrennur — snúrurnar sjást ekki</li>
       <li>Fáanlegt í öllum litum</li>
     </ul>
-    <p class="home-price">Frá 45.000 kr.</p>
-    <a class="home-link" href="/verslun/darts/fullbuid-sett/">Sjá myndir og myndband →</a>
+    <p class="home-price">Frá 25.000 kr.</p>
+    <a class="home-link" href="/verslun/darts/fullbuid-sett/">Velja og kaupa →</a>
   </div>
 </div>
 
@@ -52,7 +52,7 @@ images:
 
   {{< hextra/feature-card
     title="Fullbúið Autodarts sett"
-    subtitle="Samsett og prófað, með hvítum ljósahring og WLED RGB veggljósi — frá 45.000 kr."
+    subtitle="Samsett og prófað — veldu útfærslu, frá 25.000 kr."
     link="/verslun/darts/fullbuid-sett"
     icon="sparkles"
     class="card-photo"
@@ -95,8 +95,7 @@ images:
 <h2 class="home-section-title">Hvernig virkar þetta?</h2>
 
 <div class="home-steps">
-  <div class="home-step"><span>1</span><h3>Sendu fyrirspurn</h3><p>Veldu vöru og lit í forminu á vörusíðunni.</p></div>
-  <div class="home-step"><span>2</span><h3>Ég svara</h3><p>Með verði og afhendingartíma, yfirleitt innan 1–2 daga.</p></div>
-  <div class="home-step"><span>3</span><h3>Prentað fyrir þig</h3><p>Hver hlutur prentaður eftir pöntun, settur saman og prófaður.</p></div>
-  <div class="home-step"><span>4</span><h3>Sent eða sótt</h3><p>Með Póstinum eða Dropp hvert á land sem er, eða sótt eftir samkomulagi.</p></div>
+  <div class="home-step"><span>1</span><h3>Veldu og keyptu</h3><p>Veldu útfærslu og lit, settu í körfu og kláraðu kaupin.</p></div>
+  <div class="home-step"><span>2</span><h3>Prentað fyrir þig</h3><p>Prentað eftir pöntun, sett saman og prófað.</p></div>
+  <div class="home-step"><span>3</span><h3>Sent eða sótt</h3><p>Með Póstinum eða Dropp hvert á land sem er.</p></div>
 </div>
