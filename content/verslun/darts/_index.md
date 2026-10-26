@@ -1,6 +1,6 @@
 ---
 title: "Darts"
-description: "Autodarts sett frá 25.000 kr., stakir hlutar og pílukarusell — prentað eftir pöntun"
+description: "Autodarts sett frá 25.000 kr., stakir hlutar, píluhaldarar og pílukarusell — prentað eftir pöntun"
 toc: false
 layout: wide
 weight: 2
@@ -22,7 +22,7 @@ images:
 
 ## Bættu við
 
-{{< products ids="pilukarusell,bjorkassi" >}}
+{{< products ids="piluhaldari-spjald,piluhaldari-island,pilukarusell,bjorkassi" >}}
 
 ## Stakir hlutar
 

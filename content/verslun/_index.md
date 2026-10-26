@@ -37,6 +37,16 @@ images:
   >}}
 
   {{< hextra/feature-card
+    title="Píluhaldari"
+    subtitle="9 pílur á vegginn — pílukastspjald eða Ísland, með þínum texta — 6.900 kr."
+    link="/verslun/darts/piluhaldari"
+    icon="star"
+    class="card-photo"
+    image="/images/piluhaldari/01-spjald-a-vegg-sq.webp"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(220,38,38,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
     title="Pílukarusell"
     subtitle="Snýst á legu, heldur 24 pílum (8 settum) föstum — 5.900 kr."
     link="/verslun/darts/pilukarusell"

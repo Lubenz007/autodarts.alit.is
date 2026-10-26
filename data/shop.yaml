@@ -13,7 +13,7 @@ checkout_url: /verslun/karfa/
 colors: [Svartur, Hvítur, Rauður, Blár, Grænn]
 
 # Stungið upp á í körfunni, ef varan er ekki þegar í körfu
-upsell: [pilukarusell, bjorkassi, sett]
+upsell: [pilukarusell, piluhaldari-spjald, bjorkassi, sett]
 
 products:
   standur:
@@ -85,6 +85,27 @@ products:
     image: /images/pilukarusell/02-karusell-og-lyng-sq.webp
     url: /verslun/darts/pilukarusell/
 
+  piluhaldari-spjald:
+    name: Píluhaldari — pílukastspjald
+    price: 6900
+    bundle_price: 5900
+    bundle_with: [sett, sett-myndavelar]
+    short: 9 pílur, hringlaga, þinn texti
+    image: /images/piluhaldari/01-spjald-a-vegg-sq.webp
+    url: /verslun/darts/piluhaldari/
+    no_color: true
+    text: { label: Texti undir spjaldinu, max: 16, upper: true, hint: "T.d. BIG FISH, GAME ON, TON 80 eða 180." }
+  piluhaldari-island:
+    name: Píluhaldari — Ísland
+    price: 6900
+    bundle_price: 5900
+    bundle_with: [sett, sett-myndavelar]
+    short: 9 pílur, útlínur Íslands, þinn texti
+    image: /images/piluhaldari/02-island-big-fish-sq.webp
+    url: /verslun/darts/piluhaldari/
+    no_color: true
+    text: { label: Texti undir Íslandi, max: 16, upper: true, hint: "T.d. BIG FISH, GAME ON, MADHOUSE eða BED & BREAKFAST." }
+
   bjorkassi:
     name: Bjórkassi með kælingu
     price: 7900
@@ -135,6 +156,9 @@ groups:
   karusell:
     options: [pilukarusell, pilukarusell-vegg]
     default: pilukarusell
+  piluhaldari:
+    options: [piluhaldari-spjald, piluhaldari-island]
+    default: piluhaldari-spjald
   bjorkassi:
     options: [bjorkassi, bjorkassi-texti]
     default: bjorkassi

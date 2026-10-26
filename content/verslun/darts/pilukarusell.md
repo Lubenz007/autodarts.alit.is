@@ -20,6 +20,6 @@ images:
 
 ## Bættu við
 
-{{< products ids="sett,bjorkassi" >}}
+{{< products ids="sett,piluhaldari-spjald,bjorkassi" >}}
 
 <small style="opacity:.7">8 sett af 3 · oddar 26–50 mm · um 14 cm × 9 cm · lega og skrúfur fylgja, pílur fylgja ekki.</small>
