@@ -20,14 +20,14 @@ products:
     name: Standur
     price: 22000
     short: 3 myndavélafestingar, passar á flesta ljósahringi
-    image: /images/darts-sett/10-standur-a-ljosahring-800.webp
+    image: /images/darts-sett/11-myndavelafesting-naermynd-800.webp
     url: /verslun/darts/fullbuid-sett/
     legacy: Standur með myndavélafestingum
   standur-ljos:
     name: Standur + ljósahringur
-    price: 40000
+    price: 30000
     short: Hvítt ljós á spjaldið
-    image: /images/darts-sett/02-hvitur-ljosahringur-800.webp
+    image: /images/darts-sett/10-standur-a-ljosahring-800.webp
     url: /verslun/darts/fullbuid-sett/
     legacy: Standur með myndavélafestingum
   sett:
@@ -134,7 +134,7 @@ groups:
     parts:
       - id: standur
         name: Standur
-        image: /images/darts-sett/10-standur-a-ljosahring-800.webp
+        image: /images/darts-sett/11-myndavelafesting-naermynd-800.webp
         full: /images/darts-sett/10-standur-a-ljosahring.webp
         text: 3 myndavélafestingar og kapalrennur, festar við ljósahringinn. Passar við flesta ljósahringi. Um 83 cm. Fest með 4 skrúfum.
       - id: hvitur
