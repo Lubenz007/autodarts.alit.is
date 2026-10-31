@@ -30,6 +30,13 @@ products:
     image: /images/darts-sett/10-standur-a-ljosahring-800.webp
     url: /verslun/darts/fullbuid-sett/
     legacy: Standur með myndavélafestingum
+  sett-an-wled:
+    name: Fullbúið sett án WLED
+    price: 45000
+    short: Bakland, ljósahringur og myndavélar
+    image: /images/darts-sett/02-hvitur-ljosahringur-800.webp
+    url: /verslun/darts/fullbuid-sett/
+    legacy: Fullbúið sett án WLED
   sett:
     name: Fullbúið sett
     price: 49900
@@ -58,7 +65,7 @@ products:
     name: Pílukarusell
     price: 5900
     bundle_price: 4900
-    bundle_with: [sett]
+    bundle_with: [sett-an-wled, sett]
     short: 24 pílur, snýst á legu
     image: /images/pilukarusell/01-karusell-a-pallinum-sq.webp
     url: /verslun/darts/pilukarusell/
@@ -73,7 +80,7 @@ products:
     name: Píluhaldari — pílukastspjald
     price: 6900
     bundle_price: 5900
-    bundle_with: [sett]
+    bundle_with: [sett-an-wled, sett]
     short: 9 pílur, hringlaga, þinn texti
     image: /images/piluhaldari/01-spjald-a-vegg-sq.webp
     url: /verslun/darts/piluhaldari/
@@ -83,7 +90,7 @@ products:
     name: Píluhaldari — Ísland
     price: 6900
     bundle_price: 5900
-    bundle_with: [sett]
+    bundle_with: [sett-an-wled, sett]
     short: 9 pílur, útlínur Íslands, þinn texti
     image: /images/piluhaldari/02-island-big-fish-sq.webp
     url: /verslun/darts/piluhaldari/
@@ -108,11 +115,12 @@ products:
 
 groups:
   sett:
-    options: [standur, standur-ljos, sett]
+    options: [standur, standur-ljos, sett-an-wled, sett]
     default: sett
     includes:
       standur: [standur, myndavelar]
       standur-ljos: [standur, myndavelar, hvitur]
+      sett-an-wled: [standur, myndavelar, bakland, hvitur]
       sett: [standur, myndavelar, bakland, hvitur, wled]
     parts:
       - id: standur

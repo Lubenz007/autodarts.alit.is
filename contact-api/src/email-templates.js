@@ -153,8 +153,9 @@ ${section('Uppsetning', steps([
     'WLED veggljós':                    (args) => festingTemplate('WLED veggljós', args),
 
     // ── Fullbúið Autodarts sett ──────────────────────────────────────────────
-    'Fullbúið sett án myndavéla':      (args) => settTemplate(args),
-    'Fullbúið sett með 3 myndavélum':  (args) => settTemplate(args),
+    'Fullbúið sett án myndavéla':      (args) => settTemplate(true, args),
+    'Fullbúið sett með 3 myndavélum':  (args) => settTemplate(true, args),
+    'Fullbúið sett án WLED':           (args) => settTemplate(false, args),
 
     // ── Bjórkassi ────────────────────────────────────────────────────────────
     'Bjórkassi með kælingu': (args) => bjorkassiTemplate(args),
@@ -245,15 +246,14 @@ ${section('Næstu skref', steps([
     };
 }
 
-// Shared template for the complete, assembled Autodarts set (cameras always included)
-function settTemplate({ name, color }) {
-    const price = 'frá 49.900 kr.';
-    const variant = 'með 3 myndavélum';
+// Shared template for the complete, assembled Autodarts set (cameras always included, with or without WLED)
+function settTemplate(withWled, { name, color }) {
+    const price = withWled ? 'frá 49.900 kr.' : 'frá 45.000 kr.';
+    const variant = withWled ? 'með 3 myndavélum' : 'án WLED, með 3 myndavélum';
     const includes = [
         'Fullsamsettur standur með 3 myndavélafestingum fyrir Autodarts',
         'Hvítur ljósahringur (6000K) sem lýsir spjaldið jafnt upp',
-        'WLED RGB veggljós (WS2815, 12V) á bakvið — stýrt úr WLED appinu',
-        '12V aflgjafi, WLED stýring og allar skrúfur',
+        ...(withWled ? ['WLED RGB veggljós (WS2815, 12V) á bakvið — stýrt úr WLED appinu', '12V aflgjafi, WLED stýring og allar skrúfur'] : ['12V aflgjafi og allar skrúfur']),
         '3 × GXIVISION OV9732 myndavélar, tilbúnar fyrir Autodarts',
     ];
     const colorNote = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong> — settið er prentað í þeim lit sem þú velur.</p>` : '';

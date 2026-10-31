@@ -18,7 +18,7 @@ images:
 
 ## Veldu sett
 
-{{< products ids="standur,standur-ljos,sett" >}}
+{{< products ids="standur,standur-ljos,sett-an-wled,sett" >}}
 
 ## Bættu við
 
