@@ -153,8 +153,8 @@ ${section('Uppsetning', steps([
     'WLED veggljós':                    (args) => festingTemplate('WLED veggljós', args),
 
     // ── Fullbúið Autodarts sett ──────────────────────────────────────────────
-    'Fullbúið sett án myndavéla':      (args) => settTemplate(false, args),
-    'Fullbúið sett með 3 myndavélum':  (args) => settTemplate(true, args),
+    'Fullbúið sett án myndavéla':      (args) => settTemplate(args),
+    'Fullbúið sett með 3 myndavélum':  (args) => settTemplate(args),
 
     // ── Bjórkassi ────────────────────────────────────────────────────────────
     'Bjórkassi með kælingu': (args) => bjorkassiTemplate(args),
@@ -165,10 +165,10 @@ ${section('Uppsetning', steps([
 // Shared template for the single parts of the Autodarts set
 const FESTING_VARIANTS = {
     'Standur með myndavélafestingum': {
-        heading: 'standinum með myndavélafestingum',
-        subj: 'standinn með myndavélafestingum',
-        price: '22.000 kr.',
-        includes: ['3 standar með myndavélafestingum fyrir Autodarts', 'Festast á ljósahringinn — passa á flesta ljósahringi', 'Allar skrúfur fylgja'],
+        heading: 'standinum með 3 myndavélum',
+        subj: 'standinn með 3 myndavélum',
+        price: '19.900 kr.',
+        includes: ['3 standar með myndavélafestingum fyrir Autodarts', '3 × GXIVISION OV9732 myndavélar, tilbúnar fyrir Autodarts', 'Festast á ljósahringinn — passa á flesta ljósahringi', 'Allar skrúfur fylgja'],
     },
     'Hvítur ljósahringur': {
         heading: 'hvíta ljósahringnum',
@@ -200,10 +200,7 @@ ${section('Um vöruna', `
 </p>
 <ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
   ${v.includes.map(i => `<li>${i}</li>`).join('\n  ')}
-</ul>
-<p style="color:#555;line-height:1.6">
-  Vantar þig myndavélar líka? Ég sel <strong>GXIVISION OV9732</strong> sett (3 stk., tilbúið fyrir Autodarts) á 8.000 kr. — nefndu það í svari.
-</p>`)}
+</ul>`)}
 
 ${section('Verð', `
 ${priceTag(v.price)}
@@ -235,8 +232,6 @@ ${section('Næstu skref', steps([
             'Innifalið:',
             ...v.includes.map(i => `- ${i}`),
             '',
-            'Vantar þig myndavélar líka? GXIVISION OV9732 sett (3 stk., tilbúið fyrir Autodarts) á 8.000 kr.',
-            '',
             'Næstu skref:',
             '1. Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
             '2. Þú staðfestir útfærslu og lit.',
@@ -250,16 +245,16 @@ ${section('Næstu skref', steps([
     };
 }
 
-// Shared template for the complete, assembled Autodarts set (with or without cameras)
-function settTemplate(withCameras, { name, color }) {
-    const price = withCameras ? 'frá 52.000 kr.' : 'frá 45.000 kr.';
-    const variant = withCameras ? 'með 3 myndavélum' : 'án myndavéla';
+// Shared template for the complete, assembled Autodarts set (cameras always included)
+function settTemplate({ name, color }) {
+    const price = 'frá 49.900 kr.';
+    const variant = 'með 3 myndavélum';
     const includes = [
         'Fullsamsettur standur með 3 myndavélafestingum fyrir Autodarts',
         'Hvítur ljósahringur (6000K) sem lýsir spjaldið jafnt upp',
         'WLED RGB veggljós (WS2815, 12V) á bakvið — stýrt úr WLED appinu',
         '12V aflgjafi, WLED stýring og allar skrúfur',
-        ...(withCameras ? ['3 × GXIVISION OV9732 myndavélar, tilbúnar fyrir Autodarts'] : []),
+        '3 × GXIVISION OV9732 myndavélar, tilbúnar fyrir Autodarts',
     ];
     const colorNote = color ? `<p style="color:#555">Þú óskaðir eftir lit: <strong>${color}</strong> — settið er prentað í þeim lit sem þú velur.</p>` : '';
     const body = `

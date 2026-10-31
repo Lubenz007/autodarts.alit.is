@@ -18,7 +18,7 @@ images:
 
   {{< hextra/feature-card
     title="Autodarts sett"
-    subtitle="Samsett og prófað — veldu útfærslu, frá 22.000 kr."
+    subtitle="Samsett og prófað — veldu útfærslu, frá 19.900 kr."
     link="/verslun/darts/fullbuid-sett"
     icon="star"
     class="card-photo"
@@ -58,7 +58,7 @@ images:
 
   {{< hextra/feature-card
     title="Darts"
-    subtitle="Stakir hlutar fyrir Autodarts — standur, LED hringir og myndavélar, frá 8.000 kr."
+    subtitle="Stakir hlutar fyrir Autodarts — ljósahringur og WLED veggljós, frá 15.000 kr."
     link="/verslun/darts"
     icon="star"
     class="card-photo"

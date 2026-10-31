@@ -28,13 +28,14 @@ images:
   <div class="home-showcase-text">
     <span class="home-badge">Nýtt</span>
     <h2>Fullbúið Autodarts sett</h2>
-    <p>Standur með 3 myndavélafestingum, hvítur ljósahringur sem lýsir spjaldið jafnt upp og <strong>WLED RGB veggljós</strong> sem þú stýrir úr símanum. Kemur <strong>samsett, vírað og prófað</strong> — bara skrúfa á vegginn og tengja.</p>
+    <p>Standur með 3 myndavélum, hvítur ljósahringur sem lýsir spjaldið jafnt upp og <strong>WLED RGB veggljós</strong> sem þú stýrir úr símanum. Kemur <strong>samsett, vírað og prófað</strong> — bara skrúfa á vegginn og tengja.</p>
     <ul>
+      <li>3 myndavélar fylgja öllum útgáfum</li>
       <li>Aflgjafi og WLED stýring fylgja</li>
       <li>Kapalrennur — snúrurnar sjást ekki</li>
       <li>Fáanlegt í öllum litum</li>
     </ul>
-    <p class="home-price">Frá 22.000 kr.</p>
+    <p class="home-price">Frá 19.900 kr.</p>
     <a class="home-link" href="/verslun/darts/fullbuid-sett/">Velja og kaupa →</a>
   </div>
 </div>
@@ -52,7 +53,7 @@ images:
 
   {{< hextra/feature-card
     title="Fullbúið Autodarts sett"
-    subtitle="Samsett og prófað — veldu útfærslu, frá 22.000 kr."
+    subtitle="Samsett og prófað — veldu útfærslu, frá 19.900 kr."
     link="/verslun/darts/fullbuid-sett"
     icon="sparkles"
     class="card-photo"
@@ -62,7 +63,7 @@ images:
 
   {{< hextra/feature-card
     title="Stakir Autodarts hlutar"
-    subtitle="Áttu nú þegar LED hring eða myndavélar? Standur, ljósahringir og myndavélar stakt — frá 8.000 kr."
+    subtitle="Áttu nú þegar stand og myndavélar? Ljósahringur og WLED veggljós stakt — frá 15.000 kr."
     link="/verslun/darts"
     icon="puzzle"
     class="card-photo"

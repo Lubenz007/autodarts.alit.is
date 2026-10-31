@@ -17,35 +17,27 @@ upsell: [pilukarusell, piluhaldari-spjald, bjorkassi, sett]
 
 products:
   standur:
-    name: Standur
-    price: 22000
-    short: 3 standar, passa á flesta ljósahringi
+    name: Standur + 3 myndavélar
+    price: 19900
+    short: 3 standar og myndavélar, passa á flesta ljósahringi
     image: /images/darts-sett/11-myndavelafesting-naermynd-800.webp
     url: /verslun/darts/fullbuid-sett/
     legacy: Standur með myndavélafestingum
   standur-ljos:
-    name: Standur + ljósahringur
-    price: 30000
+    name: Standur + myndavélar + ljósahringur
+    price: 29900
     short: Hvítt ljós á spjaldið
     image: /images/darts-sett/10-standur-a-ljosahring-800.webp
     url: /verslun/darts/fullbuid-sett/
     legacy: Standur með myndavélafestingum
   sett:
     name: Fullbúið sett
-    price: 45000
-    short: Standur, ljósahringur og WLED veggljós
+    price: 49900
+    short: Allt tilbúið — bakland, ljós, WLED og myndavélar
     image: /images/darts-sett/01-upplyst-spjald-800.webp
     url: /verslun/darts/fullbuid-sett/
-    legacy: Fullbúið sett án myndavéla
-    badge: Vinsælast
-  sett-myndavelar:
-    name: Fullbúið sett + myndavélar
-    price: 52000
-    short: Allt tilbúið, bara tengja
-    image: /images/darts-sett/06-upplyst-spjald-og-skjar-800.webp
-    url: /verslun/darts/fullbuid-sett/
     legacy: Fullbúið sett með 3 myndavélum
-    badge: Allt innifalið
+    badge: Vinsælast
 
   hvitur:
     name: Hvítur ljósahringur
@@ -61,20 +53,12 @@ products:
     image: /images/darts-sett/04-wled-graent-800.webp
     url: /verslun/darts/#stakir-hlutar
     legacy: WLED veggljós
-  myndavelar:
-    name: 3 myndavélar
-    price: 8000
-    short: OV9732 með USB snúrum
-    image: /images/darts-sett/06-upplyst-spjald-og-skjar-800.webp
-    url: /verslun/darts/#stakir-hlutar
-    legacy: Eingöngu myndavélar
-    no_color: true
 
   pilukarusell:
     name: Pílukarusell
     price: 5900
     bundle_price: 4900
-    bundle_with: [sett, sett-myndavelar]
+    bundle_with: [sett]
     short: 24 pílur, snýst á legu
     image: /images/pilukarusell/01-karusell-a-pallinum-sq.webp
     url: /verslun/darts/pilukarusell/
@@ -89,7 +73,7 @@ products:
     name: Píluhaldari — pílukastspjald
     price: 6900
     bundle_price: 5900
-    bundle_with: [sett, sett-myndavelar]
+    bundle_with: [sett]
     short: 9 pílur, hringlaga, þinn texti
     image: /images/piluhaldari/01-spjald-a-vegg-sq.webp
     url: /verslun/darts/piluhaldari/
@@ -99,7 +83,7 @@ products:
     name: Píluhaldari — Ísland
     price: 6900
     bundle_price: 5900
-    bundle_with: [sett, sett-myndavelar]
+    bundle_with: [sett]
     short: 9 pílur, útlínur Íslands, þinn texti
     image: /images/piluhaldari/02-island-big-fish-sq.webp
     url: /verslun/darts/piluhaldari/
@@ -124,13 +108,12 @@ products:
 
 groups:
   sett:
-    options: [standur, standur-ljos, sett, sett-myndavelar]
+    options: [standur, standur-ljos, sett]
     default: sett
     includes:
-      standur: [standur]
-      standur-ljos: [standur, hvitur]
-      sett: [standur, bakland, hvitur, wled]
-      sett-myndavelar: [standur, bakland, hvitur, wled, myndavelar]
+      standur: [standur, myndavelar]
+      standur-ljos: [standur, myndavelar, hvitur]
+      sett: [standur, myndavelar, bakland, hvitur, wled]
     parts:
       - id: standur
         name: Standur
@@ -157,7 +140,7 @@ groups:
         name: 3 myndavélar
         image: /images/darts-sett/06-upplyst-spjald-og-skjar-800.webp
         full: /images/darts-sett/06-upplyst-spjald-og-skjar.webp
-        text: Tilbúnar fyrir Autodarts. Sjá hvert kast og telja stigin.
+        text: Fylgja öllum útgáfum. Tilbúnar fyrir Autodarts — sjá hvert kast og telja stigin.
   karusell:
     options: [pilukarusell, pilukarusell-vegg]
     default: pilukarusell
