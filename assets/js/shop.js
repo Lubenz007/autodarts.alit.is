@@ -156,8 +156,8 @@ function closeDrawer() {
 
 function renderChrome() {
   const n = count();
-  $('.shop-fab-n', fab).textContent = n;
-  fab.classList.toggle('is-visible', n > 0 && !isCheckout);
+  $('.shop-fab-n', fab).textContent = n || '';
+  fab.classList.toggle('is-visible', fab.classList.contains('is-top') || (n > 0 && !isCheckout));
   $('.shop-drawer-items', drawer).innerHTML = itemsHtml();
   $('.shop-drawer-up', drawer).innerHTML = upsellHtml('Bættu við');
   $('.shop-sum b', drawer).textContent = kr(total());
@@ -329,7 +329,13 @@ function initCheckout(root) {
 
 // ── Ræsing ──────────────────────────────────────────────────────────────────
 function boot() {
-  document.body.append(fab, drawer, dlg);
+  // Karfan efst í valmyndinni; annars fljótandi hnappur neðst til hægri
+  const nav = $('nav.hextra-max-navbar-width');
+  if (nav) {
+    fab.classList.add('is-top');
+    nav.insertBefore(fab, $('.hextra-hamburger-menu', nav));
+  }
+  document.body.append(...(nav ? [] : [fab]), drawer, dlg);
   $$('.shop-buy').forEach(initBuy);
   $$('.shop-checkout').forEach(initCheckout);
   renderChrome();

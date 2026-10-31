@@ -126,6 +126,11 @@ html.dark {
 }
 .shop-fab.is-visible { display: flex; }
 .shop-fab-n { position: absolute; top: -4px; right: -4px; min-width: 22px; height: 22px; padding: 0 5px; border-radius: 11px; background: #dc2626; color: #fff; font-size: .75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.shop-fab-n:empty { display: none; }
+/* Karfan í valmyndinni efst */
+.shop-fab.is-top { position: relative; right: auto; bottom: auto; z-index: auto; flex: none; width: 40px; height: 40px; border-radius: 8px; background: transparent; color: inherit !important; box-shadow: none; }
+.shop-fab.is-top:hover { background: rgba(127, 127, 127, .15); }
+.shop-fab.is-top .shop-fab-n { top: 0; right: -2px; min-width: 18px; height: 18px; font-size: .7rem; }
 
 .shop-lock { overflow: hidden; }
 .shop-drawer { position: fixed; inset: 0; z-index: 60; pointer-events: none; }
