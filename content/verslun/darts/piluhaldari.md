@@ -18,6 +18,16 @@ images:
   <img src="/images/piluhaldari/04-uppsetning-med-autodarts-800.webp" alt="Píluhaldarar á vegg við Autodarts spjald með ljósahring" style="width:100%; border-radius:12px; grid-column: 1 / -1;">
 </div>
 
+## Sérútgáfa fyrir pílufélög
+
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; align-items:center; margin: 1rem 0 2rem;">
+  <a href="/images/piluhaldari/07-pfr-felag-full.webp" target="_blank" rel="noopener"><img src="/images/piluhaldari/07-pfr-felag.webp" alt="Píluhaldari í 7 litum með merki Pílukastfélags Reykjavíkur (PFR)" loading="lazy" style="width:100%; max-width:380px; border-radius:12px;"></a>
+  <div>
+    <p>Píluhaldari prentaður í <strong>7 litum</strong> fyrir <strong>Pílukastfélag Reykjavíkur (PFR)</strong> — með nafni og merki félagsins, lárviðarsveig og PFR borða.</p>
+    <p>Viltu útgáfu fyrir þitt félag, lið eða fyrirtæki? Sendu merkið á <a href="mailto:bensi@hitt.is">bensi@hitt.is</a> og ég geri tilboð.</p>
+  </div>
+</div>
+
 ## Bættu við
 
 {{< products ids="sett,pilukarusell" >}}
