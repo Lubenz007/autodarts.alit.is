@@ -25,7 +25,7 @@ Fer eftir útgáfunni sem þú valdir:
 - 12V spennir
 - Skrúfur
 
-**Þú þarft:** skrúfjárn, borvél, vatnsvog og málband.
+**Þú þarft:** skrúfjárn, borvél og málband.
 
 ## 1. Settu baklandið saman
 
@@ -38,7 +38,7 @@ Fer eftir útgáfunni sem þú valdir:
 
 <div class="guide-step">
   <img src="/images/darts-sett/09-standur-an-spjalds-800.webp" alt="Baklandið skrúfað á vegg" loading="lazy">
-  <p>Miðja spjaldsins á að vera í <strong>173 cm hæð</strong> frá gólfi (keppnishæð). Notaðu vatnsvog og skrúfaðu með <strong>4 skrúfum</strong>.</p>
+  <p>Miðja spjaldsins á að vera í <strong>173 cm hæð</strong> frá gólfi (keppnishæð). Skrúfaðu það með <strong>4 skrúfum</strong>.</p>
 </div>
 
 ## 3. Festu WLED hringinn
