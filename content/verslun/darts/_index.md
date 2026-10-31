@@ -11,7 +11,7 @@ images:
 <a class="shop-feature" href="/verslun/darts/fullbuid-sett/">
   <img src="/images/darts-sett/01-upplyst-spjald.webp" alt="Fullbúið Autodarts sett með upplýstu spjaldi">
   <span class="shop-feature-text">
-    <span><b>Autodarts sett</b><span>Samsett og prófað · frá 19.900 kr.</span></span>
+    <span><b>Autodarts sett</b><span>Vírað og prófað · frá 19.900 kr.</span></span>
     <span class="shop-add">Velja sett →</span>
   </span>
 </a>

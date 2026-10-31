@@ -197,7 +197,7 @@ ${colorNote}
 
 ${section('Um vöruna', `
 <p style="color:#555;line-height:1.6">
-  Hluti af Autodarts settinu mínu, hannaður og prentaður af mér á Bambu Lab P1S og H2S — fáanlegur í öllum litum og kemur samsettur og prófaður. Passar við aðra hluta settsins svo þú getur bætt við seinna.
+  Hluti af Autodarts settinu mínu, hannaður og prentaður af mér á Bambu Lab P1S og H2S — fáanlegur í öllum litum, víraður og prófaður. Samsettur ef þú sækir, annars sendur með samsetningarleiðbeiningum. Passar við aðra hluta settsins svo þú getur bætt við seinna.
 </p>
 <ul style="padding-left:20px;margin:8px 0 16px;color:#555;line-height:1.6">
   ${v.includes.map(i => `<li>${i}</li>`).join('\n  ')}
@@ -212,7 +212,7 @@ ${priceTag(v.price)}
 ${section('Næstu skref', steps([
     'Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
     'Þú staðfestir útfærslu og lit.',
-    'Prentað, sett saman og prófað fyrir þig og sent með Póstinum eða Dropp — eða sótt eftir samkomulagi.',
+    'Prentað og prófað fyrir þig — sótt samsett eftir samkomulagi, eða sent ósamsett með leiðbeiningum með Póstinum eða Dropp.',
 ]))}
 
 <p style="color:#555;line-height:1.6">
@@ -251,7 +251,7 @@ function settTemplate(withWled, { name, color }) {
     const price = withWled ? 'frá 49.900 kr.' : 'frá 45.000 kr.';
     const variant = withWled ? 'með 3 myndavélum' : 'án WLED, með 3 myndavélum';
     const includes = [
-        'Fullsamsettur standur með 3 myndavélafestingum fyrir Autodarts',
+        'Standur með 3 myndavélafestingum fyrir Autodarts',
         'Hvítur ljósahringur (6000K) sem lýsir spjaldið jafnt upp',
         ...(withWled ? ['WLED RGB veggljós (WS2815, 12V) á bakvið — stýrt úr WLED appinu', '12V aflgjafi, WLED stýring og allar skrúfur'] : ['12V aflgjafi og allar skrúfur']),
         '3 × GXIVISION OV9732 myndavélar, tilbúnar fyrir Autodarts',
@@ -269,7 +269,7 @@ ${section('Hvað fylgir með', `
   ${includes.map(i => `<li>${i}</li>`).join('\n  ')}
 </ul>
 <p style="color:#555;line-height:1.6">
-  Settið kemur <strong>samsett, vírað og prófað</strong> — þú skrúfar það á vegginn með 4 skrúfum og tengir í innstungu.
+  Settið kemur <strong>vírað og prófað</strong>. Ef þú sækir það er það samsett — þú skrúfar það á vegginn með 4 skrúfum og tengir í innstungu. Ef það er sent kemur það ósamsett með <a href="${BASE_URL}/verslun/darts/samsetning/" style="color:${BRAND_COLOR}">samsetningarleiðbeiningum</a> — bara skrúfur og tengi, engin lóðun.
 </p>`)}
 
 ${section('Verð', `
@@ -281,7 +281,7 @@ ${priceTag(price)}
 ${section('Næstu skref', steps([
     'Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
     'Þú staðfestir útfærslu og lit.',
-    'Settið er prentað, sett saman og prófað — og afhent með Póstinum eða Dropp, eða sótt eftir samkomulagi.',
+    'Settið er prentað, vírað og prófað — sótt samsett eftir samkomulagi, eða sent ósamsett með leiðbeiningum með Póstinum eða Dropp.',
 ]))}
 
 <p style="color:#555;line-height:1.6">
@@ -302,12 +302,12 @@ ${section('Næstu skref', steps([
             'Hvað fylgir með:',
             ...includes.map(i => `- ${i}`),
             '',
-            'Settið kemur samsett, vírað og prófað — skrúfað á vegginn með 4 skrúfum og tengt í innstungu.',
+            `Settið kemur vírað og prófað. Sótt: samsett, skrúfað á vegginn með 4 skrúfum. Sent: ósamsett með leiðbeiningum (${BASE_URL}/verslun/darts/samsetning/).`,
             '',
             'Næstu skref:',
             '1. Ég sendi þér nákvæmt verð og áætlaðan afhendingartíma, yfirleitt innan 1–2 daga.',
             '2. Þú staðfestir útfærslu og lit.',
-            '3. Settið er prentað, sett saman og prófað og afhent með Póstinum eða Dropp, eða sótt eftir samkomulagi.',
+            '3. Settið er prentað, vírað og prófað — sótt samsett, eða sent ósamsett með leiðbeiningum með Póstinum eða Dropp.',
             '',
             `Myndir og myndband: ${BASE_URL}/verslun/darts/fullbuid-sett/`,
             '',

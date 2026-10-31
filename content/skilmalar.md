@@ -8,7 +8,7 @@ toc: false
 
 **Greiðsla:** Varan fer í framleiðslu þegar pöntun berst. Greiðsluupplýsingar (millifærsla) og afhendingartími koma í tölvupósti.
 
-**Afhending:** Sent með [Dropp](https://www.dropp.is) eða [Póstinum](https://posturinn.is), eða sótt eftir samkomulagi. Sendingarkostnaður fer eftir verðskrá Dropp eða Póstsins hverju sinni og bætist við verð vörunnar.
+**Afhending:** Sent með [Dropp](https://www.dropp.is) eða [Póstinum](https://posturinn.is), eða sótt eftir samkomulagi. Autodarts sett eru send ósamsett með [samsetningarleiðbeiningum](/verslun/darts/samsetning/) en afhent samsett ef þau eru sótt. Sendingarkostnaður fer eftir verðskrá Dropp eða Póstsins hverju sinni og bætist við verð vörunnar.
 
 **Skilaréttur:** 14 daga skilaréttur frá afhendingu. Hann gildir ekki um sérhannaðar vörur, t.d. með þínum texta, merki eða sérútgáfu. Hafðu samband á [bensi@hitt.is](mailto:bensi@hitt.is) til að skila vöru.
 

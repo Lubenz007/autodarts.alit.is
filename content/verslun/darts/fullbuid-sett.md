@@ -1,6 +1,6 @@
 ---
 title: "Autodarts sett"
-description: "Autodarts standur með ljósum — veldu útfærslu frá 19.900 kr. Samsett og prófað."
+description: "Autodarts standur með ljósum — veldu útfærslu frá 19.900 kr. Vírað og prófað."
 toc: false
 layout: wide
 weight: 1
@@ -8,7 +8,7 @@ images:
   - /images/darts-sett/01-upplyst-spjald.webp
 ---
 
-**Samsett, vírað og prófað.** Skrúfaðu á vegginn og tengdu í rafmagn.
+**Vírað og prófað.** Sóttu það samsett, eða fáðu það sent ósamsett með [samsetningarleiðbeiningum](/verslun/darts/samsetning/) — bara skrúfur og tengi, engin lóðun.
 
 {{< buy group="sett" >}}
 

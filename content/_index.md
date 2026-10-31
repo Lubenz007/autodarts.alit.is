@@ -31,7 +31,7 @@ images:
   <div class="home-showcase-text">
     <span class="home-badge">Nýtt</span>
     <h2>Fullbúið Autodarts sett</h2>
-    <p>Standur með 3 myndavélum, hvítur ljósahringur sem lýsir spjaldið jafnt upp og <strong>WLED RGB veggljós</strong> sem þú stýrir úr símanum. Kemur <strong>samsett, vírað og prófað</strong> — bara skrúfa á vegginn og tengja.</p>
+    <p>Standur með 3 myndavélum, hvítur ljósahringur sem lýsir spjaldið jafnt upp og <strong>WLED RGB veggljós</strong> sem þú stýrir úr símanum. Kemur <strong>vírað og prófað</strong> — samsett ef þú sækir, eða sent með einföldum samsetningarleiðbeiningum.</p>
     <ul>
       <li>3 myndavélar fylgja öllum útgáfum</li>
       <li>Aflgjafi og WLED stýring fylgja</li>
@@ -55,7 +55,7 @@ images:
 
   {{< hextra/feature-card
     title="Fullbúið Autodarts sett"
-    subtitle="Samsett og prófað — veldu útfærslu, frá 19.900 kr."
+    subtitle="Vírað og prófað — veldu útfærslu, frá 19.900 kr."
     link="/verslun/darts/fullbuid-sett"
     icon="sparkles"
     class="card-photo"
@@ -109,8 +109,8 @@ images:
 
 <div class="home-steps">
   <div class="home-step"><span>1</span><h3>Veldu og keyptu</h3><p>Veldu útfærslu og lit, settu í körfu og kláraðu kaupin.</p></div>
-  <div class="home-step"><span>2</span><h3>Prentað fyrir þig</h3><p>Prentað eftir pöntun, sett saman og prófað.</p></div>
-  <div class="home-step"><span>3</span><h3>Sent eða sótt</h3><p>Með Póstinum eða Dropp hvert á land sem er.</p></div>
+  <div class="home-step"><span>2</span><h3>Prentað fyrir þig</h3><p>Prentað eftir pöntun, vírað og prófað.</p></div>
+  <div class="home-step"><span>3</span><h3>Sent eða sótt</h3><p>Sótt samsett, eða sent með Póstinum eða Dropp ásamt samsetningarleiðbeiningum.</p></div>
 </div>
 
 <a class="home-saga" href="https://saganidag.is/?utm_source=hitt.is&utm_medium=auglysing" target="_blank" rel="noopener">
