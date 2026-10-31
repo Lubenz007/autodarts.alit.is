@@ -8,7 +8,7 @@ images:
   - /images/pilukarusell/01-karusell-a-pallinum.webp
 ---
 
-**24 pílur sem sitja fastar** — grannar eða þykkar. Snýst á legu. **4.900 kr.** með fullbúnu setti.
+**24 pílur sem sitja fastar** — grannar eða þykkar. Snýst á legu. **5.900 kr.** — eða **4.900 kr.** ef þú kaupir hann með fullbúnu setti.
 
 {{< buy group="karusell" >}}
 
