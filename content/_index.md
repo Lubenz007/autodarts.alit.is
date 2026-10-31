@@ -34,7 +34,7 @@ images:
       <li>Kapalrennur — snúrurnar sjást ekki</li>
       <li>Fáanlegt í öllum litum</li>
     </ul>
-    <p class="home-price">Frá 25.000 kr.</p>
+    <p class="home-price">Frá 22.000 kr.</p>
     <a class="home-link" href="/verslun/darts/fullbuid-sett/">Velja og kaupa →</a>
   </div>
 </div>
@@ -52,7 +52,7 @@ images:
 
   {{< hextra/feature-card
     title="Fullbúið Autodarts sett"
-    subtitle="Samsett og prófað — veldu útfærslu, frá 25.000 kr."
+    subtitle="Samsett og prófað — veldu útfærslu, frá 22.000 kr."
     link="/verslun/darts/fullbuid-sett"
     icon="sparkles"
     class="card-photo"

@@ -1,6 +1,6 @@
 ---
 title: "Autodarts sett"
-description: "Autodarts standur með ljósum — veldu útfærslu frá 25.000 kr. Samsett og prófað."
+description: "Autodarts standur með ljósum — veldu útfærslu frá 22.000 kr. Samsett og prófað."
 toc: false
 layout: wide
 weight: 1

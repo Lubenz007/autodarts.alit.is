@@ -18,7 +18,7 @@ images:
 
   {{< hextra/feature-card
     title="Autodarts sett"
-    subtitle="Samsett og prófað — veldu útfærslu, frá 25.000 kr."
+    subtitle="Samsett og prófað — veldu útfærslu, frá 22.000 kr."
     link="/verslun/darts/fullbuid-sett"
     icon="star"
     class="card-photo"

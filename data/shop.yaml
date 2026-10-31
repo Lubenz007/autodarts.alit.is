@@ -18,9 +18,9 @@ upsell: [pilukarusell, piluhaldari-spjald, bjorkassi, sett]
 products:
   standur:
     name: Standur
-    price: 25000
-    short: 3 myndavélafestingar, án ljósa
-    image: /images/darts-sett/08-standur-a-vegg-800.webp
+    price: 22000
+    short: 3 myndavélafestingar, passar á flesta ljósahringi
+    image: /images/darts-sett/10-standur-a-ljosahring-800.webp
     url: /verslun/darts/fullbuid-sett/
     legacy: Standur með myndavélafestingum
   standur-ljos:
@@ -134,9 +134,9 @@ groups:
     parts:
       - id: standur
         name: Standur
-        image: /images/darts-sett/08-standur-a-vegg-800.webp
-        full: /images/darts-sett/08-standur-a-vegg.webp
-        text: 3 myndavélafestingar og kapalrennur. Um 83 cm. Fest með 4 skrúfum.
+        image: /images/darts-sett/10-standur-a-ljosahring-800.webp
+        full: /images/darts-sett/10-standur-a-ljosahring.webp
+        text: 3 myndavélafestingar og kapalrennur, festar við ljósahringinn. Passar við flesta ljósahringi. Um 83 cm. Fest með 4 skrúfum.
       - id: hvitur
         name: Hvítur ljósahringur
         image: /images/darts-sett/02-hvitur-ljosahringur-800.webp
