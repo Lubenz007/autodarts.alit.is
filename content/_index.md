@@ -33,7 +33,6 @@ images:
     <ul>
       <li>3 myndavélar fylgja öllum útgáfum</li>
       <li>Aflgjafi og WLED stýring fylgja</li>
-      <li>Kapalrennur — snúrurnar sjást ekki</li>
       <li>Fáanlegt í öllum litum</li>
     </ul>
     <p class="home-price">Frá 19.900 kr.</p>
