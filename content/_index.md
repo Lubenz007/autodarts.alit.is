@@ -111,3 +111,10 @@ images:
   <div class="home-step"><span>2</span><h3>Prentað fyrir þig</h3><p>Prentað eftir pöntun, sett saman og prófað.</p></div>
   <div class="home-step"><span>3</span><h3>Sent eða sótt</h3><p>Með Póstinum eða Dropp hvert á land sem er.</p></div>
 </div>
+
+<a class="home-saga" href="https://saganidag.is/?utm_source=hitt.is&utm_medium=auglysing" target="_blank" rel="noopener">
+  <span class="home-saga-label">Frá sama höfundi</span>
+  <span class="home-saga-title">Sagan í Dag</span>
+  <span class="home-saga-text">Hvað gerðist á þessum degi? Atburðir úr Íslands- og heimssögu, afmælisbörn, spurningakeppni og verðlagið þá — og hvað gerðist á afmælisdeginum þínum.</span>
+  <span class="home-saga-cta">saganidag.is →</span>
+</a>
