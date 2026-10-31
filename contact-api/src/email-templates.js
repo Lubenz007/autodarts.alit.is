@@ -168,7 +168,7 @@ const FESTING_VARIANTS = {
         heading: 'standinum með myndavélafestingum',
         subj: 'standinn með myndavélafestingum',
         price: '22.000 kr.',
-        includes: ['Miðja, 3 armar og fætur með 3 myndavélafestingum fyrir Autodarts', 'Kapalrennur fyrir myndavélasnúrur', 'Allar skrúfur — kemur samsett'],
+        includes: ['3 standar með myndavélafestingum fyrir Autodarts', 'Festast á ljósahringinn — passa á flesta ljósahringi', 'Allar skrúfur fylgja'],
     },
     'Hvítur ljósahringur': {
         heading: 'hvíta ljósahringnum',

@@ -19,7 +19,7 @@ products:
   standur:
     name: Standur
     price: 22000
-    short: 3 myndavélafestingar, passar á flesta ljósahringi
+    short: 3 standar, passa á flesta ljósahringi
     image: /images/darts-sett/11-myndavelafesting-naermynd-800.webp
     url: /verslun/darts/fullbuid-sett/
     legacy: Standur með myndavélafestingum
@@ -127,8 +127,8 @@ groups:
     options: [standur, standur-ljos, sett, sett-myndavelar]
     default: sett
     includes:
-      standur: [standur, bakland]
-      standur-ljos: [standur, bakland, hvitur]
+      standur: [standur]
+      standur-ljos: [standur, hvitur]
       sett: [standur, bakland, hvitur, wled]
       sett-myndavelar: [standur, bakland, hvitur, wled, myndavelar]
     parts:
@@ -136,12 +136,12 @@ groups:
         name: Standur
         image: /images/darts-sett/11-myndavelafesting-naermynd-800.webp
         full: /images/darts-sett/10-standur-a-ljosahring.webp
-        text: 3 myndavélafestingar og kapalrennur, festar við ljósahringinn. Passar við flesta ljósahringi. Um 83 cm. Fest með 4 skrúfum.
+        text: 3 standar með myndavélafestingum sem festast við ljósahringinn. Passar við flesta ljósahringi.
       - id: bakland
         name: Bakland
         image: /images/darts-sett/12-bakland-800.webp
         full: /images/darts-sett/12-bakland.webp
-        text: Þriggja arma grind á bakvið spjaldið sem heldur öllu saman — ljósahringnum, WLED hringnum og myndavélafestingunum.
+        text: Þriggja arma grind á bakvið spjaldið sem heldur öllu saman — ljósahringnum, WLED hringnum og myndavélafestingunum. Um 83 cm. Fest með 4 skrúfum.
       - id: hvitur
         name: Hvítur ljósahringur
         image: /images/darts-sett/13-hvitur-ljosahringur-stakur-800.webp
