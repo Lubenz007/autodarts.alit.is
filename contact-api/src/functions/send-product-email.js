@@ -28,7 +28,7 @@ app.storageQueue('sendProductEmail', {
         const t = tmpl({ name, color, handleText, message });
         const client = new EmailClient(process.env.COMMUNICATION_CONNECTION_STRING);
         const poller = await client.beginSend({
-            senderAddress: 'DoNotReply@alit.is',
+            senderAddress: 'DoNotReply@hitt.is',
             recipients: { to: [{ address: email, displayName: name }] },
             content: {
                 subject: t.subject,

@@ -120,7 +120,7 @@ products:
     image: /images/bjorkassi-kaelikubbur.webp
     url: /verslun/bjorkassi/
     legacy: Bjórkassi með kælingu, sérsniðnum texta og merki
-    text: { label: Texti á handfang, max: 14, upper: true, hint: Merkið sendir þú á bensi@alit.is eftir pöntun. }
+    text: { label: Texti á handfang, max: 14, upper: true, hint: Merkið sendir þú á bensi@hitt.is eftir pöntun. }
 
 groups:
   sett:

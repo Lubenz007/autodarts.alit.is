@@ -1,5 +1,5 @@
 ---
-title: "alit.is"
+title: "hitt.is"
 description: "3D prentaðir hlutir, hannaðir og prentaðir á Íslandi — fullbúin Autodarts sett, bjórkassi með kælingu og fleira"
 layout: hextra-home
 images:

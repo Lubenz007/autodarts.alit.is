@@ -3,7 +3,7 @@
 const { app } = require('@azure/functions');
 const { EmailClient } = require('@azure/communication-email');
 
-const ALLOWED_ORIGINS = new Set(['https://alit.is', 'http://localhost:1313']);
+const ALLOWED_ORIGINS = new Set(['https://hitt.is', 'https://www.hitt.is', 'https://alit.is', 'http://localhost:1313']);
 
 function esc(s) {
     return String(s ?? '')
@@ -15,7 +15,7 @@ function esc(s) {
 
 function corsHeaders(origin) {
     return {
-        'Access-Control-Allow-Origin': ALLOWED_ORIGINS.has(origin) ? origin : 'https://alit.is',
+        'Access-Control-Allow-Origin': ALLOWED_ORIGINS.has(origin) ? origin : 'https://hitt.is',
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
         'Vary': 'Origin',
@@ -65,11 +65,11 @@ app.http('contact', {
             ].filter(Boolean).join('\n');
 
             const html = `
-<h2 style="color:#0055FF;font-family:sans-serif">Ný pöntun — alit.is</h2>
+<h2 style="color:#0055FF;font-family:sans-serif">Ný pöntun — hitt.is</h2>
 <table style="border-collapse:collapse;font-family:sans-serif;font-size:15px">${rows}</table>
 ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-family:sans-serif;white-space:pre-wrap">${esc(message)}</p>` : ''}
 <hr style="margin-top:24px">
-<small style="color:#888;font-family:sans-serif">Sent frá kassanum á alit.is</small>`;
+<small style="color:#888;font-family:sans-serif">Sent frá kassanum á hitt.is</small>`;
 
             const plain = [
                 `Nafn: ${name}`,
@@ -91,7 +91,7 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
   <p>Pöntunin þín er móttekin og <strong>varan fer nú í framleiðslu</strong>.</p>
   <p>${NEXT}</p>
   ${message ? `<h3>Pöntunin þín</h3><p style="white-space:pre-wrap;font-size:15px">${esc(message)}</p>` : ''}
-  <p style="margin-top:24px">Kveðja,<br><strong>alit.is</strong></p>
+  <p style="margin-top:24px">Kveðja,<br><strong>hitt.is</strong></p>
   <hr style="margin-top:32px">
   <small style="color:#888">Þetta er sjálfvirk kvittun. Vinsamlegast ekki svara þessum tölvupósti.</small>
 </div>`;
@@ -104,14 +104,14 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                 '',
                 message,
                 '',
-                'Kveðja,\nalit.is',
+                'Kveðja,\nhitt.is',
             ].join('\n');
 
             const sends = [
                 // 1. Notify you
                 client.beginSend({
-                    senderAddress: 'DoNotReply@alit.is',
-                    recipients: { to: [{ address: 'bensi@alit.is', displayName: 'Bensi' }] },
+                    senderAddress: 'DoNotReply@hitt.is',
+                    recipients: { to: [{ address: 'bensi@hitt.is', displayName: 'Bensi' }] },
                     replyTo: [{ address: email, displayName: name }],
                     content: {
                         subject: `Pöntun: ${name}${product ? ` — ${product}` : ''}`,
@@ -121,10 +121,10 @@ ${message ? `<h3 style="font-family:sans-serif">Skilaboð</h3><p style="font-fam
                 }).then(p => p.pollUntilDone()),
                 // 2. Kvittun til kaupanda
                 client.beginSend({
-                    senderAddress: 'DoNotReply@alit.is',
+                    senderAddress: 'DoNotReply@hitt.is',
                     recipients: { to: [{ address: email, displayName: name }] },
                     content: {
-                        subject: 'Takk fyrir kaupin — alit.is',
+                        subject: 'Takk fyrir kaupin — hitt.is',
                         plainText: confirmPlain,
                         html: confirmHtml,
                     },

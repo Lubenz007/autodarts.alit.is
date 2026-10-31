@@ -1,8 +1,8 @@
-baseURL: https://alit.is
+baseURL: https://hitt.is
 languageCode: is
 defaultContentLanguage: is
 enableRobotsTXT: true
-title: alit.is
+title: hitt.is
 
 module:
   imports:

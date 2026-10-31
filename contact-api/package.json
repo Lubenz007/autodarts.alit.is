@@ -1,7 +1,7 @@
 {
   "name": "alit-contact-api",
   "version": "1.0.0",
-  "description": "Contact form API for alit.is using Azure Communication Services",
+  "description": "Contact form API for hitt.is using Azure Communication Services",
   "main": "src/functions/*.js",
   "scripts": {
     "start": "func start"

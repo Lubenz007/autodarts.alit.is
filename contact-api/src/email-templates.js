@@ -7,12 +7,12 @@
 // and returns { subject, html, plainText }.
 //
 // A template that still contains [PLACEHOLDER] text is disabled automatically (see getTemplate).
-// Image URLs point to static/images/ on alit.is — swap in better photos
+// Image URLs point to static/images/ on hitt.is — swap in better photos
 // by adding them to static/images/ and updating the src= below.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const BRAND_COLOR = '#0055FF';
-const BASE_URL    = 'https://alit.is';
+const BASE_URL    = 'https://hitt.is';
 
 function layout(name, imgSrc, bodyHtml) {
     return `<!DOCTYPE html>
@@ -25,7 +25,7 @@ function layout(name, imgSrc, bodyHtml) {
 
       <!-- Header -->
       <tr><td style="background:${BRAND_COLOR};padding:24px 32px">
-        <a href="${BASE_URL}" style="color:#fff;font-size:22px;font-weight:700;text-decoration:none">alit.is</a>
+        <a href="${BASE_URL}" style="color:#fff;font-size:22px;font-weight:700;text-decoration:none">hitt.is</a>
       </td></tr>
 
       <!-- Product image -->
@@ -35,12 +35,12 @@ function layout(name, imgSrc, bodyHtml) {
       <tr><td style="padding:32px">
         <p style="margin:0 0 16px;font-size:17px">Hæ <strong>${name}</strong>!</p>
         ${bodyHtml}
-        <p style="margin:24px 0 0">Kveðja,<br><strong>Bensi @ alit.is</strong></p>
+        <p style="margin:24px 0 0">Kveðja,<br><strong>Bensi @ hitt.is</strong></p>
       </td></tr>
 
       <!-- Footer -->
       <tr><td style="background:#f5f5f5;padding:16px 32px;font-size:12px;color:#999;text-align:center">
-        Þetta er sjálfvirk staðfesting. Til að hafa samband: <a href="mailto:bensi@alit.is" style="color:${BRAND_COLOR}">bensi@alit.is</a>
+        Þetta er sjálfvirk staðfesting. Til að hafa samband: <a href="mailto:bensi@hitt.is" style="color:${BRAND_COLOR}">bensi@hitt.is</a>
       </td></tr>
 
     </table>
@@ -138,11 +138,11 @@ ${section('Uppsetning', steps([
             '• Styður Windows, Mac, Linux, Android, Raspberry Pi',
             '',
             'Kveðja,',
-            'Bensi @ alit.is',
+            'Bensi @ hitt.is',
         ].join('\n');
 
         return {
-            subject: 'Upplýsingar um myndavélar — alit.is',
+            subject: 'Upplýsingar um myndavélar — hitt.is',
             html: layout(name, `${BASE_URL}/images/hero-board.jpg`, body),
             plainText: plain,
         };
@@ -218,11 +218,11 @@ ${section('Næstu skref', steps([
 ]))}
 
 <p style="color:#555;line-height:1.6">
-  Myndir af uppsetningum: <a href="${BASE_URL}/verslun/darts/myndir/" style="color:${BRAND_COLOR}">alit.is/verslun/darts/myndir</a>
+  Myndir af uppsetningum: <a href="${BASE_URL}/verslun/darts/myndir/" style="color:${BRAND_COLOR}">hitt.is/verslun/darts/myndir</a>
 </p>`;
 
     return {
-        subject: `Upplýsingar um ${v.subj} — alit.is`,
+        subject: `Upplýsingar um ${v.subj} — hitt.is`,
         html: layout(name, `${BASE_URL}/images/darts-sett/01-upplyst-spjald-800.webp`, body),
         plainText: [
             `Hæ ${name}!`,
@@ -245,7 +245,7 @@ ${section('Næstu skref', steps([
             `Myndir: ${BASE_URL}/verslun/darts/myndir/`,
             '',
             'Kveðja,',
-            'Bensi @ alit.is',
+            'Bensi @ hitt.is',
         ].filter(l => l !== null).join('\n'),
     };
 }
@@ -290,11 +290,11 @@ ${section('Næstu skref', steps([
 ]))}
 
 <p style="color:#555;line-height:1.6">
-  Myndir og myndband: <a href="${BASE_URL}/verslun/darts/fullbuid-sett/" style="color:${BRAND_COLOR}">alit.is/verslun/darts/fullbuid-sett</a>
+  Myndir og myndband: <a href="${BASE_URL}/verslun/darts/fullbuid-sett/" style="color:${BRAND_COLOR}">hitt.is/verslun/darts/fullbuid-sett</a>
 </p>`;
 
     return {
-        subject: `Upplýsingar um fullbúið Autodarts sett — alit.is`,
+        subject: `Upplýsingar um fullbúið Autodarts sett — hitt.is`,
         html: layout(name, `${BASE_URL}/images/darts-sett/01-upplyst-spjald-800.webp`, body),
         plainText: [
             `Hæ ${name}!`,
@@ -317,7 +317,7 @@ ${section('Næstu skref', steps([
             `Myndir og myndband: ${BASE_URL}/verslun/darts/fullbuid-sett/`,
             '',
             'Kveðja,',
-            'Bensi @ alit.is',
+            'Bensi @ hitt.is',
         ].filter(l => l !== null).join('\n'),
     };
 }
@@ -364,11 +364,11 @@ ${section('Næstu skref', steps([
 ]))}
 
 <p style="color:#555;line-height:1.6">
-  Fleiri myndir: <a href="${BASE_URL}/verslun/bjorkassi/myndir/" style="color:${BRAND_COLOR}">alit.is/verslun/bjorkassi/myndir</a>
+  Fleiri myndir: <a href="${BASE_URL}/verslun/bjorkassi/myndir/" style="color:${BRAND_COLOR}">hitt.is/verslun/bjorkassi/myndir</a>
 </p>`;
 
     return {
-        subject: 'Upplýsingar um bjórkassann með kælingu — alit.is',
+        subject: 'Upplýsingar um bjórkassann með kælingu — hitt.is',
         html: layout(name, `${BASE_URL}/images/bjorkassi-hero.webp`, body),
         plainText: [
             `Hæ ${name}!`,
@@ -396,7 +396,7 @@ ${section('Næstu skref', steps([
             `Fleiri myndir: ${BASE_URL}/verslun/bjorkassi/myndir/`,
             '',
             'Kveðja,',
-            'Bensi @ alit.is',
+            'Bensi @ hitt.is',
         ].filter(l => l !== null).join('\n'),
     };
 }

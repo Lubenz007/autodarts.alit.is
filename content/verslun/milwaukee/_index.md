@@ -8,4 +8,4 @@ description: "3D prentaðir festihlutir og fylgihlutir fyrir verkfæri"
 
 Sérsniðnir 3D prentaðir festihlutir, geymsluhlutir og fylgihlutir fyrir verkfæri og rafhlöður.
 
-> Hafðu samband í gegnum [bensi@alit.is](mailto:bensi@alit.is) til að panta eða spyrja spurninga.
+> Hafðu samband í gegnum [bensi@hitt.is](mailto:bensi@hitt.is) til að panta eða spyrja spurninga.

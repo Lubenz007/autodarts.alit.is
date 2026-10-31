@@ -1,4 +1,4 @@
-// Verslun alit.is: karfa (geymd í vafranum), körfuskúffa með viðbótum,
+// Verslun hitt.is: karfa (geymd í vafranum), körfuskúffa með viðbótum,
 // valhnappar á vörusíðum og kassi. Vörulistinn kemur úr data/shop.yaml (window.SHOP).
 
 const SHOP = window.SHOP || { products: {}, groups: {} };
