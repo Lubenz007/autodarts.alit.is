@@ -127,24 +127,29 @@ groups:
     options: [standur, standur-ljos, sett, sett-myndavelar]
     default: sett
     includes:
-      standur: [standur]
-      standur-ljos: [standur, hvitur]
-      sett: [standur, hvitur, wled]
-      sett-myndavelar: [standur, hvitur, wled, myndavelar]
+      standur: [standur, bakland]
+      standur-ljos: [standur, bakland, hvitur]
+      sett: [standur, bakland, hvitur, wled]
+      sett-myndavelar: [standur, bakland, hvitur, wled, myndavelar]
     parts:
       - id: standur
         name: Standur
         image: /images/darts-sett/11-myndavelafesting-naermynd-800.webp
         full: /images/darts-sett/10-standur-a-ljosahring.webp
         text: 3 myndavélafestingar og kapalrennur, festar við ljósahringinn. Passar við flesta ljósahringi. Um 83 cm. Fest með 4 skrúfum.
+      - id: bakland
+        name: Bakland
+        image: /images/darts-sett/12-bakland-800.webp
+        full: /images/darts-sett/12-bakland.webp
+        text: Þriggja arma grind á bakvið spjaldið sem heldur öllu saman — ljósahringnum, WLED hringnum og myndavélafestingunum.
       - id: hvitur
         name: Hvítur ljósahringur
-        image: /images/darts-sett/02-hvitur-ljosahringur-800.webp
+        image: /images/darts-sett/13-hvitur-ljosahringur-stakur-800.webp
         full: /images/darts-sett/02-hvitur-ljosahringur.webp
         text: Lýsir spjaldið jafnt. Engir skuggar fyrir myndavélarnar.
       - id: wled
         name: WLED veggljós
-        image: /images/darts-sett/04-wled-graent-800.webp
+        image: /images/darts-sett/14-wled-hringur-stakur-800.webp
         full: /images/darts-sett/04-wled-graent.webp
         video: /videos/wled-veggljos.mp4
         text: Litir og áhrif á bakvið spjaldið. Stýrt úr símanum.

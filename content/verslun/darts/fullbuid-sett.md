@@ -32,6 +32,9 @@ images:
   <a href="/images/darts-sett/05-wled-litir-i-herbergi.webp" target="_blank" rel="noopener"><img src="/images/darts-sett/05-wled-litir-i-herbergi-800.webp" alt="Settið upplýst í herbergi" loading="lazy"></a>
   <a href="/images/darts-sett/07-wled-graent-nalaegt.webp" target="_blank" rel="noopener"><img src="/images/darts-sett/07-wled-graent-nalaegt-800.webp" alt="WLED veggljós í nærmynd" loading="lazy"></a>
   <a href="/images/darts-sett/09-standur-an-spjalds.webp" target="_blank" rel="noopener"><img src="/images/darts-sett/09-standur-an-spjalds-800.webp" alt="Standurinn séður frá hlið" loading="lazy"></a>
+  <a href="/images/darts-sett/12-bakland.webp" target="_blank" rel="noopener"><img src="/images/darts-sett/12-bakland-800.webp" alt="Baklandið sem heldur öllu saman" loading="lazy"></a>
+  <a href="/images/darts-sett/13-hvitur-ljosahringur-stakur.webp" target="_blank" rel="noopener"><img src="/images/darts-sett/13-hvitur-ljosahringur-stakur-800.webp" alt="Hvíti ljósahringurinn" loading="lazy"></a>
+  <a href="/images/darts-sett/14-wled-hringur-stakur.webp" target="_blank" rel="noopener"><img src="/images/darts-sett/14-wled-hringur-stakur-800.webp" alt="WLED hringurinn" loading="lazy"></a>
 </div>
 
 <style>
