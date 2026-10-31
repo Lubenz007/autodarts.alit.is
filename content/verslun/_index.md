@@ -1,6 +1,6 @@
 ---
 title: "Verslun"
-description: "3D prentaðir hlutir — bjórkassi með kælingu og Autodarts festingar"
+description: "Autodarts sett frá 19.900 kr., píluhaldarar, pílukarusell og bjórkassi með kælingu — 3D prentað á Íslandi"
 layout: hextra-home
 images:
   - /images/bjorkassi-hero.webp

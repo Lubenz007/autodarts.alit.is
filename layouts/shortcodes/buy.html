@@ -18,7 +18,7 @@
       {{- $p := index $shop.products . }}
       <label class="shop-opt">
         <input type="radio" name="opt-{{ $gid }}" value="{{ . }}"{{ if eq . $g.default }} checked{{ end }}>
-        <img src="{{ $p.image }}" alt="" loading="lazy">
+        <img src="{{ $p.image }}" alt="{{ $p.name }}" loading="lazy">
         <span class="shop-opt-body">
           <span class="shop-opt-name">{{ $p.name }}{{ with $p.badge }} <em class="shop-badge">{{ . }}</em>{{ end }}</span>
           <span class="shop-opt-short">{{ $p.short }}</span>

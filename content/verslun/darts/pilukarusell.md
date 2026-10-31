@@ -13,7 +13,7 @@ images:
 {{< buy group="karusell" >}}
 
 <div style="max-width:420px; margin: 1rem auto 2rem;">
-  <video controls autoplay muted loop playsinline preload="metadata" poster="/images/pilukarusell/poster-pilukarusell.jpg" style="width:100%; border-radius:12px; background:#000;">
+  <video controls data-autoplay muted loop playsinline preload="none" poster="/images/pilukarusell/poster-pilukarusell.jpg" style="width:100%; border-radius:12px; background:#000;">
     <source src="/videos/pilukarusell.mp4" type="video/mp4">
   </video>
 </div>

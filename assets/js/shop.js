@@ -74,7 +74,7 @@ function itemsHtml() {
     const p = P[i.id];
     const meta = [i.color, i.text && `„${i.text}“`].filter(Boolean).map(esc).join(' · ');
     return `<div class="shop-line">
-      <img src="${esc(p.image)}" alt="">
+      <img src="${esc(p.image)}" alt="${esc(p.name)}">
       <div class="shop-line-body">
         <span class="shop-line-name">${esc(p.name)}</span>
         ${meta ? `<span class="shop-line-meta">${meta}</span>` : ''}
@@ -97,7 +97,7 @@ function upsellHtml(title) {
     const btn = p.text ? `<a class="shop-add shop-add-sm" href="${esc(p.url)}">Velja</a>`
                        : `<button type="button" class="shop-add shop-add-sm" data-add="${id}">+ Bæta við</button>`;
     return `<div class="shop-line">
-      <a href="${esc(p.url)}"><img src="${esc(p.image)}" alt=""></a>
+      <a href="${esc(p.url)}"><img src="${esc(p.image)}" alt="${esc(p.name)}"></a>
       <div class="shop-line-body"><span class="shop-line-name">${esc(p.name)}</span>
         <span class="shop-line-meta">${priceHtml(id)} ${bundleHint(id)}</span></div>
       ${btn}
@@ -339,5 +339,13 @@ function boot() {
   $$('.shop-buy').forEach(initBuy);
   $$('.shop-checkout').forEach(initCheckout);
   renderChrome();
+  // Myndbönd hlaðast og spilast aðeins þegar þau sjást
+  const vids = $$('video[data-autoplay]');
+  if (vids.length && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) e.target.play().catch(() => {}); else e.target.pause();
+    }), { threshold: 0.25 });
+    vids.forEach((v) => io.observe(v));
+  } else vids.forEach((v) => { v.autoplay = true; v.play().catch(() => {}); });
 }
 if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();

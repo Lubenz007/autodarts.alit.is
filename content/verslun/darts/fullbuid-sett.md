@@ -8,7 +8,7 @@ images:
   - /images/darts-sett/01-upplyst-spjald.webp
 ---
 
-**Samsett, víraður og prófaður.** Skrúfaðu á vegginn og tengdu í rafmagn.
+**Samsett, vírað og prófað.** Skrúfaðu á vegginn og tengdu í rafmagn.
 
 {{< buy group="sett" >}}
 
@@ -19,10 +19,10 @@ images:
 ## Sjáðu það í gangi
 
 <div class="shop-videos">
-  <video controls autoplay muted loop playsinline preload="metadata" poster="/images/darts-sett/poster-upplyst-spjald.jpg">
+  <video controls data-autoplay muted loop playsinline preload="none" poster="/images/darts-sett/poster-upplyst-spjald.jpg">
     <source src="/videos/upplyst-spjald.mp4" type="video/mp4">
   </video>
-  <video controls autoplay muted loop playsinline preload="metadata" poster="/images/darts-sett/poster-wled-veggljos.jpg">
+  <video controls data-autoplay muted loop playsinline preload="none" poster="/images/darts-sett/poster-wled-veggljos.jpg">
     <source src="/videos/wled-veggljos.mp4" type="video/mp4">
   </video>
 </div>

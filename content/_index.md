@@ -1,5 +1,6 @@
 ---
 title: "hitt.is"
+htmlTitle: "hitt.is — Autodarts sett og 3D prentun á Íslandi"
 description: "3D prentaðir hlutir, hannaðir og prentaðir á Íslandi — fullbúin Autodarts sett, bjórkassi með kælingu og fleira"
 layout: hextra-home
 images:
@@ -21,7 +22,7 @@ images:
 
 <div class="home-showcase">
   <div class="home-showcase-media">
-    <video autoplay muted loop playsinline preload="metadata" poster="/images/darts-sett/poster-upplyst-spjald.jpg" aria-label="Upplýst dartspjald í fullbúnu Autodarts setti">
+    <video data-autoplay muted loop playsinline preload="none" poster="/images/darts-sett/poster-upplyst-spjald.jpg" aria-label="Upplýst dartspjald í fullbúnu Autodarts setti">
       <source src="/videos/upplyst-spjald.mp4" type="video/mp4">
     </video>
   </div>
