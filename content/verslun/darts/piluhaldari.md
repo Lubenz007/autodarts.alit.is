@@ -8,7 +8,7 @@ images:
   - /images/piluhaldari/01-spjald-a-vegg.webp
 ---
 
-**9 pílur á vegginn** — oddarnir fara inn í haldarann og flugurnar standa upp. Litirnir eru prentaðir í plastið, ekki límdir á. **5.900 kr.** með fullbúnu setti.
+**9 pílur á vegginn** — oddarnir fara inn í haldarann og flugurnar standa upp. Litirnir eru prentaðir í plastið, ekki límdir á. **6.900 kr.** — eða **5.900 kr.** ef þú kaupir hann með fullbúnu setti.
 
 {{< buy group="piluhaldari" >}}
 
