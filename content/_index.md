@@ -7,9 +7,11 @@ images:
   - /images/darts-sett/01-upplyst-spjald.webp
 ---
 
-<div class="hx:mt-6 hx:mb-6">
-{{< hextra/hero-headline >}}Sérsmíðað og 3D prentað á Íslandi{{< /hextra/hero-headline >}}
+<div class="hx:mt-6 hx:mb-3">
+{{< hextra/hero-headline >}}Hitt og þetta{{< /hextra/hero-headline >}}
 </div>
+
+<p class="home-tagline">Sérsmíðað og 3D prentað á Íslandi</p>
 
 <div class="hx:mb-8">
 {{< hextra/hero-subtitle >}}Fullbúin Autodarts sett með LED lýsingu, bjórkassi með kælingu og þínu merki — hannað af mér og prentað eftir pöntun á Bambu Lab P1S og H2S.{{< /hextra/hero-subtitle >}}
