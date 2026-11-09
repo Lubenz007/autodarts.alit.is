@@ -96,6 +96,14 @@ products:
     url: /verslun/darts/piluhaldari/
     no_color: true
     text: { label: Texti undir Íslandi, max: 16, upper: true, hint: "T.d. BIG FISH, GAME ON, MADHOUSE eða BED & BREAKFAST." }
+  piluhaldari-pfr:
+    name: PFR píluhaldari
+    price: 6900
+    short: 9 pílur, merki Pílukastfélags Reykjavíkur
+    image: /images/piluhaldari/07-pfr-felag.webp
+    url: /verslun/darts/pfr-piluhaldari/
+    legacy: PFR píluhaldari
+    no_color: true
 
   bjorkassi:
     name: Bjórkassi með kælingu
@@ -155,6 +163,9 @@ groups:
   piluhaldari:
     options: [piluhaldari-spjald, piluhaldari-island]
     default: piluhaldari-spjald
+  piluhaldari-pfr:
+    options: [piluhaldari-pfr]
+    default: piluhaldari-pfr
   bjorkassi:
     options: [bjorkassi, bjorkassi-texti]
     default: bjorkassi
