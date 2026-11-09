@@ -96,6 +96,15 @@ products:
     url: /verslun/darts/piluhaldari/
     no_color: true
     text: { label: Texti undir Íslandi, max: 16, upper: true, hint: "T.d. BIG FISH, GAME ON, MADHOUSE eða BED & BREAKFAST." }
+  piluhaldari-landslag:
+    name: Píluhaldari — Ísland í landslagi
+    price: 6900
+    bundle_price: 5900
+    bundle_with: [sett-an-wled, sett]
+    short: 6 pílur, upphleypt Íslandskort, jöklarnir hvítir
+    image: /images/piluhaldari/08-island-landslag-sq.webp
+    url: /verslun/darts/piluhaldari/
+    no_color: true
   piluhaldari-pfr:
     name: PFR píluhaldari
     price: 6900
@@ -161,7 +170,7 @@ groups:
     options: [pilukarusell, pilukarusell-vegg]
     default: pilukarusell
   piluhaldari:
-    options: [piluhaldari-spjald, piluhaldari-island]
+    options: [piluhaldari-spjald, piluhaldari-island, piluhaldari-landslag]
     default: piluhaldari-spjald
   piluhaldari-pfr:
     options: [piluhaldari-pfr]
