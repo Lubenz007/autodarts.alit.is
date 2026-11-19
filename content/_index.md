@@ -94,6 +94,16 @@ images:
   >}}
 
   {{< hextra/feature-card
+    title="Oddahaldari"
+    subtitle="Heldur 3 vara-stálodda í töskunni — 3 stk. á 450 kr., 10 stk. á 1.000 kr."
+    link="/verslun/darts/oddahaldari"
+    icon="star"
+    class="card-photo"
+    image="/images/oddahaldari/00-oddahaldarar-a-bordi-sq.webp"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(220,38,38,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
     title="Bjórkassi með kælingu"
     subtitle="6 dósir, kælikubbur fylgir, þinn texti og merki — frá 7.900 kr."
     link="/verslun/bjorkassi"
