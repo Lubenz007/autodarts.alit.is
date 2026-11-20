@@ -5,7 +5,7 @@ toc: false
 layout: wide
 weight: 2
 images:
-  - /images/pilukarusell/01-karusell-a-pallinum.webp
+  - /images/pilukarusell/03-hvitt-karusell.webp
 ---
 
 **24 pílur sem sitja fastar** — grannar eða þykkar. Snýst á legu. **5.900 kr.** — eða **4.900 kr.** ef þú kaupir hann með fullbúnu setti.
@@ -22,4 +22,4 @@ images:
 
 {{< products ids="sett,piluhaldari-spjald,bjorkassi" >}}
 
-<small style="opacity:.7">8 sett af 3 · oddar 26–50 mm · um 14 cm × 9 cm · lega og skrúfur fylgja, pílur fylgja ekki.</small>
+<small style="opacity:.7">8 sett af 3 · oddar 26–50 mm · um 16 cm × 13 cm · stöngin skrúfast í botninn · lega og skrúfur fylgja, pílur fylgja ekki.</small>

@@ -89,7 +89,7 @@ images:
     link="/verslun/darts/pilukarusell"
     icon="star"
     class="card-photo"
-    image="/images/pilukarusell/01-karusell-a-pallinum-sq.webp"
+    image="/images/pilukarusell/04-hvitt-karusell-heild-800.webp"
     style="background: radial-gradient(ellipse at 50% 80%,rgba(220,38,38,0.15),hsla(0,0%,100%,0));"
   >}}
 
