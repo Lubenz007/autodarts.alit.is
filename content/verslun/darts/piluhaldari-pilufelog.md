@@ -20,6 +20,6 @@ images:
 
 {{< buy group="piluhaldari-pilufelog" >}}
 
-<small style="display:block; text-align:center; opacity:.7; margin-top:1rem;">PFR og Hvammstanga: 9 pílur, Ø25 cm · PFF: 9 pílur, 26 × 31 cm · PFH: 8 pílur, Ø25 cm · Grindavík: 9 pílur, Ø25 cm · oddar allt að 50 mm · hengt á 2 skrúfur · pílur fylgja ekki.</small>
+<small style="display:block; text-align:center; opacity:.7; margin-top:1rem;">9 pílur · Ø25 cm (PFF: 26 × 31 cm) · oddar allt að 50 mm · hengt á 2 skrúfur · pílur fylgja ekki.</small>
 
 <p style="text-align:center; margin-top:2rem;">Viltu útgáfu fyrir þitt félag, lið eða fyrirtæki? Sendu merkið á <a href="mailto:bensi@hitt.is">bensi@hitt.is</a> og ég geri tilboð.</p>

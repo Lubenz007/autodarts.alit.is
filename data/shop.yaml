@@ -130,7 +130,7 @@ products:
   piluhaldari-pfh:
     name: PFH píluhaldari
     price: 6900
-    short: 8 pílur, merki Pílukastfélags Hafnarfjarðar
+    short: 9 pílur, merki Pílukastfélags Hafnarfjarðar
     image: /images/piluhaldari/11-pfh-felag-sq.webp
     url: /verslun/darts/piluhaldari-pilufelog/
     no_color: true
