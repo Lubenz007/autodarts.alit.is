@@ -1,6 +1,6 @@
 ---
 title: "Píluhaldari fyrir pílufélög"
-description: "Píluhaldari á vegg með merki pílufélagsins — PFR, Pílufélag Hvammstanga, PFF og PFH. 6.900 kr."
+description: "Píluhaldari á vegg með merki pílufélagsins — PFR, Pílufélag Hvammstanga, PFF, PFH og Pílufélag Grindavíkur. 6.900 kr."
 toc: false
 layout: wide
 aliases:
@@ -20,6 +20,6 @@ images:
 
 {{< buy group="piluhaldari-pilufelog" >}}
 
-<small style="display:block; text-align:center; opacity:.7; margin-top:1rem;">PFR og Hvammstanga: 9 pílur, Ø25 cm · PFF: 9 pílur, 26 × 31 cm · PFH: 8 pílur, Ø25 cm · oddar allt að 50 mm · hengt á 2 skrúfur · pílur fylgja ekki.</small>
+<small style="display:block; text-align:center; opacity:.7; margin-top:1rem;">PFR og Hvammstanga: 9 pílur, Ø25 cm · PFF: 9 pílur, 26 × 31 cm · PFH: 8 pílur, Ø25 cm · Grindavík: 9 pílur, Ø25 cm · oddar allt að 50 mm · hengt á 2 skrúfur · pílur fylgja ekki.</small>
 
 <p style="text-align:center; margin-top:2rem;">Viltu útgáfu fyrir þitt félag, lið eða fyrirtæki? Sendu merkið á <a href="mailto:bensi@hitt.is">bensi@hitt.is</a> og ég geri tilboð.</p>

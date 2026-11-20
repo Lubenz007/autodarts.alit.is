@@ -134,6 +134,13 @@ products:
     image: /images/piluhaldari/11-pfh-felag-sq.webp
     url: /verslun/darts/piluhaldari-pilufelog/
     no_color: true
+  piluhaldari-grindavik:
+    name: Grindavíkur píluhaldari
+    price: 6900
+    short: 9 pílur, merki Pílufélags Grindavíkur
+    image: /images/piluhaldari/12-grindavik-felag-sq.webp
+    url: /verslun/darts/piluhaldari-pilufelog/
+    no_color: true
 
   oddahaldari-3:
     name: Oddahaldari — 3 stk.
@@ -210,7 +217,7 @@ groups:
     options: [piluhaldari-spjald, piluhaldari-island, piluhaldari-landslag]
     default: piluhaldari-spjald
   piluhaldari-pilufelog:
-    options: [piluhaldari-pfr, piluhaldari-hvammstanga, piluhaldari-pff, piluhaldari-pfh]
+    options: [piluhaldari-pfr, piluhaldari-hvammstanga, piluhaldari-pff, piluhaldari-pfh, piluhaldari-grindavik]
     default: piluhaldari-pfr
   oddahaldari:
     options: [oddahaldari-3, oddahaldari-10]

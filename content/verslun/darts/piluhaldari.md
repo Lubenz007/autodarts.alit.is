@@ -24,7 +24,7 @@ images:
 <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; align-items:center; margin: 1rem 0 2rem;">
   <a href="/verslun/darts/piluhaldari-pilufelog/"><img src="/images/piluhaldari/07-pfr-felag.webp" alt="Píluhaldari með merki Pílukastfélags Reykjavíkur (PFR)" loading="lazy" style="width:100%; max-width:380px; border-radius:12px;"></a>
   <div>
-    <p>Píluhaldari með merki pílufélagsins, prentaður í litum félagsins: <strong>PFR</strong>, <strong>Pílufélag Hvammstanga</strong>, <strong>PFF</strong> og <strong>PFH</strong>.</p>
+    <p>Píluhaldari með merki pílufélagsins, prentaður í litum félagsins: <strong>PFR</strong>, <strong>Pílufélag Hvammstanga</strong>, <strong>PFF</strong>, <strong>PFH</strong> og <strong>Pílufélag Grindavíkur</strong>.</p>
     <p><a class="home-link" href="/verslun/darts/piluhaldari-pilufelog/">Píluhaldari fyrir pílufélög · 6.900 kr. →</a></p>
     <p>Viltu útgáfu fyrir annað félag, lið eða fyrirtæki? Sendu merkið á <a href="mailto:bensi@hitt.is">bensi@hitt.is</a> og ég geri tilboð.</p>
   </div>
