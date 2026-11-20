@@ -22,20 +22,10 @@ images:
 ## Sérútgáfa fyrir pílufélög
 
 <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:1.25rem; align-items:center; margin: 1rem 0 2rem;">
-  <a href="/images/piluhaldari/07-pfr-felag-full.webp" target="_blank" rel="noopener"><img src="/images/piluhaldari/07-pfr-felag.webp" alt="Píluhaldari í 7 litum með merki Pílukastfélags Reykjavíkur (PFR)" loading="lazy" style="width:100%; max-width:380px; border-radius:12px;"></a>
+  <a href="/verslun/darts/piluhaldari-pilufelog/"><img src="/images/piluhaldari/07-pfr-felag.webp" alt="Píluhaldari með merki Pílukastfélags Reykjavíkur (PFR)" loading="lazy" style="width:100%; max-width:380px; border-radius:12px;"></a>
   <div>
-    <p>Píluhaldari prentaður í <strong>7 litum</strong> fyrir <strong>Pílukastfélag Reykjavíkur (PFR)</strong> — með nafni og merki félagsins, lárviðarsveig og PFR borða.</p>
-    <p><a class="home-link" href="/verslun/darts/pfr-piluhaldari/">Panta PFR píluhaldara · 6.900 kr. →</a></p>
-  </div>
-  <a href="/images/piluhaldari/09-hvammstanga-felag.webp" target="_blank" rel="noopener"><img src="/images/piluhaldari/09-hvammstanga-felag-sq.webp" alt="Píluhaldari með merki Pílufélags Hvammstanga: rauð brún, ísbirnir og krosslagðar pílur" loading="lazy" style="width:100%; max-width:380px; border-radius:12px;"></a>
-  <div>
-    <p>Píluhaldari í <strong>3 litum</strong> fyrir <strong>Pílufélag Hvammstanga</strong> — með ísbjörnunum, krosslögðu pílunum og rauðu brúninni úr merki félagsins.</p>
-    <p><a class="home-link" href="/verslun/darts/hvammstanga-piluhaldari/">Panta Hvammstanga píluhaldara · 6.900 kr. →</a></p>
-  </div>
-  <a href="/images/piluhaldari/10-pff-felag.webp" target="_blank" rel="noopener"><img src="/images/piluhaldari/10-pff-felag-sq.webp" alt="Skjaldarlaga píluhaldari með merki Pílukastfélags Fjarðabyggðar: rauðir PFF stafir og pílukastspjald" loading="lazy" style="width:100%; max-width:380px; border-radius:12px;"></a>
-  <div>
-    <p>Píluhaldari í <strong>4 litum</strong> fyrir <strong>Pílukastfélag Fjarðabyggðar (PFF)</strong> — í laginu eins og skjöldur félagsins, með rauðu PFF stöfunum og pílukastspjaldinu.</p>
-    <p><a class="home-link" href="/verslun/darts/pff-piluhaldari/">Panta PFF píluhaldara · 6.900 kr. →</a></p>
+    <p>Píluhaldari með merki pílufélagsins, prentaður í litum félagsins: <strong>PFR</strong>, <strong>Pílufélag Hvammstanga</strong>, <strong>PFF</strong> og <strong>PFH</strong>.</p>
+    <p><a class="home-link" href="/verslun/darts/piluhaldari-pilufelog/">Píluhaldari fyrir pílufélög · 6.900 kr. →</a></p>
     <p>Viltu útgáfu fyrir annað félag, lið eða fyrirtæki? Sendu merkið á <a href="mailto:bensi@hitt.is">bensi@hitt.is</a> og ég geri tilboð.</p>
   </div>
 </div>
