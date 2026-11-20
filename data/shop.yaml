@@ -113,6 +113,13 @@ products:
     url: /verslun/darts/pfr-piluhaldari/
     legacy: PFR píluhaldari
     no_color: true
+  piluhaldari-hvammstanga:
+    name: Hvammstanga píluhaldari
+    price: 6900
+    short: 9 pílur, merki Pílufélags Hvammstanga
+    image: /images/piluhaldari/09-hvammstanga-felag-sq.webp
+    url: /verslun/darts/hvammstanga-piluhaldari/
+    no_color: true
 
   oddahaldari-3:
     name: Oddahaldari — 3 stk.
@@ -191,6 +198,9 @@ groups:
   piluhaldari-pfr:
     options: [piluhaldari-pfr]
     default: piluhaldari-pfr
+  piluhaldari-hvammstanga:
+    options: [piluhaldari-hvammstanga]
+    default: piluhaldari-hvammstanga
   oddahaldari:
     options: [oddahaldari-3, oddahaldari-10]
     default: oddahaldari-3
