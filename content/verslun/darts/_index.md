@@ -22,7 +22,7 @@ images:
 
 ## Bættu við
 
-{{< products ids="piluhaldari-spjald,piluhaldari-island,pilukarusell,oddahaldari-3,bjorkassi" >}}
+{{< products ids="piluhaldari-spjald,piluhaldari-island,pilukarusell,piluturn,oddahaldari-3,bjorkassi" >}}
 
 ## Stakir hlutar
 

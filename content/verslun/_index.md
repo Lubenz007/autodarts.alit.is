@@ -57,6 +57,16 @@ images:
   >}}
 
   {{< hextra/feature-card
+    title="Píluturn"
+    subtitle="3 pílur í einum turni, geymast á hvolfi í standinum — 2.500 kr."
+    link="/verslun/darts/piluturn"
+    icon="star"
+    class="card-photo"
+    image="/images/piluturn/01-piluturn-med-pilum-sq.webp"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(220,38,38,0.15),hsla(0,0%,100%,0));"
+  >}}
+
+  {{< hextra/feature-card
     title="Oddahaldari"
     subtitle="Heldur 3 vara-stálodda í töskunni — 3 stk. á 450 kr., 10 stk. á 1.000 kr."
     link="/verslun/darts/oddahaldari"

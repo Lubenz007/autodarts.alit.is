@@ -3,7 +3,7 @@ title: "Oddahaldari"
 description: "Lítill haldari fyrir 3 vara-stálodda — passar í pílutöskuna. 3 stk. á 450 kr. eða 10 stk. á 1.000 kr."
 toc: false
 layout: wide
-weight: 4
+weight: 5
 images:
   - /images/oddahaldari/00-oddahaldarar-a-bordi.webp
 ---

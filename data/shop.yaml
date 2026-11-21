@@ -13,7 +13,7 @@ checkout_url: /verslun/karfa/
 colors: [Svartur, Hvítur, Rauður, Blár, Grænn]
 
 # Stungið upp á í körfunni, ef varan er ekki þegar í körfu
-upsell: [pilukarusell, piluhaldari-spjald, oddahaldari-3, bjorkassi, sett]
+upsell: [pilukarusell, piluturn, piluhaldari-spjald, oddahaldari-3, bjorkassi, sett]
 
 products:
   standur:
@@ -142,6 +142,14 @@ products:
     url: /verslun/darts/piluhaldari-pilufelog/
     no_color: true
 
+  piluturn:
+    name: Píluturn + standur
+    price: 2500
+    short: 3 pílur, oddarnir mætast efst, geymist á hvolfi í standinum
+    image: /images/piluturn/01-piluturn-med-pilum-sq.webp
+    url: /verslun/darts/piluturn/
+    no_color: true
+
   oddahaldari-3:
     name: Oddahaldari — 3 stk.
     price: 450
@@ -219,6 +227,9 @@ groups:
   piluhaldari-pilufelog:
     options: [piluhaldari-pfr, piluhaldari-hvammstanga, piluhaldari-pff, piluhaldari-pfh, piluhaldari-grindavik]
     default: piluhaldari-pfr
+  piluturn:
+    options: [piluturn]
+    default: piluturn
   oddahaldari:
     options: [oddahaldari-3, oddahaldari-10]
     default: oddahaldari-3
